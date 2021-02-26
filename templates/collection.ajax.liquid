@@ -1,0 +1,20 @@
+{% comment %}
+  Exact same as normal collection template but without unneeded markup
+  that slows down ajax loading
+{% endcomment %}
+{% layout none %}
+
+<div id="CollectionAjaxContent">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-fifth grid__item--sidebar">
+        {% section 'collection-sidebar' %}
+      </div>
+      <div class="grid__item medium-up--four-fifths grid__item--content">
+        <div class="collection-grid__wrapper">
+          {% section 'collection-template' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

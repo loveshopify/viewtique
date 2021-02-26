@@ -1,0 +1,38 @@
+{%- unless list_printed -%}
+  {%- if link.active or link.child_active -%}
+    {%- assign sub_collection_links = link.links -%}
+    {%- for sub_link in link.links -%}
+      {%- if sub_link.url contains '/collections/' -%}
+        {%- assign sub_handle = sub_link.url | remove: '/collections/' -%}
+        <li {% if sub_link.current %}class="tag--active"{% endif %}>
+          <a href="{{ sub_link.url }}" class="no-ajax">
+            {{ sub_link.title }}
+            {%- if block.settings.enable_count and collections[sub_handle].products_count != blank -%}
+              &mdash; {{ collections[sub_handle].products_count }}
+            {%- endif -%}
+          </a>
+
+          {%- if block.settings.enable_subsubcollections and sub_link.levels > 0 -%}
+            <ul class="no-bullets tag-list">
+              {%- for sub_sub_link in sub_link.links -%}
+                {%- if sub_sub_link.url contains '/collections/' -%}
+                  {%- assign sub_sub_handle = sub_sub_link.url | remove: '/collections/' -%}
+                  <li {% if sub_sub_link.current %}class="tag--active"{% endif %}>
+                    <a href="{{ sub_sub_link.url }}" class="no-ajax">
+                      {{ sub_sub_link.title }}
+                      {%- if block.settings.enable_count and collections[sub_sub_handle].products_count != blank -%}
+                        &mdash; {{ collections[sub_sub_handle].products_count }}
+                      {%- endif -%}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- assign list_printed = true -%}
+  {%- endif -%}
+{%- endunless -%}

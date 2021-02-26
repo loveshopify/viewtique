@@ -1,0 +1,641 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="promo-grid">
+
+  {% if section.blocks.size > 0 %}
+    {% style %}
+      .flex-grid--{{ section.id }} {
+        margin-bottom: {{ section.settings.gutter_size }}px;
+      }
+    {% endstyle %}
+
+    {% include 'promo-grid', collection_page: true %}
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Collection promotions",
+    "settings": [
+      {
+        "type": "range",
+        "id": "gutter_size",
+        "label": "Spacing",
+        "default": 20,
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "unit": "px"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "advanced",
+        "name": "Advanced",
+        "settings": [
+          {
+            "label": "Only show promotion on",
+            "id": "promo_collection",
+            "type": "collection",
+            "info": "If no collection is chosen, your promotion will appear on all collections"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Limited time"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Announce your promotion"
+          },
+          {
+            "type": "textarea",
+            "id": "textarea",
+            "label": "Text",
+            "default": "Include the smaller details of your promotion in text below the title."
+          },
+          {
+            "type": "text",
+            "id": "cta_text1",
+            "label": "Button #1 text",
+            "default": "Shop This"
+          },
+          {
+            "type": "url",
+            "id": "cta_link1",
+            "label": "Button #1 link"
+          },
+          {
+            "type": "text",
+            "id": "cta_text2",
+            "label": "Button #2 text",
+            "default": "Shop All"
+          },
+          {
+            "type": "url",
+            "id": "cta_link2",
+            "label": "Button #2 link"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video url"
+          },
+          {
+            "type": "header",
+            "content": "Layout"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100",
+            "options": [
+              {
+                "value": "33",
+                "label": "33%"
+              },
+              {
+                "value": "50",
+                "label": "50%"
+              },
+              {
+                "value": "100",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "height",
+            "label": "Height",
+            "default": 500,
+            "min": 100,
+            "max": 800,
+            "step": 20,
+            "unit": "px"
+          },
+          {
+            "type": "range",
+            "id": "text_size",
+            "label": "Text size",
+            "default": 100,
+            "min": 40,
+            "max": 200,
+            "step": 5,
+            "unit": "%"
+          },
+          {
+            "type": "header",
+            "content": "Alignment"
+          },
+          {
+            "type": "select",
+            "id": "text_align",
+            "label": "Text alignment",
+            "default": "vertical-center horizontal-center",
+            "options": [
+              {
+                "value": "vertical-top horizontal-left",
+                "label": "Top left"
+              },
+              {
+                "value": "vertical-top horizontal-center",
+                "label": "Top center"
+              },
+              {
+                "value": "vertical-top horizontal-right",
+                "label": "Top right"
+              },
+              {
+                "value": "vertical-center horizontal-left",
+                "label": "Center left"
+              },
+              {
+                "value": "vertical-center horizontal-center",
+                "label": "Center"
+              },
+              {
+                "value": "vertical-center horizontal-right",
+                "label": "Center right"
+              },
+              {
+                "value": "vertical-bottom horizontal-left",
+                "label": "Bottom left"
+              },
+              {
+                "value": "vertical-bottom horizontal-center",
+                "label": "Bottom center"
+              },
+              {
+                "value": "vertical-bottom horizontal-right",
+                "label": "Bottom right"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "focal_point",
+            "label": "Image focal point",
+            "default": "center",
+            "options": [
+              {
+                "value": "20% 0",
+                "label": "Top left"
+              },
+              {
+                "value": "top",
+                "label": "Top center"
+              },
+              {
+                "value": "80% 0",
+                "label": "Top right"
+              },
+              {
+                "value": "20% 50%",
+                "label": "Center left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "80% 50%",
+                "label": "Center right"
+              },
+              {
+                "value": "20% 100%",
+                "label": "Bottom left"
+              },
+              {
+                "value": "bottom",
+                "label": "Bottom center"
+              },
+              {
+                "value": "80% 100%",
+                "label": "Bottom right"
+              }
+            ]
+          },
+          {
+            "type": "header",
+            "content": "Design"
+          },
+          {
+            "type": "color",
+            "id": "color_accent",
+            "label": "Buttons",
+            "default": "rgba(0,0,0,0)"
+          },
+          {
+            "type": "checkbox",
+            "id": "boxed",
+            "label": "Add box",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "framed",
+            "label": "Add frame",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "banner",
+        "name": "Banner",
+        "settings": [
+          {
+            "label": "Only show promotion on",
+            "id": "promo_collection",
+            "type": "collection",
+            "info": "If no collection is chosen, your promotion will appear on all collections"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Banner promotion"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Add the details of your promotion in smaller text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Link label",
+            "default": "Shop now"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "header",
+            "content": "Design"
+          },
+          {
+            "type": "color",
+            "id": "color_tint",
+            "label": "Tint",
+            "default": "#000"
+          },
+          {
+            "type": "range",
+            "id": "color_tint_opacity",
+            "label": "Amount",
+            "default": 8,
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "%"
+          },
+          {
+            "type": "checkbox",
+            "id": "framed",
+            "label": "Add frame",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "label": "Only show promotion on",
+            "id": "promo_collection",
+            "type": "collection",
+            "info": "If no collection is chosen, your promotion will appear on all collections"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100",
+            "options": [
+              {
+                "value": "33",
+                "label": "33%"
+              },
+              {
+                "value": "50",
+                "label": "50%"
+              },
+              {
+                "value": "100",
+                "label": "100%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+          {
+            "label": "Only show promotion on",
+            "id": "promo_collection",
+            "type": "collection",
+            "info": "If no collection is chosen, your promotion will appear on all collections"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Limited time"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Announce your product"
+          },
+          {
+            "type": "textarea",
+            "id": "textarea",
+            "label": "Text",
+            "default": "Include the smaller details of your promotion in text below the title."
+          },
+          {
+            "type": "text",
+            "id": "link_label",
+            "label": "Button text",
+            "default": "Learn more"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "New"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_price",
+            "label": "Show price",
+            "default": true
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100",
+            "options": [
+              {
+                "value": "50",
+                "label": "50%"
+              },
+              {
+                "value": "100",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "text_size",
+            "label": "Text size",
+            "default": 100,
+            "min": 40,
+            "max": 200,
+            "step": 5,
+            "unit": "%"
+          },
+          {
+            "type": "header",
+            "content": "Design"
+          },
+          {
+            "type": "color",
+            "id": "color_tint",
+            "label": "Tint",
+            "default": "#000"
+          },
+          {
+            "type": "range",
+            "id": "color_tint_opacity",
+            "label": "Amount",
+            "default": 0,
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "%"
+          },
+          {
+            "type": "checkbox",
+            "id": "framed",
+            "label": "Add frame",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "sale_collection",
+        "name": "Sale Collection",
+        "settings": [
+          {
+            "label": "Only show promotion on",
+            "id": "promo_collection",
+            "type": "collection",
+            "info": "If no collection is chosen, your promotion will appear on all collections"
+          },
+          {
+            "type": "collection",
+            "id": "sale_collection",
+            "label": "Sale collection"
+          },
+          {
+            "type": "text",
+            "id": "top_text",
+            "label": "Top text",
+            "default": "Up to"
+          },
+          {
+            "type": "text",
+            "id": "middle_text",
+            "label": "Middle text",
+            "default": "50% off"
+          },
+          {
+            "type": "text",
+            "id": "bottom_text",
+            "label": "Bottom text",
+            "default": "Select products"
+          },
+          {
+            "type": "header",
+            "content": "Layout"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100",
+            "options": [
+              {
+                "value": "50",
+                "label": "50%"
+              },
+              {
+                "value": "100",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "header",
+            "content": "Design"
+          },
+          {
+            "type": "color",
+            "id": "color_tint",
+            "label": "Tint",
+            "default": "#000"
+          },
+          {
+            "type": "range",
+            "id": "color_tint_opacity",
+            "label": "Amount",
+            "default": 0,
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "%"
+          },
+          {
+            "type": "checkbox",
+            "id": "boxed",
+            "label": "Add box",
+            "default": false
+          },
+          {
+            "type": "checkbox",
+            "id": "framed",
+            "label": "Add frame",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "simple",
+        "name": "Simple",
+        "settings": [
+          {
+            "label": "Only show promotion on",
+            "id": "promo_collection",
+            "type": "collection",
+            "info": "If no collection is chosen, your promotion will appear on all collections"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "header",
+            "content": "Layout"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Width",
+            "default": "100",
+            "options": [
+              {
+                "value": "33",
+                "label": "33%"
+              },
+              {
+                "value": "50",
+                "label": "50%"
+              },
+              {
+                "value": "100",
+                "label": "100%"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "height",
+            "label": "Height",
+            "default": 300,
+            "min": 0,
+            "max": 800,
+            "step": 20,
+            "unit": "px"
+          },
+          {
+            "type": "header",
+            "content": "Design"
+          },
+          {
+            "type": "color",
+            "id": "color_tint",
+            "label": "Tint",
+            "default": "#000"
+          },
+          {
+            "type": "range",
+            "id": "color_tint_opacity",
+            "label": "Amount",
+            "default": 8,
+            "min": 0,
+            "max": 20,
+            "step": 2,
+            "unit": "%"
+          },
+          {
+            "type": "checkbox",
+            "id": "framed",
+            "label": "Add frame",
+            "default": false
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

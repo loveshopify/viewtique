@@ -1,0 +1,334 @@
+<ul class="no-bullets tag-list tag-list--active-tags">
+  {%- if current_tags -%}
+    {%- for tag in current_tags -%}
+      {%- assign tag_text = tag -%}
+      {%- assign tag_name = tag | strip -%}
+      {%- if tag_name contains '_' -%}
+        {%- assign cat = tag | split: '_' | first -%}
+        {%- assign tag_text = tag | remove_first: cat | remove_first: '_' -%}
+      {%- endif -%}
+
+      <li class="tag tag--remove">
+        {{ tag_text | link_to_remove_tag: tag_name | replace: 'title=', 'class="btn btn--small js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+      </li>
+    {%- endfor -%}
+  {%- endif -%}
+</ul>
+
+{%- for block in section.blocks -%}
+  {%- assign collapsed_state = block.settings.collapsed -%}
+
+  <div class="collection-sidebar__group--{{ block.id }}" {{ block.shopify_attributes }}>
+    {%- if block.type == 'tags_group' or 'tags_all' -%}
+      {%- assign tags_to_display = false -%}
+      {% case block.type %}
+        {% when 'tags_group' %}
+          {%- assign split_tag_list = block.settings.tag_list | newline_to_br | split:'<br />' -%}
+          {%- assign tags_to_display = split_tag_list -%}
+        {% when 'tags_all' %}
+          {%- assign tags_to_display = collection.all_tags -%}
+      {% endcase %}
+
+      {% comment %}
+        Check if we have underscore-defined tag groups
+      {% endcomment %}
+      {%- assign underscore_groups = false -%}
+      {%- if block.type == 'tags_all' -%}
+        {%- assign categories = '' -%}
+        {%- for tag in tags_to_display -%}
+          {%- include 'filter-out-custom-tags' -%}
+          {%- if tag contains '_' -%}
+            {%- assign underscore_groups = true -%}
+            {% capture categories %}{% unless categories == blank %}{{ categories }}|{% endunless %}{{ tag | split: '_' | first }}{% endcapture %}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- assign cat_array = categories | split: '|' | uniq -%}
+      {%- endif -%}
+
+      {% comment %}
+        Output groups of collapsible tag groups
+      {% endcomment %}
+      {%- if underscore_groups -%}
+        {%- for cat_item in cat_array -%}
+          {%- assign cat_handle = cat_item | handleize -%}
+          <div class="collection-sidebar__group collection-sidebar__group--{{ cat_handle }}">
+            {%- include 'collection-sidebar-filter-trigger', title: cat_item, index: forloop.index, id: cat_handle -%}
+
+            <div
+              id="{{ location }}-{{ forloop.index }}-{{ cat_handle }}"
+              class="collapsible-content collapsible-content--sidebar{% unless collapsed_state %} is-open{% endunless %}"
+              {% unless collapsed_state %}style="height: auto;"{% endunless %}>
+              <div class="collapsible-content__inner">
+                {% comment %}
+                  Tag and checkbox markup
+                {% endcomment %}
+                {%- assign tag_count = 0 -%}
+                <ul class="no-bullets tag-list{% if section.settings.tags_combine %} tag-list--checkboxes{% endif %}">
+                  {%- for tag in tags_to_display -%}
+                    {%- include 'filter-out-custom-tags' -%}
+                    {%- assign cat = tag | split: '_' | first -%}
+                    {%- if cat != tag and cat_item == cat -%}
+                      {% comment %}
+                        Strip out tag category prefix
+                      {% endcomment %}
+                      {%- assign tag_name = tag | strip -%}
+                      {%- assign tag_text = tag_name | remove_first: cat_item | remove_first: '_' -%}
+                      {%- assign tag_count = tag_count | plus: 1 -%}
+
+                      {%- if section.settings.tags_combine -%}
+                        {%- if current_tags contains tag_name -%}
+                          <li class="tag tag--active">
+                            {{ tag_text | link_to_remove_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                          </li>
+                        {%- else -%}
+                          <li class="tag">
+                            {{ tag_text | link_to_add_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                          </li>
+                        {%- endif -%}
+                      {%- else -%}
+                        <li class="tag{% if current_tags contains tag_name %} tag--active{% endif %}">
+                          {{ tag_text | link_to_tag: tag | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                        </li>
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+
+                {%- if tag_count <= 1 -%}
+                  {% style %}
+                    .collection-sidebar__group--{{ cat_handle }} { display: none; }
+                  {% endstyle %}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- else -%}
+        {% comment %}
+          Output a list of all
+        {% endcomment %}
+        {%- if tags_to_display -%}
+          <div class="collection-sidebar__group">
+            {%- include 'collection-sidebar-filter-trigger', title: block.settings.title, index: forloop.index -%}
+            <div
+              id="{{ location }}-{{ forloop.index }}"
+              class="collapsible-content collapsible-content--sidebar{% unless collapsed_state %} is-open{% endunless %}"
+              {% unless collapsed_state %}style="height: auto;"{% endunless %}>
+              <div class="collapsible-content__inner">
+                {% comment %}
+                  Tag and checkbox markup
+                {% endcomment %}
+                {%- assign tag_count = 0 -%}
+                <ul class="no-bullets tag-list{% if section.settings.tags_combine %} tag-list--checkboxes{% endif %}">
+
+                  {%- assign tags_to_loop = collection.tags -%}
+                  {%- if collection.handle == 'all' and current_tags == blank -%}
+                    {%- assign tags_to_loop = collection.all_tags -%}
+                  {%- endif -%}
+
+                  {%- for tag in tags_to_display -%}
+                    {%- include 'filter-out-custom-tags' -%}
+                    {%- assign tag_name = tag | strip -%}
+                    {%- assign tag_text = tag_name -%}
+                    {%- assign show_tag = false -%}
+
+                    {%- if section.settings.tags_combine == true and tags_to_loop contains tag_name -%}
+                      {%- assign show_tag = true -%}
+                    {% elsif section.settings.tags_combine == false and collection.all_tags contains tag_name %}
+                      {%- assign show_tag = true -%}
+                    {%- endif -%}
+
+                    {%- if show_tag -%}
+                      {%- assign tag_count = tag_count | plus: 1 -%}
+
+                      {%- if current_tags contains tag_name -%}
+                        <li class="tag tag--active">
+                          {{ tag_text | link_to_remove_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                        </li>
+                      {%- else -%}
+                        {%- if section.settings.tags_combine -%}
+                          <li class="tag">
+                            {{ tag_text | link_to_add_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                          </li>
+                        {%- else -%}
+                          <li class="tag">
+                            {{ tag_text | link_to_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                          </li>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+
+                {%- if tag_count <= 1 -%}
+                  {% style %}
+                    .collection-sidebar__group--{{ block.id }} { display: none; }
+                  {% endstyle %}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if block.type == 'color_group' -%}
+      {%- assign swatch_file_extension = 'png' -%}
+      {%- assign split_tag_list = block.settings.tag_list | newline_to_br | split:'<br />' -%}
+      {%- assign tags_to_display = split_tag_list -%}
+
+      {% comment %}
+        Output a list of all color tags
+      {% endcomment %}
+      {%- if tags_to_display -%}
+        <div class="collection-sidebar__group">
+          {%- include 'collection-sidebar-filter-trigger', title: block.settings.title, index: forloop.index -%}
+          <div
+            id="{{ location }}-{{ forloop.index }}"
+            class="collapsible-content collapsible-content--sidebar{% unless collapsed_state %} is-open{% endunless %}"
+            {% unless collapsed_state %}style="height: auto;"{% endunless %}>
+            <div class="collapsible-content__inner">
+              {% comment %}
+                Tag and checkbox markup
+              {% endcomment %}
+              {%- assign tag_count = 0 -%}
+              <ul class="no-bullets tag-list{% if settings.product_color_swatches %} tag-list--swatches{% endif %}">
+
+                {%- assign tags_to_loop = collection.tags -%}
+                {%- if collection.handle == 'all' and current_tags == blank -%}
+                  {%- assign tags_to_loop = collection.all_tags -%}
+                {%- endif -%}
+
+                {%- for tag in tags_to_display -%}
+                  {%- include 'filter-out-custom-tags' -%}
+                  {%- assign tag_name = tag | strip -%}
+                  {%- assign tag_text = tag_name -%}
+                  {%- assign show_tag = false -%}
+
+                  {%- if section.settings.tags_combine == true and tags_to_loop contains tag_name -%}
+                    {%- assign show_tag = true -%}
+                  {% elsif section.settings.tags_combine == false and collection.all_tags contains tag_name %}
+                    {%- assign show_tag = true -%}
+                  {%- endif -%}
+
+                  {%- if show_tag -%}
+                    {%- assign tag_count = tag_count | plus: 1 -%}
+                    {%- assign color_image = tag_name | handle | append: '.' | append: swatch_file_extension | asset_img_url: '50x' | prepend: 'https:' | split: '?' | first -%}
+                    {%- assign color_swatch_fallback = tag_name | split: ' ' | last | handle -%}
+
+                    {%- if settings.product_color_swatches -%}
+                      {% capture swatch %}
+                        <span
+                          class="color-swatch color-swatch--filter color-swatch--{{ tag_name | handle }}"
+                          style="background-image: url({{ color_image }}); background-color: {{ color_swatch_fallback }};">
+                          {{ tag_text }}
+                        </span>
+                      {% endcapture %}
+                    {%- else -%}
+                      {%- assign swatch = tag_text -%}
+                    {%- endif -%}
+
+                    {%- if current_tags contains tag_name -%}
+                      <li class="tag tag--active">
+                        {{ swatch | link_to_remove_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                      </li>
+                    {%- else -%}
+                      {%- if section.settings.tags_combine -%}
+                        <li class="tag">
+                          {{ swatch | link_to_add_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                        </li>
+                      {%- else -%}
+                        <li class="tag">
+                          {{ swatch | link_to_tag: tag_name | replace: 'title=', 'class="js-no-transition" title=' | replace: '?view=ajax', '' | replace: 'view=ajax', '' }}
+                        </li>
+                      {%- endif -%}
+                    {%- endif -%}
+
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+
+              {%- if tag_count == 0 -%}
+                {% style %}
+                  .collection-sidebar__group--{{ block.id }} { display: none; }
+                {% endstyle %}
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if block.type == 'menu' -%}
+      <div class="collection-sidebar__group">
+        {%- assign block_title = block.settings.title -%}
+        {%- if block_title == blank -%}
+          {%- assign block_title = linklists[block.settings.menu].title -%}
+        {%- endif -%}
+        {%- include 'collection-sidebar-filter-trigger', title: block_title, index: forloop.index -%}
+        <div
+          id="{{ location }}-{{ forloop.index }}"
+          class="collapsible-content collapsible-content--sidebar{% unless collapsed_state %} is-open{% endunless %}"
+          {% unless collapsed_state %}style="height: auto;"{% endunless %}>
+          <div class="collapsible-content__inner">
+            <ul class="no-bullets tag-list">
+              {%- for link in linklists[block.settings.menu].links -%}
+                <li {% if link.current %}class="tag--active"{% endif %}>
+                  <a href="{{ link.url }}" class="no-ajax">
+                    {{ link.title }}
+                  </a>
+                  {%- if link.links -%}
+                    <ul class="no-bullets tag-list">
+                      {%- for childlink in link.links -%}
+                        <li {% if childlink.current %}class="tag--active"{% endif %}>
+                          <a href="{{ childlink.url }}" class="no-ajax">
+                            {{ childlink.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if block.type == 'subcollections' -%}
+      <div class="collection-sidebar__group">
+        {%- assign block_title = 'collections.filters.categories_title' | t -%}
+        {%- assign title_printed = false -%}
+        {%- for link in linklists.main-menu.links -%}
+          {%- if link.child_active and title_printed == false -%}
+            {%- assign block_title =  link.title -%}
+            {%- assign title_printed = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- include 'collection-sidebar-filter-trigger', title: block_title, index: forloop.index -%}
+        <div
+          id="{{ location }}-{{ forloop.index }}"
+          class="collapsible-content collapsible-content--sidebar{% unless collapsed_state %} is-open{% endunless %}"
+          {% unless collapsed_state %}style="height: auto;"{% endunless %}>
+          <div class="collapsible-content__inner">
+            <ul class="no-bullets tag-list">
+              {%- assign sub_collection_links = link.links -%}
+              {%- assign list_printed = false -%}
+              {%- for link in linklists.main-menu.links -%}
+                {% include 'subcollection-list' %}
+              {%- endfor -%}
+
+              {% unless sub_collection_links.size > 0 %}
+                {% style %}
+                  .collection-sidebar__group--{{ block.id }} { display: none; }
+                {% endstyle %}
+              {% endunless %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endfor -%}

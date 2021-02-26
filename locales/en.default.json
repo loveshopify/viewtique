@@ -1,0 +1,420 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close_modal": "Close (esc)",
+      "close": "Close",
+      "learn_more": "Learn more"
+    },
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "404": {
+      "title": "404 Page Not Found",
+      "subtext_html": "<p>The page you were looking for does not exist. <\/p><p><a href=\"\/\">Continue shopping<\/a><\/p>"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "password_page": {
+      "login_form_heading": "Enter store using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "admin_link_html": "Store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>",
+      "password_link": "Enter using password",
+      "powered_by_shopify_html": " "
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "home_link_title": "Back to the frontpage"
+    },
+    "social": {
+      "share_on_facebook": "Share",
+      "share_on_twitter": "Tweet",
+      "share_on_pinterest": "Pin it",
+      "alt_text": {
+        "share_on_facebook": "Share on Facebook",
+        "share_on_twitter": "Tweet on Twitter",
+        "share_on_pinterest": "Pin on Pinterest"
+      }
+    },
+    "newsletter_form": {
+      "newsletter_email": "Enter your email",
+      "newsletter_confirmation": "Thanks for subscribing",
+      "submit": "Subscribe"
+    },
+    "search": {
+      "view_more": "View more",
+      "pages": "Pages:",
+      "articles": "Articles:",
+      "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
+      "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
+      "title": "Search",
+      "placeholder": "Search our store",
+      "submit": "Search",
+      "result_count": {
+        "one": "{{ count }} result",
+        "other": "{{ count }} results"
+      }
+    },
+    "drawers": {
+      "navigation": "Site navigation",
+      "close_menu": "Close menu",
+      "expand_submenu": "Expand submenu",
+      "collapse_submenu": "Collapse submenu"
+    }
+  },
+  "sections": {
+    "map": {
+      "get_directions": "Get directions",
+      "address_error": "Error looking up that address",
+      "address_no_results": "No results for that address",
+      "address_query_limit_html": "You have exceeded the Google API usage limit. Consider upgrading to a <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Premium Plan<\/a>.",
+      "auth_error_html": "There was a problem authenticating your Google Maps account. Create and enable the <a href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key\">JavaScript API<\/a> and <a href=\"https:\/\/developers.google.com\/maps\/documentation\/geocoding\/get-api-key\">Geocoding API<\/a> permissions of your app."
+    }
+  },
+  "blogs": {
+    "article": {
+      "view_all": "View all",
+      "tags": "Tags",
+      "read_more": "Continue reading",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "My Bag",
+      "remove": "Remove",
+      "note": "Order note",
+      "subtotal": "Subtotal",
+      "discounts": "Discounts",
+      "shipping_at_checkout": "Delivery fee (goes toward anything you purchase) and discount codes applied at checkout.",
+      "update": "Update cart",
+      "checkout": "Check out",
+      "empty": "Your bag is currently empty. Add items from your local boutiques!",
+      "continue_browsing_html": "<a href=\"\/collections\/all\">Take me back to the store!<\/a>",
+      "close_cart": "Close cart",
+      "reduce_quantity": "Reduce item quantity by one",
+      "increase_quantity": "Increase item quantity by one",
+      "orders_processed_in_currency_html": "Orders will be processed in {{ currency }}.",
+      "terms": "I agree with the terms and conditions",
+      "terms_html": "I agree with the <a href='{{ url }}' target='_blank'>terms and conditions<\/a>",
+      "terms_confirm": "You must agree with the terms and conditions of sales to check out"
+    },
+    "label": {
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total"
+    }
+  },
+  "collections": {
+    "general": {
+      "catalog_title": "Catalog",
+      "all_of_collection": "View all",
+      "view_all_products_html": "View all<br>{{ count }} products",
+      "see_more": "Show more",
+      "see_less": "Show less",
+      "no_matches": "Sorry, there are no products in this collection.",
+      "items_with_count": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      }
+    },
+    "sorting": {
+      "title": "Sort"
+    },
+    "filters": {
+      "title_tags": "Filter",
+      "all_tags": "All products",
+      "categories_title": "Categories"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone number",
+      "message": "Message",
+      "send": "Send",
+      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "My account",
+      "details": "Account details",
+      "view_addresses": "View addresses",
+      "return": "Return to account"
+    },
+    "activate_account": {
+      "title": "Activate account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Activate account",
+      "cancel": "Decline invitation"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "default": "Default",
+      "add_new": "Add address",
+      "edit_address": "Edit address",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "company": "Company",
+      "address1": "Address1",
+      "address2": "Address2",
+      "city": "City",
+      "country": "Country",
+      "province": "Province",
+      "zip": "Postal\/Zip code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add address",
+      "update": "Update address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?"
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot password?",
+      "sign_in": "Sign In",
+      "cancel": "Return to Store",
+      "guest_title": "Continue as a guest",
+      "guest_continue": "Continue"
+    },
+    "orders": {
+      "title": "Order History",
+      "order_number": "Order",
+      "date": "Date",
+      "payment_status": "Payment status",
+      "fulfillment_status": "Fulfillment status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet."
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date": "Placed on {{ date }}",
+      "cancelled": "Order cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing address",
+      "payment_status": "Payment status",
+      "shipping_address": "Delivery address",
+      "fulfillment_status": "Fulfillment status",
+      "discount": "Discount",
+      "shipping": "Delivery",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "fulfilled_at": "Fulfilled {{ date }}",
+      "subtotal": "Subtotal"
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "email": "Email",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "subtext": "We will send you an email to reset your password.",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password for {{ email }}",
+      "password": "Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Reset Password"
+    },
+    "register": {
+      "title": "Create Account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create",
+      "cancel": "Return to Store"
+    }
+  },
+  "home_page": {
+    "onboarding": {
+      "product_title": "Example product",
+      "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color,  materials used, sizing, and where it was made.",
+      "collection_title": "Example collection",
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
+    }
+  },
+  "layout": {
+    "cart": {
+      "title": "Cart"
+    },
+    "customer": {
+      "account": "Account",
+      "log_out": "Log out",
+      "log_in": "Log in",
+      "create_account": "Create account"
+    },
+    "footer": {
+      "social_platform": "{{ name }} on {{ platform }}"
+    }
+  },
+  "products": {
+    "general": {
+      "save_html": "Save {{ saved_amount }}",
+      "collection_return": "Back to {{ collection }}",
+      "next_product": "Next: {{ title }}",
+      "sale": "Sale",
+      "sale_price": "Sale price",
+      "regular_price": "Regular price",
+      "from_text_html": "from {{ price }}",
+      "recent_products": "Recently viewed"
+    },
+    "product": {
+      "stock_label": "Only {{ count }} items in stock!",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "quantity": "Quantity",
+      "add_to_cart": "Add to Bag", 
+      "preorder": "Pre-order",
+      "will_not_ship_until": "Will not deliver until {{ date }}",
+      "will_be_in_stock_after": "Will be in stock after {{ date }}",
+      "waiting_for_stock": "Inventory on the way"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title_html": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Here's your gift card!",
+      "disabled": "Disabled",
+      "expired": "Expired on {{ expiry }}",
+      "active": "Expires on {{ expiry }}",
+      "redeem": "Use this code at checkout to redeem your gift card",
+      "shop_link": "Start shopping",
+      "print": "Print",
+      "add_to_apple_wallet": "Add to Apple Wallet"
+    }
+  },
+  "date_formats": {
+    "month_day_year": "%b %d, %Y"
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "continue_to_shipping_method": "Continue to delivery method",
+        "back_to_shipping_method": "Return to delivery",
+        "choose_shipping_method": "Choose a delivery method",
+        "back_to_cart": "Return to your bag",
+        "cart": "Bag"
+      },
+      "contact": {
+        "shipping_address_title": "Delivery address"
+      },
+      "order_summary": {
+        "free_shipping_discount_label": "Free delivery",
+        "discount_requires_customer_notice": "Enter your delivery information to apply the <strong>{{ code }}<\/strong> discount code",
+        "shipping_information_does_not_meet_discount_requirements_notice": "<strong>{{ code }}<\/strong> discount code isn't available for your delivery address",
+        "shipping_label": "Delivery (goes toward anything you purchase)",
+        "shipping_policy_link": "Delivery costs"
+      },
+      "shipping": {
+        "title": "Delivery",
+        "shipping_method_title": "Delivery method",
+        "waiting_on_rate_notice": "Getting available delivery rates....",
+        "no_rates_for_cart_or_destination_notice": "There are no delivery methods for your cart or address",
+        "no_rates_for_country_notice": "We don't deliver to {{ country }}",
+        "please_enter_your_shipping_information_notice": "Please enter your delivery information"
+      },
+      "payment": {
+        "same_billing_address_label": "Same as delivery address"
+      },
+      "field_errors": {
+        "address_country_not_supported": "We don't currently deliver to this country\/region. Please enter another delivery address and try again."
+      },
+      "thank_you": {
+        "shipping_information_title": "Delivery information",
+        "shipping_address_title": "Delivery address",
+        "shipping_address_map_title": "Google map displaying pin point of delivery address: {{ address }}",
+        "shipping_method_title": "Delivery method",
+        "order_status_updates_with_email": "You'll get delivery updates by email",
+        "order_status_updates_with_phone": "You'll get delivery updates by text",
+        "order_status_updates_with_email_and_phone": "You'll get delivery updates by email and text",
+        "order_status_updates_with_missing": "Choose how you want to get delivery updates",
+        "marker": {
+          "shipping": "Delivery address",
+          "current": "Current delivery location"
+        },
+        "order_updates_description_missing": "You are not receiving delivery updates",
+        "order_updates_subscribe_to_email_notifications": "Get delivery updates by email",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Get delivery updates by email or text",
+        "order_updates_subscribe_to_phone_notifications": "Get delivery updates by text",
+        "confirmed_description": "We've accepted your order, and we're getting it ready. Come back to this page for updates on your delivery status.",
+        "no_tracking_number": "There is no tracking number for this delivery",
+        "unfulfilled_items_title": "Preparing for delivery",
+        "unfulfilled_items_description": "We are currently preparing these items for delivery",
+        "fulfillment": {
+          "unfulfilled_table_title": "Items preparing for delivery",
+          "fulfilled_table_title": "Items in this order"
+        },
+        "in_transit_title": "Your delivery is on its way",
+        "in_transit_description": "Come back to this page for updates on your delivery status",
+        "out_for_delivery_title": "Your order is out for delivery",
+        "out_for_delivery_description_html": "It's on the delivery truck, expect it to arrive today.",
+        "attempted_delivery_title": "An attempt was made to deliver your order",
+        "attempted_delivery_description_html": "An attempt was made to deliver your order, please contact us.",
+        "failed_title": "Your order couldn't be delivered",
+        "delivered_title": "Your order has been delivered",
+        "delivered_description_html": "Your order has been delivered. Thank you",
+        "pick_up_in_store_marker": {
+          "current": "Current delivery location"
+        },
+        "track_shipment": "Track delivery"
+      },
+      "review": {
+        "blocks": {
+          "shipping_address_title": "Deliver to",
+          "change_shipping_address_link_label": "Change delivery address",
+          "change_shipping_method_link_label": "Change delivery method"
+        }
+      },
+      "shop_policies": {
+        "shipping_policy": "Delivery policy"
+      },
+      "delivery_options": {
+        "ship": "Deliver"
+      }
+    },
+    "notices": {
+      "cart": {
+        "shipping_address_not_required": "This cart does not require delivery",
+        "shipping_address_invalid": "There was a problem calculating your delivery rates, please check your delivery address."
+      }
+    },
+    "links": {
+      "powered_by_shopify": " "
+    }
+  }
+}

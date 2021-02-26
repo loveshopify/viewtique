@@ -1,0 +1,24 @@
+{%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
+
+{% case section.settings.recent_count %}
+{% when 2 %}
+  {%- assign grid_item_width = 'medium-up--one-half' -%}
+{% when 3 %}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
+{% when 4 %}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+{% when 6 %}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-sixth' -%}
+{% when 8 %}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+{% endcase %}
+
+<div
+  data-subsection
+  data-section-id="{{ section.id }}"
+  data-section-type="recently-viewed"
+  data-product-handle="{{ product.handle }}"
+  data-recent-count="{{ section.settings.recent_count }}"
+  data-grid-item-class="{{ grid_item_width }}">
+  <div id="RecentlyViewed-{{ section.id }}"></div>
+</div>

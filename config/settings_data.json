@@ -1,0 +1,4657 @@
+{
+  "current": {
+    "color_body_bg": "#ffffff",
+    "color_body_text": "#000000",
+    "color_price": "#1c1d1d",
+    "color_savings_text": "#ff4e4e",
+    "color_borders": "#e8e8e1",
+    "color_button": "#111111",
+    "color_button_text": "#fff",
+    "color_cart_dot": "#ff4f33",
+    "color_small_image_bg": "#fff",
+    "color_large_image_bg": "#0f0f0f",
+    "color_header": "#fff",
+    "color_header_text": "#000",
+    "color_announcement": "#0f0f0f",
+    "color_announcement_text": "#fff",
+    "color_footer": "#ffffff",
+    "color_footer_text": "#000000",
+    "color_drawer_background": "#ffffff",
+    "color_drawer_text": "#000000",
+    "color_drawer_border": "#e8e8e1",
+    "color_drawer_button": "#111111",
+    "color_drawer_button_text": "#ffffff",
+    "color_modal_overlays": "#e6e6e6",
+    "color_image_text": "#ffffff",
+    "color_image_overlay": "#ffffff",
+    "color_image_overlay_opacity": 0,
+    "color_image_overlay_text_shadow": 0,
+    "type_header_font_family": "tiemann_n4",
+    "type_header_spacing": "0",
+    "type_header_base_size": 38,
+    "type_header_line_height": 1,
+    "type_header_capitalize": true,
+    "type_headers_align_text": true,
+    "type_base_font_family": "futura_n4",
+    "type_base_spacing": "0",
+    "type_base_size": 16,
+    "type_base_line_height": 1.4,
+    "type_body_align_text": false,
+    "type_navigation_style": "body",
+    "type_navigation_size": 13,
+    "type_navigation_capitalize": true,
+    "type_product_style": "body",
+    "type_product_capitalize": true,
+    "type_collection_font": "body",
+    "type_collection_size": 18,
+    "button_style": "square",
+    "icon_weight": "2px",
+    "icon_linecaps": "miter",
+    "vendor_enable": true,
+    "sku_enable": false,
+    "quantity_enable": false,
+    "variant_labels_enable": true,
+    "variant_type": "button",
+    "enable_payment_button": false,
+    "inventory_enable": true,
+    "inventory_threshold": 10,
+    "inventory_transfers_enable": false,
+    "product_save_amount": true,
+    "product_save_type": "dollar",
+    "product_zoom_enable": true,
+    "quick_shop_enable": true,
+    "quick_shop_text": "Quick view",
+    "product_grid_image_size": "portrait",
+    "product_hover_image": true,
+    "product_color_swatches": false,
+    "collection_color_swatches": false,
+    "swatch_style": "round",
+    "product_video_width": "960",
+    "product_video_height": "1280",
+    "product_video_style": "unmuted",
+    "trust_image": "",
+    "product_content_1": "",
+    "product_content_collapse_1": true,
+    "product_content_2": "",
+    "product_content_collapse_2": true,
+    "product_content_3": "",
+    "product_content_collapse_3": true,
+    "product_contact": false,
+    "product_contact_title": "Ask a question",
+    "product_contact_show_phone": true,
+    "enable_product_reviews": false,
+    "reviews_layout": "expandable",
+    "collection_grid_style": "overlaid-box",
+    "collection_grid_shape": "landscape",
+    "collection_grid_image": "collection",
+    "collection_grid_text_align": "center",
+    "collection_grid_tint": "#000000",
+    "collection_grid_opacity": 10,
+    "collection_grid_gutter": true,
+    "cart_type": "drawer",
+    "cart_additional_buttons": false,
+    "cart_notes_enable": false,
+    "cart_terms_conditions_enable": false,
+    "cart_terms_conditions_link": "",
+    "enable_currencies": false,
+    "currency_format": "money_format",
+    "supported_currencies": "USD CAD INR GBP AUD EUR JPY",
+    "social_facebook_link": "https:\/\/www.facebook.com\/ShopViewtique\/?ref=bookmarks",
+    "social_twitter_link": "https:\/\/twitter.com\/Viewtique",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/viewtique.shop\/",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_linkedin_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "homepage_social_image": "shopify:\/\/shop_images\/social_share.jpg",
+    "favicon": "shopify:\/\/shop_images\/Viewtique.png",
+    "search_enable": true,
+    "search_type": "product",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "predictive_image_size": "square",
+    "show_breadcrumbs": false,
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Viewtique-logo-black-8.8.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#111111",
+    "checkout_button_color": "#111111",
+    "checkout_error_color": "#ff6d6d",
+    "breadcrumb": true,
+    "sections": {
+      "header": {
+        "type": "header",
+        "blocks": {
+          "1524770014057": {
+            "type": "logo",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/Viewtique-logo-black-8.8.png",
+              "logo-inverted": "",
+              "desktop_logo_width": 210,
+              "mobile_logo_width": 110
+            }
+          },
+          "1524770292306": {
+            "type": "announcement",
+            "settings": {
+              "text": "Discover & Shop Northern Indiana Boutiques",
+              "link_text": "How it works",
+              "link": "shopify:\/\/pages\/how"
+            }
+          }
+        },
+        "block_order": [
+          "1524770014057",
+          "1524770292306"
+        ],
+        "settings": {
+          "main_menu_link_list": "main-menu",
+          "mega_menu_images": true,
+          "main_menu_alignment": "center",
+          "header_style": "sticky",
+          "sticky_index": false,
+          "sticky_collection": false,
+          "toolbar_menu": "",
+          "toolbar_social": false,
+          "announcement_compact": true,
+          "announcement_above_header": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1575930650150": {
+            "type": "menu",
+            "settings": {
+              "show_footer_title": true,
+              "menu": "about-the-boutiques",
+              "container_width": 20
+            }
+          },
+          "1494301487049": {
+            "type": "menu",
+            "settings": {
+              "show_footer_title": true,
+              "menu": "footer",
+              "container_width": 18
+            }
+          },
+          "1576086622902": {
+            "type": "menu",
+            "settings": {
+              "show_footer_title": true,
+              "menu": "careers",
+              "container_width": 19
+            }
+          },
+          "1494292487693": {
+            "type": "newsletter",
+            "settings": {
+              "show_footer_title": true,
+              "title": "Recieve updates",
+              "text": "<p>Subscribe to get special offers and&nbsp;updates on when new boutiques are live!<\/p>",
+              "container_width": 28
+            }
+          }
+        },
+        "block_order": [
+          "1575930650150",
+          "1494301487049",
+          "1576086622902",
+          "1494292487693"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "show_copyright": true,
+          "copyright_text": ""
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "description_position": "top",
+          "subcollection_style": "none",
+          "subcollections_per_row": 5,
+          "enable_collection_count": true,
+          "per_row": 4,
+          "rows_per_page": 14,
+          "mobile_flush_grid": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "image_position": "left",
+          "image_size": "medium",
+          "thumbnail_position": "beside",
+          "thumbnail_arrows": true,
+          "description_style": "default",
+          "social_enable": true
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "image_hero": false,
+          "blog_show_tags": true,
+          "blog_show_date": true,
+          "blog_show_comments": true,
+          "blog_show_author": false,
+          "social_sharing_blog": true
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "blog_show_tag_filter": true,
+          "blog_show_rss": false,
+          "blog_show_tags": true,
+          "blog_show_date": true,
+          "blog_show_comments": true,
+          "blog_show_author": false,
+          "blog_show_excerpt": false,
+          "blog_image_size": "wide"
+        }
+      },
+      "product-sections-template": {
+        "type": "product-sections-template",
+        "blocks": {
+          "product-image-row": {
+            "type": "image-row",
+            "settings": {
+              "image_1": "",
+              "image_1_link": "",
+              "image_2": "",
+              "image_2_link": "",
+              "image_3": "",
+              "image_3_link": "",
+              "image_4": "",
+              "image_4_link": "",
+              "enable_gutter": false,
+              "enable_zoom": true
+            }
+          },
+          "product-text-and-image": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "",
+              "image_width": 500,
+              "subtitle": "Improved",
+              "title": "Image with text",
+              "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+              "button_label": "Optional button",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "product-background-image-text": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "Impressive",
+              "title": "Large image with text box",
+              "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "image": "",
+              "alignment": "center",
+              "color_border": "#f4f4f4",
+              "layout": "right",
+              "height": 550,
+              "parallax": true
+            }
+          },
+          "product-text-columns": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": true,
+              "image_1": "",
+              "image_width_1": 650,
+              "title_1": "Example title",
+              "text_1": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "",
+              "image_width_2": 650,
+              "title_2": "Example title",
+              "text_2": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": true,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "Example title",
+              "text_3": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "product-hero-video": {
+            "type": "hero-video",
+            "settings": {
+              "title": "Bring your\nbrand to life.",
+              "title_size": 80,
+              "subheading": "Seamless hero videos",
+              "link_text": "Optional button",
+              "link": "",
+              "text_align": "vertical-bottom horizontal-left",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+              "section_height": "650px",
+              "mobile_height": "auto"
+            }
+          }
+        },
+        "block_order": [
+          "product-image-row",
+          "product-text-and-image",
+          "product-background-image-text",
+          "product-text-columns",
+          "product-hero-video"
+        ],
+        "settings": {
+          "image_position": "right",
+          "image_size": "medium",
+          "thumbnail_position": "beside",
+          "thumbnail_arrows": false,
+          "description_style": "default",
+          "social_enable": true,
+          "collection_links_enable": true
+        }
+      },
+      "page-sections-template": {
+        "type": "page-sections-template",
+        "blocks": {
+          "page-text-columns": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": true,
+              "image_1": "shopify:\/\/shop_images\/IMG_5114-3-01.jpg",
+              "image_width_1": 650,
+              "title_1": "1. Browse & Book",
+              "text_1": "<p>Find items &amp; choose date and time of at-home try-on&nbsp;at checkout.&nbsp;&nbsp;<\/p>",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/new_bd50a505-1df3-45bc-9068-84a0e16ab307.jpg",
+              "image_width_2": 650,
+              "title_2": "2. We Deliver",
+              "text_2": "<p>Pay $0 for items up front!&nbsp;The $20 delivery fee goes toward anything you purchase.<\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": true,
+              "image_3": "shopify:\/\/shop_images\/IMG_5009_08de02f4-d4a9-4bf0-8de8-9723a6cfbdda.jpg",
+              "image_width_3": 650,
+              "title_3": "3. Try on at home",
+              "text_3": "<p>Try on your items and <strong>only pay for what you love<\/strong>. We'll come pick up everything else!<\/p>",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "1576468597789": {
+            "type": "rich-text",
+            "settings": {
+              "title": "",
+              "text": "<p><a href=\"\/pages\/f-a-q\" title=\"F.A.Q.\">Have questions? Visit our FAQ page.<\/a><\/p>",
+              "align_text": "center",
+              "narrow_column": true,
+              "enlarge_text": true
+            }
+          },
+          "page-background-image-text": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "The easiest way to",
+              "title": "Shop Local",
+              "text": "<p>Northern Indiana Fashion Boutiques<\/p>",
+              "button_label": "Shop All",
+              "button_link": "shopify:\/\/collections\/view-all-items",
+              "image": "shopify:\/\/shop_images\/IMG_4934-2.jpg",
+              "alignment": "top",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 450,
+              "parallax": true
+            }
+          }
+        },
+        "block_order": [
+          "page-text-columns",
+          "1576468597789",
+          "page-background-image-text"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "newsletter-popup": {
+        "type": "newsletter-popup",
+        "settings": {
+          "mode": "enabled",
+          "popup_seconds": 50,
+          "popup_days": 7,
+          "popup_title": "How It works",
+          "popup_image": "shopify:\/\/shop_images\/new_bd50a505-1df3-45bc-9068-84a0e16ab307.jpg",
+          "popup_text": "<p>Order from one or multiple boutiques in same order.<br>We deliver same day for you to try on. Only pay for what you love.<br><strong>Bonus:<\/strong> $20 delivery fee goes toward your purchase!<\/p>",
+          "close_text": "Continue Shopping",
+          "enable_newsletter": false,
+          "button_label": "Learn More",
+          "button_link": "shopify:\/\/pages\/how",
+          "enable_button": true
+        }
+      },
+      "1524769873765": {
+        "type": "slideshow",
+        "disabled": true,
+        "blocks": {
+          "1575423175583": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "The easiest way to",
+              "title": "Shop Local",
+              "title_size": 80,
+              "subheading": "Northern Indiana Fashion Boutiques",
+              "link": "shopify:\/\/pages\/how",
+              "link_text": "How it Works",
+              "link_2": "shopify:\/\/collections",
+              "link_text_2": "shop all",
+              "color_accent": "#000000",
+              "text_align": "vertical-center horizontal-left",
+              "image": "shopify:\/\/shop_images\/Untitled-8.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1576249876134": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "The easiest way to",
+              "title": "Shop Local",
+              "title_size": 80,
+              "subheading": "Northern Indiana Boutiques",
+              "link": "",
+              "link_text": "Shop All",
+              "link_2": "shopify:\/\/collections",
+              "link_text_2": "",
+              "color_accent": "#000000",
+              "text_align": "vertical-center horizontal-left",
+              "image": "shopify:\/\/shop_images\/Inspire-Me-Cover.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1576250550979": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "The easiest way to",
+              "title": "Shop Local",
+              "title_size": 80,
+              "subheading": "Northern Indiana Boutiques",
+              "link": "shopify:\/\/collections",
+              "link_text": "Shop All",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#000000",
+              "text_align": "vertical-center horizontal-left",
+              "image": "shopify:\/\/shop_images\/Cambria_cover-01.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1576250806405": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "The easiest way to",
+              "title": "Shop Local",
+              "title_size": 80,
+              "subheading": "Northern Indiana Boutiques",
+              "link": "",
+              "link_text": "Shop All",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#000000",
+              "text_align": "vertical-center horizontal-left",
+              "image": "shopify:\/\/shop_images\/Unity-cover.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1576251336524": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "A New Way to",
+              "title": "Shop\nLocal",
+              "title_size": 80,
+              "subheading": "Northern Indiana Boutiques",
+              "link": "shopify:\/\/collections",
+              "link_text": "Shop All",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#000000",
+              "text_align": "vertical-center horizontal-left",
+              "image": "shopify:\/\/shop_images\/TS-cover.jpg",
+              "focal_point": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1575423175583",
+          "1576249876134",
+          "1576250550979",
+          "1576250806405",
+          "1576251336524"
+        ],
+        "settings": {
+          "section_height": "550px",
+          "mobile_height": "300px",
+          "parallax": false,
+          "style": "bars",
+          "autoplay": true,
+          "autoplay_speed": 5
+        }
+      },
+      "collection-header": {
+        "type": "collection-header",
+        "settings": {
+          "enable": true,
+          "collection_image_enable": true,
+          "parallax": true
+        }
+      },
+      "collection-sidebar": {
+        "type": "collection-sidebar",
+        "blocks": {
+          "1524772785241": {
+            "type": "subcollections",
+            "settings": {
+              "enable_subsubcollections": true,
+              "enable_count": false,
+              "collapsed": true
+            }
+          },
+          "1524772580942": {
+            "type": "tags_all",
+            "settings": {
+              "title": "Type",
+              "collapsed": false
+            }
+          }
+        },
+        "block_order": [
+          "1524772785241",
+          "1524772580942"
+        ],
+        "settings": {
+          "enable_sidebar": true,
+          "filter_style": "sidebar",
+          "tags_combine": true,
+          "enable_sort": true
+        }
+      },
+      "1526068199595": {
+        "type": "instagram",
+        "settings": {
+          "title": "",
+          "username": "@Viewtique.Shop",
+          "client_id": "8040440453.2a46ab3.9c2dc79693f747bba2e7f5f5f579051f",
+          "count": "1",
+          "full_width": true,
+          "divider": false
+        }
+      },
+      "collection-promotions": {
+        "type": "collection-promotions",
+        "blocks": {
+          "1526403837307": {
+            "type": "banner",
+            "settings": {
+              "promo_collection": "unity-boutique",
+              "heading": "",
+              "text": "",
+              "link": "shopify:\/\/pages\/about-unity-boutique",
+              "label": "About",
+              "image": "shopify:\/\/shop_images\/Logo_Unity_Boutique_360x_56180c0d-3687-4177-90f7-e6de858c91c1.jpg",
+              "color_tint": "#ffafaf",
+              "color_tint_opacity": 12,
+              "framed": false
+            }
+          },
+          "1576101974428": {
+            "type": "banner",
+            "settings": {
+              "promo_collection": "cambria-boutique",
+              "heading": "",
+              "text": "",
+              "link": "shopify:\/\/pages\/about-cambria-boutique",
+              "label": "About",
+              "image": "shopify:\/\/shop_images\/Cambria_Boutique_Logo.png",
+              "color_tint": "#1a5648",
+              "color_tint_opacity": 6,
+              "framed": false
+            }
+          },
+          "1576102435778": {
+            "type": "banner",
+            "settings": {
+              "promo_collection": "the-twisted-string-elkhart-in",
+              "heading": "",
+              "text": "",
+              "link": "shopify:\/\/pages\/about-the-twisted-string",
+              "label": "About",
+              "image": "shopify:\/\/shop_images\/ts.jpg",
+              "color_tint": "#93663f",
+              "color_tint_opacity": 8,
+              "framed": false
+            }
+          },
+          "1576102928498": {
+            "type": "banner",
+            "settings": {
+              "promo_collection": "inspire-me",
+              "heading": "",
+              "text": "",
+              "link": "shopify:\/\/pages\/about-inspire-me",
+              "label": "About",
+              "image": "shopify:\/\/shop_images\/Inspire_Me_South_Bend_IN_Logo.jpg",
+              "color_tint": "#fd0094",
+              "color_tint_opacity": 6,
+              "framed": false
+            }
+          },
+          "1576104257990": {
+            "type": "banner",
+            "settings": {
+              "promo_collection": "ali-on-the-boulevard",
+              "heading": "",
+              "text": "",
+              "link": "shopify:\/\/pages\/about-ali-on-the-boulevard",
+              "label": "About",
+              "image": "shopify:\/\/shop_images\/Ali_On_The_Boulevard_South_Bend_IN.png",
+              "color_tint": "#709a6a",
+              "color_tint_opacity": 14,
+              "framed": false
+            }
+          },
+          "1582123213906": {
+            "type": "banner",
+            "settings": {
+              "promo_collection": "satori-boutique",
+              "heading": "",
+              "text": "",
+              "link": "shopify:\/\/pages\/about-satori-boutique",
+              "label": "About",
+              "image": "shopify:\/\/shop_images\/logo_771cab7d-dbb6-43f4-97ee-5af9eaa8815b.png",
+              "color_tint": "#cbabee",
+              "color_tint_opacity": 10,
+              "framed": false
+            }
+          },
+          "1582123394874": {
+            "type": "banner",
+            "settings": {
+              "promo_collection": "morning-willow-boutique",
+              "heading": "",
+              "text": "",
+              "link": "shopify:\/\/pages\/about-morning-willow-boutique",
+              "label": "About",
+              "image": "shopify:\/\/shop_images\/New_Morning_Willow_Logo_250x_2x_1a351dee-2e62-4724-840b-ebfc8c7307b7.jpeg",
+              "color_tint": "#95b9a4",
+              "color_tint_opacity": 14,
+              "framed": false
+            }
+          }
+        },
+        "block_order": [
+          "1526403837307",
+          "1576101974428",
+          "1576102435778",
+          "1576102928498",
+          "1576104257990",
+          "1582123213906",
+          "1582123394874"
+        ],
+        "settings": {
+          "gutter_size": 20
+        }
+      },
+      "footer-promotions": {
+        "type": "footer-promotions",
+        "settings": {
+          "hide_homepage": true,
+          "image_size": "wide"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "product_recommendations_heading": "You may also like",
+          "related_count": 5
+        }
+      },
+      "recently-viewed": {
+        "type": "recently-viewed",
+        "settings": {
+          "show_section": true,
+          "recent_count": 5
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "",
+          "desktop_logo_height": 100,
+          "mobile_logo_height": 60
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "title": "Opening Soon",
+          "newsletter_enable": true,
+          "newsletter_heading": "<p>Get notified when we launch<\/p>",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Submit",
+          "show_share_buttons": true,
+          "show_image": true,
+          "image": ""
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "1576180368573": {
+            "type": "collection",
+            "settings": {
+              "collection": "ali-on-the-boulevard"
+            }
+          },
+          "1576180404281": {
+            "type": "collection",
+            "settings": {
+              "collection": "cambria-boutique"
+            }
+          },
+          "1576180440969": {
+            "type": "collection",
+            "settings": {
+              "collection": "inspire-me"
+            }
+          },
+          "1576180379598": {
+            "type": "collection",
+            "settings": {
+              "collection": "the-twisted-string-elkhart-in"
+            }
+          },
+          "1576180450730": {
+            "type": "collection",
+            "settings": {
+              "collection": "unity-boutique"
+            }
+          }
+        },
+        "block_order": [
+          "1576180368573",
+          "1576180404281",
+          "1576180440969",
+          "1576180379598",
+          "1576180450730"
+        ],
+        "settings": {
+          "title_enable": false,
+          "display_type": "selected",
+          "sort": "alphabetical",
+          "grid": "2"
+        }
+      },
+      "1575492564938": {
+        "type": "logo-list",
+        "blocks": {
+          "1575492564938-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Ali_On_The_Boulevard_South_Bend_IN.png",
+              "link": "shopify:\/\/collections\/ali-on-the-boulevard"
+            }
+          },
+          "1575492564938-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Cambria_Boutique_Logo.png",
+              "link": "shopify:\/\/collections\/cambria-boutique"
+            }
+          },
+          "1575492564938-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Inspire_Me_South_Bend_IN_Logo.jpg",
+              "link": "shopify:\/\/collections\/inspire-me"
+            }
+          },
+          "1581804783922": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/New_Morning_Willow_Logo_250x_2x_1a351dee-2e62-4724-840b-ebfc8c7307b7.jpeg",
+              "link": "shopify:\/\/collections\/morning-willow-boutique"
+            }
+          },
+          "1582124025175": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo_771cab7d-dbb6-43f4-97ee-5af9eaa8815b.png",
+              "link": ""
+            }
+          },
+          "1575492641047": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/The_Twisted_String_Logo.png",
+              "link": "shopify:\/\/collections\/the-twisted-string-elkhart-in"
+            }
+          }
+        },
+        "block_order": [
+          "1575492564938-0",
+          "1575492564938-1",
+          "1575492564938-2",
+          "1581804783922",
+          "1582124025175",
+          "1575492641047"
+        ],
+        "settings": {
+          "title": "Our Northern Indiana Boutique Partners",
+          "logo_opacity": 100,
+          "divider": false
+        }
+      },
+      "1575493714669": {
+        "type": "testimonials",
+        "blocks": {
+          "1575493714669-0": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p>Incredible customer service. The same day delivery for the At-Home Try-On is an awesome feature. I have been looking for alternate ways to shop online but still get the boutique&nbsp;feel.<\/p>\n<p><\/p>\n<p><\/p>",
+              "image": "shopify:\/\/shop_images\/72479502_10214841257362110_1510921206415491072_n_9dbdd619-48c6-4c70-afad-41700e91050c.jpg",
+              "author": "Jessica | South Bend, IN"
+            }
+          },
+          "1580420089852": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p>Alex&nbsp;and I had so much fun shopping from our apartment! Game changer for helping me be successful in my goal to only shop local! I loved my experience, definitely worth trying!<\/p>\n<p><\/p>",
+              "image": "shopify:\/\/shop_images\/61607728_10157084566912332_2486190528513703936_n.jpg",
+              "author": "Iris | South Bend, IN"
+            }
+          },
+          "1580576958443": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p><span style=\"text-decoration: none;\">My new favorite&nbsp;shopping option for my wonderfully full life! So great to have my items and perfect recommendations (made by boutique owners)&nbsp;arrive at my house same day!<\/span><\/p>",
+              "image": "shopify:\/\/shop_images\/83488112_10158163351912608_6334509877456535552_n.jpg",
+              "author": "Elizabeth | Mishawaka, IN"
+            }
+          },
+          "1575493714669-1": {
+            "type": "testimonial",
+            "settings": {
+              "testimonial": "<p>Items from all of my favorite boutiques brought to me...so convenient! I kept 7 out of the 10 items they brought. They were so nice and organized. I'll definitely use Viewtique going forward!<\/p>",
+              "image": "shopify:\/\/shop_images\/angie_fe00028e-b18d-4fbf-91bc-7994d4e5aa9a.jpg",
+              "author": "Angie | Elkhart, IN"
+            }
+          }
+        },
+        "block_order": [
+          "1575493714669-0",
+          "1580420089852",
+          "1580576958443",
+          "1575493714669-1"
+        ],
+        "settings": {
+          "title": "What Shoppers are saying ...",
+          "align_text": "center",
+          "round_images": true,
+          "divider": false
+        }
+      },
+      "1575493843207": {
+        "type": "text-columns",
+        "disabled": true,
+        "blocks": {
+          "1575493843207-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Ali_On_The_Boulevard.png",
+              "image_width": 650,
+              "title": "Ali on the Boulevard",
+              "text": "<p>A women&rsquo;s jewelry, clothing and gift boutique on Jefferson Blvd. near downtown South Bend for the gal on the go or something sweet for cutie next door!<\/p>",
+              "button_label": "Shop",
+              "button_link": ""
+            }
+          },
+          "1575493843207-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Cambria_Boutique.png",
+              "image_width": 650,
+              "title": "Cambria Boutique",
+              "text": "<p>A boho-chic boutique in the heart of South Bend&rsquo;s Emporium building. Everything from seasonally styled apparel and footwear to gifts and home decor!<\/p>",
+              "button_label": "Shop",
+              "button_link": ""
+            }
+          },
+          "1575493843207-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Inspire_Me.png",
+              "image_width": 650,
+              "title": "Inspire Me Boutique",
+              "text": "<p>Vintage meets classic and contemporary styling at this historic landmark on Colfax, featuring over 50 coveted American and European brands.<\/p>",
+              "button_label": "Shop",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1575493843207-0",
+          "1575493843207-1",
+          "1575493843207-2"
+        ],
+        "settings": {
+          "title": "Shop by Boutique",
+          "align_text": "center",
+          "divider": false
+        }
+      },
+      "1575494200423": {
+        "type": "text-columns",
+        "disabled": true,
+        "blocks": {
+          "1575494200423-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/DSCN3005_dbe94cec-9225-448e-b3fb-0341da56337d.jpg",
+              "image_width": 650,
+              "title": "The Twisted String",
+              "text": "<p>Rocking a late 1800&rsquo;s textile mill aesthetic in the heart of downtown Elkhart, The Twisted String&nbsp;features vibrant, edgy clothing from big name brands.<\/p>",
+              "button_label": "Shop",
+              "button_link": ""
+            }
+          },
+          "1575494200423-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Unity_Boutique.png",
+              "image_width": 650,
+              "title": "Unity Boutique",
+              "text": "<p>Unity Boutique offers eco-friendly, fair-trade, organic, USA made fashions, and accessories. Conveniently located in Granger's Heritage Square.<\/p>",
+              "button_label": "Shop",
+              "button_link": ""
+            }
+          },
+          "1575494631924": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": false,
+              "image": "",
+              "image_width": 650,
+              "title": "",
+              "text": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1575494200423-0",
+          "1575494200423-1",
+          "1575494631924"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "center",
+          "divider": false
+        }
+      },
+      "1575499177073": {
+        "type": "text-columns",
+        "disabled": true,
+        "blocks": {
+          "1575499177073-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Value_Props_for_homepage_12.4-01.jpg",
+              "image_width": 180,
+              "title": "",
+              "text": "<p><strong>1. Find up to 10 items<\/strong> on Viewtique.com that you'd like to try on&nbsp;at home before you buy!<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "1575499177073-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Value_Props_for_homepage_12.4-02.jpg",
+              "image_width": 180,
+              "title": "",
+              "text": "<p><strong>2. We bring you the items<\/strong> to try on at home same-day for $20 that goes toward your purchase!<\/p>",
+              "button_label": "FAQ",
+              "button_link": ""
+            }
+          },
+          "1575499177073-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "image": "shopify:\/\/shop_images\/Value_Props_for_homepage_12.4-03.jpg",
+              "image_width": 180,
+              "title": "",
+              "text": "<p><strong>3. Try on!<\/strong> Once you've tried it all on, you&nbsp;can buy what you&nbsp;love and we&rsquo;ll pick up the rest.<\/p>",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1575499177073-0",
+          "1575499177073-1",
+          "1575499177073-2"
+        ],
+        "settings": {
+          "title": "How it Works",
+          "align_text": "center",
+          "divider": false
+        }
+      },
+      "page-sections-about-template": {
+        "type": "page-sections-about-template",
+        "blocks": {
+          "1576455570775": {
+            "type": "image-hero",
+            "settings": {
+              "parallax": true,
+              "title": "About",
+              "title_size": 100,
+              "subheading": "",
+              "link": "",
+              "link_text": "",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "rgba(0,0,0,0)",
+              "text_align": "vertical-center horizontal-left",
+              "image": "shopify:\/\/shop_images\/Untitled-6_870d007c-eea6-42f3-b852-c17e9da56d27.jpg",
+              "focal_point": "80% 50%",
+              "section_height": "450px",
+              "mobile_height": "250px"
+            }
+          },
+          "1576367265835": {
+            "type": "rich-text",
+            "settings": {
+              "title": "Who We Are",
+              "text": "<p>We're a small team based in&nbsp;<strong>South Bend, Indiana<\/strong> that deeply believes in the power of local fashion. Each time you shop a local boutique, you experience the thousands&nbsp;of hours of sourcing,&nbsp;curation, expert styling, and love that each boutique owner has poured into mastering their&nbsp;craft to deliver you an unparalleled shopping experience.<\/p>\n<p><\/p>\n<p>Viewtique is dedicated to making your local boutiques more accessible so that you may conveniently and more routinely experience the quality, the uniqueness, and the personal touch that you deserve.<\/p>",
+              "align_text": "center",
+              "narrow_column": true,
+              "enlarge_text": true
+            }
+          },
+          "1575909476738": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/handoff_2.jpg",
+              "image_width": 500,
+              "subtitle": "",
+              "title": "What we do",
+              "text": "<p>We bring your local fashion boutiques to you! For<strong>&nbsp;$20 that goes toward your purchase<\/strong><em>,<\/em> we'll bring you items to try on same-day. Once you try everything on,&nbsp;only buy what you love and we'll pick up the rest!<\/p>\n<p>We currently offer this service for boutiques and shoppers in <strong>Northern Indiana.<\/strong><\/p>",
+              "button_label": "How it works",
+              "button_link": "shopify:\/\/pages\/how",
+              "layout": "left"
+            }
+          },
+          "1576454256217": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_4097-2.jpg",
+              "image_width": 500,
+              "subtitle": "",
+              "title": "What We Believe",
+              "text": "<p>We believe in the&nbsp;beautiful side of fashion, which is most frequently found in local fashion boutiques. This is the side of fashion that encourages you to be yourself - to dress yourself in the way that you want to be seen, heard, felt, and viewed. At the same time, it dares you to find new sides of yourself by trying things you've never tried, wearing things you've never worn, and deciding for yourself who you are and who you want to be.<\/p>\n<p><\/p>\n<p>Shopping your local boutiques is&nbsp;inherently a place of self-reflection and self-discovery, where you both reinforce the woman you are while discovering new possibilities with the help of genuine professionals.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/view-all-items",
+              "layout": "right"
+            }
+          }
+        },
+        "block_order": [
+          "1576455570775",
+          "1576367265835",
+          "1575909476738",
+          "1576454256217"
+        ],
+        "settings": {
+          "page_title_enable": false,
+          "page_content_enable": true
+        }
+      },
+      "page-faq-template": {
+        "type": "page-faq-template",
+        "blocks": {
+          "1575914342901": {
+            "type": "rich-text",
+            "settings": {
+              "title": "The Basics",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1575915436415": {
+            "type": "question",
+            "settings": {
+              "title": "What is Viewtique?",
+              "text": "<p>Viewtique is one website&nbsp;to shop your local Northern Indiana fashion boutiques. Order from one or multiple boutiques in the same order. All items ordered through Viewtique are delivered (by us!) to you at your requested date and time to try on before you buy. Only pay for what you love! We'll&nbsp;bring&nbsp;back anything that you don't want to keep!<\/p>"
+            }
+          },
+          "1575916025101": {
+            "type": "question",
+            "settings": {
+              "title": "How do I use Viewtique?",
+              "text": "<p>1.&nbsp;<strong>Browse &amp; Checkout:&nbsp;<\/strong>Find items from one or multiple Northern Indiana boutiques &amp; add them to your bag. In your bag, before checking out, choose date and time&nbsp;to try items on at home before buying.<\/p>\n<p><em>Pay $0 for items up front!&nbsp;A flat $20 delivery fee goes toward anything you purchase.<\/em><\/p>\n<p>2.&nbsp;<strong>We Deliver Your Items to Try On:<\/strong>&nbsp;A friendly member of our team will deliver your items! Take your time trying your items on and layering them into your current wardrobe.<\/p>\n<p>3.<strong>&nbsp;Only&nbsp;Pay For What You Love: <\/strong>We'll&nbsp;return at the time you specify to pick up anything from you that you don't want to keep. Only pay for what you love!<\/p>"
+            }
+          },
+          "1575914285505": {
+            "type": "rich-text",
+            "settings": {
+              "title": "Payment",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1575917144100": {
+            "type": "question",
+            "settings": {
+              "title": "What is the delivery fee?",
+              "text": "<p>Upon ordering your styles to try on at home with Viewtique, there is a $20 delivery fee. <strong>This&nbsp;$20 goes toward any items you decide to purchase&nbsp;after your At-Home Try-On.<\/strong> There are no other service or convenience fees.<\/p>"
+            }
+          },
+          "1575917401143": {
+            "type": "question",
+            "settings": {
+              "title": "When will I be charged for the items I order for my At-Home Try-On?",
+              "text": "<p>Your card will not be charged for any of the items you order&nbsp;on Viewtique.com until <em>after<\/em> your&nbsp;At-Home Try-On,&nbsp;when you decide which items you would like to keep. We&nbsp;will determine what you kept and what you sent back, and&nbsp;then&nbsp;you'll only be charged for the items you&nbsp;decided to keep.<\/p>"
+            }
+          },
+          "1575918285033": {
+            "type": "question",
+            "settings": {
+              "title": "Does Viewtique ever put a hold on my credit card for the items I want to try on?",
+              "text": "<p>No. Viewtique does not place a hold on your credit card.<\/p>"
+            }
+          },
+          "page-faq-template-0": {
+            "type": "rich-text",
+            "settings": {
+              "title": "Delivery",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "page-faq-template-2": {
+            "type": "question",
+            "settings": {
+              "title": "Will you deliver to my zip code?",
+              "text": "<p>We currently serve the following Northern Indiana zip codes: <strong>46637, 46635, 46530, 46556, 46615, 46617<\/strong><\/p>\n<p>If we are unable to fulfill an order because you live outside of the zip codes listed above, we will refund you your delivery fee.<\/p>\n<p><\/p>\n<p>Don't see your zip code?<br>Give us a call at&nbsp;<strong>+1<\/strong><strong>(574)-406-0776<\/strong><\/p>"
+            }
+          },
+          "1583457317595": {
+            "type": "question",
+            "settings": {
+              "title": "How long do I have to try on the items I order?",
+              "text": "<p>You tell us! In your cart, before checkout, let us know what time you'd like us to arrive with your items and what time you'd like us to come pick up anything you don't want to keep (at no additional charge!). Drop off and pick-up typically happen in the same evening. If you have any special requests to extend your try on period into the next day, please call us at (574)-406-0776.<\/p>"
+            }
+          },
+          "1575919096821": {
+            "type": "question",
+            "settings": {
+              "title": "Who delivers the items I order?",
+              "text": "<p>As we are a startup in its infancy, it is members of our team that bring the items you order to your doorstep!<\/p>\n<p><\/p>\n<p>Typically, it will be Camille, Chris, or Mike.&nbsp;&nbsp;<\/p>\n<p><\/p>\n<p>We will text you ahead of the time you schedule for your&nbsp;Try-On to let you know that we are on our way and who to expect!<\/p>"
+            }
+          },
+          "page-faq-template-3": {
+            "type": "rich-text",
+            "settings": {
+              "title": "Returns and exchanges",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1575918383700": {
+            "type": "question",
+            "settings": {
+              "title": "What if I don’t want to keep anything I have delivered to try-on?",
+              "text": "<p>That&rsquo;s okay! We will come grab the items you don&rsquo;t want.<\/p>"
+            }
+          },
+          "page-faq-template-4": {
+            "type": "question",
+            "settings": {
+              "title": "What is your returns\/exchange policy for purchased items?",
+              "text": "<p>Our mission is to provide you with an exceptional local shopping experience. As a rule of thumb, <strong>returns and exchanges are made at the discretion of the owner of the boutique the item is from.<\/strong><\/p>\n<p><\/p>\n<p>Typically, returns\/exchanges of non-sale items are honored in person in-store within 15 days of purchase if tags are still attached and the boutique owner or associate deems the item to be unworn.<\/p>\n<p>That said, <strong>the $20 try-on fee will not be refundable,<\/strong> so you are only eligible for credit up to the price you paid minus the $20 you paid to try on at home.<br><br>Sale items are final sale.<\/p>"
+            }
+          },
+          "1575914403609": {
+            "type": "rich-text",
+            "settings": {
+              "title": "Privacy",
+              "text": "",
+              "align_text": "left"
+            }
+          },
+          "1575919038755": {
+            "type": "question",
+            "settings": {
+              "title": "Will Viewtique share my email or phone number with anyone?",
+              "text": "<p>Absolutely not! If it is essential for us to put you in contact with one of your local boutique owners regarding an order, we will ask for your permission first.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1575914342901",
+          "1575915436415",
+          "1575916025101",
+          "1575914285505",
+          "1575917144100",
+          "1575917401143",
+          "1575918285033",
+          "page-faq-template-0",
+          "page-faq-template-2",
+          "1583457317595",
+          "1575919096821",
+          "page-faq-template-3",
+          "1575918383700",
+          "page-faq-template-4",
+          "1575914403609",
+          "1575919038755"
+        ],
+        "settings": {
+          "page_title_enable": false,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-about-boutique-aotb-template": {
+        "type": "page-sections-about-boutique-aotb-template",
+        "blocks": {
+          "1575926864561": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": false,
+              "image_1": "",
+              "image_width_1": 650,
+              "title_1": "",
+              "text_1": "",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/Ali_On_The_Boulevard_South_Bend_IN.png",
+              "image_width_2": 150,
+              "title_2": "",
+              "text_2": "<p><a href=\"\/collections\/ali-on-the-boulevard\" title=\"Ali on the Boulevard | South Bend, IN\"><strong>Shop Now<\/strong><\/a><\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": false,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "",
+              "text_3": "",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "1575927013814": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Ali.png",
+              "image_width": 500,
+              "subtitle": "Meet the Owner",
+              "title": "Ali Patel",
+              "text": "<p>&ldquo;We invite you in to our shop! Ali on the Boulevard is a women&rsquo;s jewelry, clothing and gift boutique located in the heart of South Bend&rsquo;s art district. We offer incredible pieces at reasonable prices. For the gal on the go, day-to-night looks, or something sweet for cutie next door &mdash; whatever you need, we have it in store for you!&rdquo; &ndash;Ali&nbsp;Patel<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576450903765": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "Ali On The Boulevard",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/ali-on-the-boulevard",
+              "image": "shopify:\/\/shop_images\/MG_1571.jpg",
+              "alignment": "center",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 450,
+              "parallax": true
+            }
+          },
+          "1576352506639": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AOTB_outside.jpg",
+              "image_width": 500,
+              "subtitle": "About the Boutique",
+              "title": "Ali on the Boulevard",
+              "text": "<p>Alison &ldquo;Ali&rdquo;&nbsp;Patel has been crafting one-of-a-kind, contemporary jewelry for more than a decade. The South Bend native began designing out of her home, and founded Ali Oesch Jewelry in 2003. What started with one booth at the South Bend Farmer&rsquo;s Market has grown to multiple booths, a burgeoning online business, wholesale to boutiques in four states, and a storefront &ndash; Ali on the Boulevard, located in the heart of the art district in downtown South Bend.<\/p>\n<p>A designer at heart, Ali is passionate about creating pieces as unique as her customers. Her collection of original jewelry is both beautiful and fashion forward, featuring pearls, gemstones, metals, and crystals. She is continually refining her skills, studying new techniques and trying innovative materials to stay fresh and on trend. Her work has been spotted on news anchors and celebrities, and is a favorite among fashionistas everywhere. From simple to elegant, Ali has something for any occasion.<\/p>\n<p><\/p>\n<p>Want to know more? Keep up with Ali on the Boulevard on <a href=\"https:\/\/www.facebook.com\/aliontheboulevard\/\" title=\"https:\/\/www.facebook.com\/aliontheboulevard\/\">Facebook<\/a>, <a href=\"https:\/\/www.instagram.com\/aliontheboulevard\/\" title=\"https:\/\/www.instagram.com\/aliontheboulevard\/\">Instagram<\/a>, or in person at <a href=\"https:\/\/goo.gl\/maps\/fgGashsTuhJWBBCC9\" title=\"https:\/\/goo.gl\/maps\/fgGashsTuhJWBBCC9\">Ali on the Boulevard<\/a>. Come see for yourself why boutiques and customers alike fall in love with her collection!<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1575929235083": {
+            "type": "map",
+            "settings": {
+              "map_title": "Ali on the Boulevard hours",
+              "address": "<p>722 E Jefferson Blvd.<br>South Bend, IN<\/p>\n<p><strong>Mon - Fri<\/strong>&nbsp; 10:00am - 6:00pm<br><strong>Saturday<\/strong>&nbsp; 10:00am - 4:00pm <br>(10:00am - 5:00pm December)<br><strong>Sunday<\/strong>&nbsp; &nbsp; &nbsp;Closed<\/p>",
+              "map_address": "722 E Jefferson Boulevard, South Bend, IN",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1575926864561",
+          "1575927013814",
+          "1576450903765",
+          "1576352506639",
+          "1575929235083"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-about-boutique-camnbria-template": {
+        "type": "page-sections-about-boutique-camnbria-template",
+        "blocks": {
+          "1575933350491": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": false,
+              "image_1": "",
+              "image_width_1": 650,
+              "title_1": "",
+              "text_1": "",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/cambria_shopify.jpg",
+              "image_width_2": 200,
+              "title_2": "",
+              "text_2": "<p><a href=\"\/collections\/cambria-boutique\" title=\"Cambria Boutique | South Bend, IN\"><strong>Shop&nbsp;Now<\/strong><\/a><\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": false,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "",
+              "text_3": "",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "1576353457072": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Angie_Cave_Cambria_Boutique_1.jpg",
+              "image_width": 500,
+              "subtitle": "Meet the Owner",
+              "title": "Angie Cave",
+              "text": "<p>\"Im just a girl in the world\"...I love that song! Hi friends! I'm Angie Cave, owner of Cambria Boutique! I started my online women's clothing boutique over a year ago! I am obsessed with fashion and could make shopping my day job! I thought \"why not start a business where I can buy all the clothes that I want, without getting in \"trouble\" by my husband...\"what did you buy now?!\" :)<\/p>\n<p>And then I thought what a great way to reach out to other women and share my passion on fashion, hair, lifestyle etc. by doing a blog! My motto is \"I believe happy girls are the prettiest girls\"-Audrey Hepburn. I even have that quote on my wall! &ndash;Angie Cave<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576451630275": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "Cambria Boutique",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/cambria-boutique",
+              "image": "shopify:\/\/shop_images\/MG_1575.jpg",
+              "alignment": "20% 50%",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 450,
+              "parallax": true
+            }
+          },
+          "1576353377535": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Cambria_Front.jpg",
+              "image_width": 500,
+              "subtitle": "About the Boutique",
+              "title": "Cambria Boutique",
+              "text": "<p>Opening a boutique was always a dream of Cambria Boutique owner, Angie Cave. In 2017, in addition to keeping her beautician chair full at the East Bank Emporium building in South Bend, Angie began an online women&rsquo;s clothing and accessories store called Cambria Boutique. Angie&rsquo;s beginnings as an online boutique involved her traveling around to markets to sell items in person everywhere from South Bend to Fort Wayne to Warsaw. She also held Facebook Live videos to show customers how some items fit.<\/p>\n<p>With her &ldquo;pop-up&rdquo; format, her success was bittersweet because it became tough to keep up with demand! She began to wonder what was next. That&rsquo;s when fate stepped in! When some retail space opened at the East Bank Emporium Building where Angie still also serves as a beautician, Angie knew it was her moment! Cambria Boutique opened as a physical location at the East Bank Emporium building on Nov. 23, 2018 &mdash; Black Friday. Cambria Boutique offers quality women&rsquo;s apparel and accessories that Angie can see anyone wear, with items ranging in price from $10 to $80. Keep up with Cambria Boutique<a href=\"https:\/\/www.instagram.com\/cambria_boutique\/\" title=\"https:\/\/www.instagram.com\/cambria_boutique\/\">&nbsp;@cambria_boutique<\/a> on Instagram!<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1575994203112": {
+            "type": "map",
+            "settings": {
+              "map_title": "Cambria Boutique",
+              "address": "<p>121 S Niles Ave Suite 14<br>South Bend, IN<\/p>\n<p><strong>Monday&nbsp; &nbsp; &nbsp;<\/strong>&nbsp; Closed<br><strong>Tues - Wed &nbsp;<\/strong>11:00am - 3:00pm<br><strong>Thurs - Fri&nbsp; &nbsp;&nbsp;<\/strong>11:00am - 6:00pm<br><strong>Saturday<\/strong>&nbsp; &nbsp; &nbsp;10:00am - 4:00pm<br><strong>Sunday<\/strong>&nbsp; &nbsp; &nbsp; &nbsp;Closed<\/p>",
+              "map_address": "121 S Niles Ave Suite 14, South Bend, IN 46617",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1575933350491",
+          "1576353457072",
+          "1576451630275",
+          "1576353377535",
+          "1575994203112"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-about-boutique-inspireme-template": {
+        "type": "page-sections-about-boutique-inspireme-template",
+        "blocks": {
+          "1576005998827": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": false,
+              "image_1": "shopify:\/\/shop_images\/Inspire_Me_South_Bend_IN_Logo.jpg",
+              "image_width_1": 650,
+              "title_1": "",
+              "text_1": "",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/logo.jpg",
+              "image_width_2": 270,
+              "title_2": "",
+              "text_2": "<p><a href=\"\/collections\/inspire-me\" title=\"Inspire Me | South Bend, IN\"><strong>Shop&nbsp;Now<\/strong><\/a><\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": false,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "",
+              "text_3": "",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "1576006197185": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_7033.jpg",
+              "image_width": 500,
+              "subtitle": "Meet the owner",
+              "title": "Jeanne Skelton",
+              "text": "<p>\"I love what I do! Working with people and constantly being \"inspired\" by everyone that I meet when I am either helping a client or traveling to market for a buying trip in New York, Chicago, Los Angeles or wherever I go! Juggling my life of being a business owner, wife and mom of 3 boys is challenging but very rewarding.\" &ndash;Jeanne Skelton<\/p>",
+              "button_label": "Shop Inspire Me",
+              "button_link": "shopify:\/\/collections\/inspire-me",
+              "layout": "left"
+            }
+          },
+          "1576452128599": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "Inspire Me Boutique",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/inspire-me",
+              "image": "shopify:\/\/shop_images\/MG_1539.jpg",
+              "alignment": "top",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 450,
+              "parallax": true
+            }
+          },
+          "1576353919351": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/untitled--3.jpg",
+              "image_width": 500,
+              "subtitle": "About the Boutique",
+              "title": "Inspire Me Boutique",
+              "text": "<p>Historic vintage meets classic and contemporary styling in this South Bend boutique, recognized by the South Bend Tribune readers as one of the top boutiques in Michiana.&nbsp;Located on South Bend&rsquo;s East Bank Village, the 3600+ square foot space reflects who they are&ndash;&ndash; a little bit of everything. Inspire Me has all of the Midwest warmth and feel you might&nbsp;expect! Spacious fitting rooms allow for a relaxed and pleasant&nbsp;experience, coupled with personal attention from one of our knowledgeable sales staff. There&rsquo;s even a waiting room with a sofa and big ottoman table and refreshments for clients&rsquo; waiting friends.<\/p>\n<p>Whether you&rsquo;re one of their long-time devotees or&nbsp;a&nbsp;first visitor, shopping at Inspire Me is like entering the closet of your most fashionable friend. Their specialty is buying&ndash;handpicking and perfectly packaging an assortment of pieces tailored to their clients&rsquo; personal style.<\/p>\n<p>The store continues to gain recognition for it&rsquo;s unique and ever changing assortment of over 150 coveted American and European designer and accessories brands, including Fifteen Twenty, Chan Luu, Alembika, Gretchen Scott, Free People, Jude Connally, Velvet, Maliparmi and Nally and Millie. Always trying to create a new and inviting seasonal atmosphere, Inspire Me&rsquo;s beautiful 1980&rsquo;s Landmark Building located near the corner of Colfax and Hill Street is a beautiful house&nbsp; showcasing&nbsp;these amazing lines.&nbsp;Keep up with Inspire Me Boutique @inspiremesouthbend on Instagram!<\/p>",
+              "button_label": "Shop Inspire Me",
+              "button_link": "shopify:\/\/collections\/inspire-me",
+              "layout": "left"
+            }
+          },
+          "1576006556424": {
+            "type": "map",
+            "settings": {
+              "map_title": "Inspire Me Boutique",
+              "address": "<p>520 E Colfax Ave.<br>South Bend, IN 46617<strong><br><\/strong><strong>Mon&nbsp;- Fri<\/strong>&nbsp; &nbsp;10:00am - 6:00pm<br><strong>Saturday<\/strong>&nbsp; &nbsp;10:00am - 6:00pm<br><strong>Sunday<\/strong>&nbsp; &nbsp; &nbsp; Closed<\/p>",
+              "map_address": "520 E Colfax Ave. South Bend, IN 46617",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1576005998827",
+          "1576006197185",
+          "1576452128599",
+          "1576353919351",
+          "1576006556424"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-about-boutique-unity-template": {
+        "type": "page-sections-about-boutique-unity-template",
+        "blocks": {
+          "1576009150491": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": false,
+              "image_1": "",
+              "image_width_1": 650,
+              "title_1": "",
+              "text_1": "",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/Logo_Unity_Boutique_360x_e4c73729-146d-4ca8-80b1-32e4fc52a7c2.jpg",
+              "image_width_2": 150,
+              "title_2": "",
+              "text_2": "<p><a href=\"\/collections\/unity-boutique-granger-in\" title=\"Unity Boutique | Granger, IN\"><strong>Shop&nbsp;Now<\/strong><\/a><\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": false,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "",
+              "text_3": "",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "1576008256735": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Erin.jpg",
+              "image_width": 500,
+              "subtitle": "Meet the owner",
+              "title": "Erin Thompson",
+              "text": "<p>&ldquo;I am a true, to-the-core clothing lover and more than anything a lover of people. I&rsquo;m happy when I see someone else comfortable in their own clothes. True style comes from within, but without the right styled pieces, your confidence can&rsquo;t shine through!&rdquo; &ndash;Erin Thompson<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576452706408": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "Unity Boutique",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/unity-boutique-granger-in",
+              "image": "shopify:\/\/shop_images\/Unity_holiday_image_4.jpg",
+              "alignment": "center",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 450,
+              "parallax": true
+            }
+          },
+          "1576359476284": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_6784.jpg",
+              "image_width": 500,
+              "subtitle": "About the Boutique",
+              "title": "Unity Boutique",
+              "text": "<p>Unity Boutique is a locally owned, fashion-forward shop specializing in unique clothing &amp; accessories that are stylish yet respectful of the earth and artisan. Created from a passion for fashion and love for the earth, we aim to collide style with a positive impact on our world.&nbsp; Located in the heart of the Michiana shopping district at the Heritage Square Shops in Granger, Indiana. Unity Boutique caters to your shopping need with the philosophy that every purchase has an effect.<\/p>\n<p>We offer you a contemporary choice to give back and expand your wardrobe. Handpicking unique eco-friendly, fair-trade, organic, and USA made fashions, accessories, and gifts we specialize in apparel that combines sustainability with modern design.&nbsp;Our clothing not only looks good, but is good for our planet and future generations as well. Unity Boutique seeks to unite consumer and creator in order to promote conscious purchases. Keep up with Unity Boutique <a href=\"https:\/\/www.instagram.com\/shopunityboutique\/\" title=\"https:\/\/www.instagram.com\/shopunityboutique\/\">@ShopUnityBoutique <\/a>&nbsp;on Instagram!<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576008401851": {
+            "type": "map",
+            "settings": {
+              "map_title": "Unity Boutique",
+              "address": "<p>7220 Heritage Square Dr.<br>#550, Granger, IN 46530<\/p>\n<p><strong>Monday<\/strong>&nbsp; &nbsp; &nbsp;Closed<br><strong>Tues&nbsp;- Fri<\/strong>&nbsp; &nbsp; 10:00am - 6:00pm<br><strong>Saturday<\/strong>&nbsp; &nbsp; 10:00am - 4:00pm<br><strong>Sunday<\/strong>&nbsp; &nbsp; &nbsp;&nbsp;Closed<\/p>",
+              "map_address": "7220 Heritage Square Dr. #550, Granger, IN 46530",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1576009150491",
+          "1576008256735",
+          "1576452706408",
+          "1576359476284",
+          "1576008401851"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-about-boutique-ts-template": {
+        "type": "page-sections-about-boutique-ts-template",
+        "blocks": {
+          "1576009421381": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": false,
+              "image_1": "shopify:\/\/shop_images\/ts.jpg",
+              "image_width_1": 650,
+              "title_1": "",
+              "text_1": "",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/ts_shopify.jpg",
+              "image_width_2": 150,
+              "title_2": "",
+              "text_2": "<p><strong><a href=\"\/collections\/the-twisted-string-elkhart-in\" title=\"The Twisted String | Elkhart, IN\">Shop Now<\/a><\/strong><\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": false,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "",
+              "text_3": "",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "1576010341267": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2019-10-08_at_12.41.59_PM.jpg",
+              "image_width": 500,
+              "subtitle": "Meet the Owner",
+              "title": "Kelly Regier",
+              "text": "<p>&ldquo;The Twisted String is a combination of what we love: antique themed decor and big-city shopping. We invite you to come check out our new remodel which contrasts antique, industrial decor with vibrant, edgy clothing from big brands that until now, were only available in Chicago.&rdquo; &ndash;Kelly Regier<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576452389670": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "The Twisted String",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/the-twisted-string-elkhart-in",
+              "image": "shopify:\/\/shop_images\/DSCN3005_cbc94656-bce5-40cf-88d1-21a875d759fb.jpg",
+              "alignment": "bottom",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 450,
+              "parallax": true
+            }
+          },
+          "1576358335610": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ts_front.jpg",
+              "image_width": 500,
+              "subtitle": "About the Boutique",
+              "title": "The Twisted String",
+              "text": "<p>The Twisted String was founded in 2014 by husband and wife, Rees and Kelly Regier. Originally opened in Granger, IN as Steam Couture, the boutique moved and re-branded as The Twisted String in 2015 and has since made its way to becoming a highly recognized shop. With it&rsquo;s edgy, ravishing retail options, and award-worthy interior design you&rsquo;ll want to visit the store over and over.&nbsp;<\/p>\n<p>The Twisted String&rsquo;s well-themed and authentic decor will appeal to those who are bored of retail chains and cookie-cutter retail. Themed after a textile mill from the late 1800&rsquo;s the Regier&rsquo;s were intentional in celebrating the local history of the area&rsquo;s Singer Sewing Machine Factory, an iconically old building which can be seen in the background of some of their styled shoots.<\/p>\n<p>Highly committed to customer satisfaction and offering unique pieces, Rees and Kelly go out of their way to make sure you walk out happy. Rees is the contactor and designer and Kelly is a Certified Stylist (and assistant to Rees&rsquo;s frequent design shenanigans). They are often described by locals as the Chip and Joanna Gaines of fashion retail and after a visit to their store you&rsquo;ll understand why! Stick around long enough and you&rsquo;re likely to see their children, Preston and Diana, as their shop truly is a hometown, American &ldquo;family business&rdquo;. Rees and Kelly want to thank you for supporting local business and look forward to helping you reach your true fashion potential! Keep up with The Twisted String <a href=\"https:\/\/www.instagram.com\/thetwistedstring\/\" title=\"https:\/\/www.instagram.com\/thetwistedstring\/\">@thetwistedstring<\/a> on Instagram.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576010610841": {
+            "type": "map",
+            "settings": {
+              "map_title": "The Twisted String",
+              "address": "<p>203 S Main St.<br>Elkhart, IN 46516<\/p>\n<p><strong>Monday<\/strong>&nbsp; &nbsp; &nbsp; Closed<br><strong>Tuesday<\/strong>&nbsp; &nbsp; &nbsp;10:00am - 6:00pm<br><strong>Wed - Fri<\/strong>&nbsp; &nbsp; 10:00am - 6:00pm<br><strong>Saturday<\/strong>&nbsp; &nbsp; 10:00am - 2:00pm<br><strong>Sunday<\/strong>&nbsp; &nbsp; &nbsp; &nbsp;Closed<\/p>",
+              "map_address": "203 S Main St, Elkhart, IN 46516",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1576009421381",
+          "1576010341267",
+          "1576452389670",
+          "1576358335610",
+          "1576010610841"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-for-owners-template": {
+        "type": "page-sections-for-owners-template",
+        "blocks": {
+          "1576013893463": {
+            "type": "image-hero",
+            "settings": {
+              "parallax": true,
+              "title": "",
+              "title_size": 80,
+              "subheading": "",
+              "link": "",
+              "link_text": "",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "rgba(0,0,0,0)",
+              "text_align": "vertical-center horizontal-center",
+              "image": "shopify:\/\/shop_images\/red-rose-flowers-bouquet-on-white-surface-beside-spring-book-1410226.jpg",
+              "focal_point": "top center",
+              "section_height": "450px",
+              "mobile_height": "250px"
+            }
+          },
+          "1576012664144": {
+            "type": "rich-text",
+            "settings": {
+              "title": "We want to meet you!",
+              "text": "<p>We are starting a new service dedicated to supporting local boutiques&nbsp;here in Northern Indiana, and we would love for you to be a part of it! Our mission is to empower local boutique owners with the same technology and online service capabilities as large tech retailers (like Amazon) and&nbsp;fashion-tech companies (like Stitch Fix). Knowing the many hats you wear as a boutique owner&ndash;&ndash; from sourcing, to merchandising, to recruiting, to training, to selling, and&nbsp;much more&nbsp;&ndash;&ndash; Viewtique takes care of the&nbsp;technology that will help your boutique be as&nbsp;accessible online as possible in order to meet the needs of your local shoppers.<\/p>",
+              "align_text": "left",
+              "narrow_column": true,
+              "enlarge_text": false
+            }
+          },
+          "1576082050030": {
+            "type": "rich-text",
+            "settings": {
+              "title": "Our Logo & Brand Promise",
+              "text": "<p>Viewtique believes in the power of community. If done right, we can compete as a community with tech giants in ways we otherwise couldn't do by ourselves. At the same time, Viewtique is committed to preserving your unique brand identity - the mission that you're on and the business you've created - which is why we designed our logo as a picture frame. The black frame represents Viewtique as the frame and your boutique as the picture that our frame displays. You bring the art that everyone's here for, and we&nbsp;bring&nbsp;the technology infrastructure that simply displays&nbsp;your boutique in the most digitally compelling way possible so that shoppers can fully see and understand the possibilities of&nbsp;shopping their local boutiques both online AND in-store.<\/p>",
+              "align_text": "left",
+              "narrow_column": true,
+              "enlarge_text": false
+            }
+          },
+          "1576013513989": {
+            "type": "rich-text",
+            "settings": {
+              "title": "Contact us",
+              "text": "<p>Want to learn more about what Viewtique can do for you and your boutique?&nbsp;We would love to hear from you!<\/p>\n<p><\/p>\n<p>Give us a call at <strong><a href=\"tel:+15744060776\">(574)-406-0776<\/a>&nbsp;<\/strong>any time OR drop us a message below and we will&nbsp;get back to you&nbsp;within 24 hours. We can&rsquo;t wait to meet you!<\/p>",
+              "align_text": "left",
+              "narrow_column": true,
+              "enlarge_text": false
+            }
+          },
+          "1576012975147": {
+            "type": "contact-form",
+            "settings": {
+              "title": "",
+              "show_phone": true,
+              "narrow_column": true
+            }
+          }
+        },
+        "block_order": [
+          "1576013893463",
+          "1576012664144",
+          "1576082050030",
+          "1576013513989",
+          "1576012975147"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "1576079956431": {
+        "type": "background-image-text",
+        "settings": {
+          "subtitle": "",
+          "title": "Try it on at home!",
+          "text": "<p>Can't make it to the boutique? Viewtique allows you to order from one or multiple boutiques. We deliver your items same day for you to try on, and return in an hour or so to pick up anything you don't want to keep! <strong>The&nbsp;$20 delivery fee goes toward your purchase!<\/strong><\/p>",
+          "button_label": "Learn More",
+          "button_link": "shopify:\/\/pages\/how",
+          "image": "shopify:\/\/shop_images\/new.jpg",
+          "focal_point": "center",
+          "color_border": "#ffffff",
+          "layout": "left",
+          "height": 450,
+          "framed": false,
+          "parallax": false
+        }
+      },
+      "page-sections-join-template": {
+        "type": "page-sections-join-template",
+        "blocks": {
+          "1576085271886": {
+            "type": "image-hero",
+            "settings": {
+              "parallax": true,
+              "title": "",
+              "title_size": 80,
+              "subheading": "",
+              "link": "",
+              "link_text": "",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "rgba(0,0,0,0)",
+              "text_align": "vertical-bottom horizontal-right",
+              "image": "shopify:\/\/shop_images\/team_cropped.jpg",
+              "focal_point": "top center",
+              "section_height": "450px",
+              "mobile_height": "250px"
+            }
+          },
+          "1576085729520": {
+            "type": "rich-text",
+            "settings": {
+              "title": "About the Team",
+              "text": "<p>Based in South Bend, Viewtique is a retail technology startup helping local fashion boutique owners thrive by democratizing the technology that has traditionally only been available to tech-forward retail companies.<\/p>\n<p>Resourceful, intelligent, and imaginative. The Viewtique team is highly passionate about solving problems to drive local commerce - always with our boutique owners and shoppers front of mind.<\/p>",
+              "align_text": "left",
+              "narrow_column": true,
+              "enlarge_text": false
+            }
+          },
+          "1576085957150": {
+            "type": "rich-text",
+            "settings": {
+              "title": "What we are looking for",
+              "text": "<p>We're looking to work with those who are passionate about the boutique retail and fashion space, so the best way to get involved with Viewtique is to first be genuinely passionate about what we're building and then reach out to us directly to meet for coffee. Broadly speaking, we're seeking people who can help with the following areas:<\/p>\n<p><\/p>",
+              "align_text": "left",
+              "narrow_column": true,
+              "enlarge_text": false
+            }
+          },
+          "1576083693400": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ba.jpg",
+              "image_width": 500,
+              "subtitle": "",
+              "title": "Brand Ambassadors",
+              "text": "<p>Seeking passionate brand ambassadors to generate the buzz on campus and in the local region and help facilitate our same-day \"try-on-at-home\" service. Operations-focused responsibilities are likely to follow.<\/p>\n<p>Reach directly to&nbsp;<a href=\"mailto:Camille@ShopViewtique.com\">Camille@ShopViewtique.com<\/a>&nbsp;to schedule a coffee chat.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576083931528": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/mc--2.jpg",
+              "image_width": 500,
+              "subtitle": "",
+              "title": "Marketing \/ Creative",
+              "text": "<p>Seeking creative minds and talents to generate content (brainstorm, design, create, edit, etc.)<\/p>\n<p>Reach directly to&nbsp;<a href=\"mailto:Chris@ShopViewtique.com\">Chris@ShopViewtique.com<\/a>&nbsp;to schedule a coffee chat.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1576084551261": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2019-12-11_at_12.17.07_PM.png",
+              "image_width": 500,
+              "subtitle": "",
+              "title": "SOFTWARE ENGINEERS",
+              "text": "<p>Seeking front-end, back-end, and full-stack developers with experience deploying applications optimized for performance and scalability.<\/p>\n<p>Reach directly to&nbsp;<a href=\"mailto:Chris@ShopViewtique.com\">Chris@ShopViewtique.com<\/a>&nbsp;to schedule a coffee chat.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1576085271886",
+          "1576085729520",
+          "1576085957150",
+          "1576083693400",
+          "1576083931528",
+          "1576084551261"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-contact-template": {
+        "type": "page-contact-template",
+        "blocks": {
+          "1576087722214": {
+            "type": "rich-text",
+            "settings": {
+              "title": "",
+              "text": "<p>Have a question or feedback? Want to learn more? Call us at <strong><a href=\"tel:+15744060776\">(574)-406-0776<\/a><\/strong> OR drop us a line below.<\/p>",
+              "align_text": "center",
+              "narrow_column": true,
+              "enlarge_text": false
+            }
+          },
+          "page-contact-template-0": {
+            "type": "contact-form",
+            "settings": {
+              "title": "",
+              "show_phone": false,
+              "narrow_column": true
+            }
+          }
+        },
+        "block_order": [
+          "1576087722214",
+          "page-contact-template-0"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": true
+        }
+      },
+      "1576169934159": {
+        "type": "featured-content",
+        "disabled": true,
+        "settings": {
+          "title": "Try on items at home.",
+          "text": "<p>Only pay for what you love.<\/p>",
+          "align_text": "center",
+          "narrow_column": false,
+          "enlarge_text": true,
+          "divider": false
+        }
+      },
+      "1576265733642": {
+        "type": "featured-collections",
+        "blocks": {
+          "1576265733642-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "tops",
+              "title": "",
+              "focal_point": "center center"
+            }
+          },
+          "1576265733642-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "dresses",
+              "title": "",
+              "focal_point": "center center"
+            }
+          },
+          "1576265733642-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "sweaters",
+              "title": "",
+              "focal_point": "center center"
+            }
+          },
+          "1576265733642-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "bottoms",
+              "title": "",
+              "focal_point": "center center"
+            }
+          },
+          "1579549956745": {
+            "type": "collection",
+            "settings": {
+              "collection": "accessories",
+              "title": "",
+              "focal_point": "center center"
+            }
+          },
+          "1576265733642-5": {
+            "type": "collection",
+            "settings": {
+              "collection": "shoes",
+              "title": "",
+              "focal_point": "center center"
+            }
+          },
+          "1576265733642-6": {
+            "type": "collection",
+            "settings": {
+              "collection": "jackets",
+              "title": "",
+              "focal_point": "center center"
+            }
+          },
+          "1576265733642-7": {
+            "type": "collection",
+            "settings": {
+              "collection": "sale",
+              "title": "",
+              "focal_point": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1576265733642-0",
+          "1576265733642-1",
+          "1576265733642-2",
+          "1576265733642-3",
+          "1579549956745",
+          "1576265733642-5",
+          "1576265733642-6",
+          "1576265733642-7"
+        ],
+        "settings": {
+          "title": "Shop By Category",
+          "divider": false,
+          "per_row": 4,
+          "enable_gutter": true
+        }
+      },
+      "1576266201048": {
+        "type": "featured-collections",
+        "blocks": {
+          "1576266201048-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "ali-on-the-boulevard",
+              "title": "Ali On The Boulevard | South Bend, IN",
+              "focal_point": "center center"
+            }
+          },
+          "1576266201048-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "cambria-boutique",
+              "title": "Cambria Boutique | South Bend, IN",
+              "focal_point": "center center"
+            }
+          },
+          "1576266201048-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "inspire-me",
+              "title": "Inspire Me | South Bend, IN",
+              "focal_point": "center center"
+            }
+          },
+          "1581803813586": {
+            "type": "collection",
+            "settings": {
+              "collection": "morning-willow-boutique",
+              "title": "Morning Willow Boutique | Mishawaka, IN",
+              "focal_point": "center center"
+            }
+          },
+          "1582123905913": {
+            "type": "collection",
+            "settings": {
+              "collection": "satori-boutique",
+              "title": "Satori Boutique | Granger, IN",
+              "focal_point": "center center"
+            }
+          },
+          "1576266201048-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "the-twisted-string-elkhart-in",
+              "title": "The Twisted String | Elkhart, IN",
+              "focal_point": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1576266201048-0",
+          "1576266201048-1",
+          "1576266201048-2",
+          "1581803813586",
+          "1582123905913",
+          "1576266201048-3"
+        ],
+        "settings": {
+          "title": "Shop By Boutique",
+          "divider": false,
+          "per_row": 2,
+          "enable_gutter": true
+        }
+      },
+      "1576285368401": {
+        "type": "background-image-text",
+        "disabled": true,
+        "settings": {
+          "subtitle": "The easiest way to",
+          "title": "Shop Local",
+          "text": "<p>Northern Indiana Fashion Boutiques<\/p>",
+          "button_label": "Shop All",
+          "button_link": "shopify:\/\/collections\/view-all-items",
+          "image": "shopify:\/\/shop_images\/34.jpg",
+          "focal_point": "80% 100%",
+          "color_border": "#f4f4f4",
+          "layout": "left",
+          "height": 550,
+          "framed": true,
+          "parallax": true
+        }
+      },
+      "1576286920980": {
+        "type": "featured-content",
+        "disabled": true,
+        "settings": {
+          "title": "",
+          "text": "<p>More Boutiques Coming Soon!<\/p>",
+          "align_text": "center",
+          "narrow_column": false,
+          "enlarge_text": true,
+          "divider": false
+        }
+      },
+      "1576287169005": {
+        "type": "newsletter",
+        "settings": {
+          "title": "Keep In Touch!",
+          "text": "<p>Subscribe to get special offers and&nbsp;updates when new boutiques are live!<\/p>",
+          "color_background": "#f9f9f9",
+          "color_text": "#1c1d1d"
+        }
+      },
+      "1576368698766": {
+        "type": "slideshow",
+        "disabled": true,
+        "blocks": {
+          "1576368698766-0": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "",
+              "title": "Experience Local",
+              "title_size": 50,
+              "subheading": "Northern Indiana Fashion Boutiques",
+              "link": "shopify:\/\/collections\/view-all-items",
+              "link_text": "Shop All",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#000000",
+              "text_align": "vertical-bottom horizontal-left",
+              "image": "shopify:\/\/shop_images\/Viewtique-Home_Page-Hero_Image-Shopify-1440X810-1.20.20px_96db60f6-a590-4bcb-8b45-6624416b7978.jpg",
+              "focal_point": "20% 50%"
+            }
+          }
+        },
+        "block_order": [
+          "1576368698766-0"
+        ],
+        "settings": {
+          "section_height": "450px",
+          "mobile_height": "300px",
+          "parallax": false,
+          "style": "minimal",
+          "autoplay": true,
+          "autoplay_speed": 5
+        }
+      },
+      "page-sections-collections-land-template": {
+        "type": "page-sections-collections-land-template",
+        "settings": {
+          "page_title_enable": false,
+          "page_content_enable": false
+        }
+      },
+      "1579206367551": {
+        "type": "text-and-image",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Viewtique-Gift-Card-Shopifyhome.png",
+          "image_width": 500,
+          "subtitle": "",
+          "title": "Viewtique Gift Cards",
+          "text": "<p>Give the gift of choice, convenience, and locally curated selections they'll LOVE with a Viewtique gift card!<\/p>",
+          "button_label": "Shop Gift Cards",
+          "button_link": "shopify:\/\/products\/gift-card",
+          "layout": "left",
+          "divider": false
+        }
+      },
+      "1580330326986": {
+        "type": "logo-list",
+        "blocks": {
+          "1583775546989": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BellasBoutique_450x_9c9b937c-1eb4-4cac-85ea-bc7a6ad5bd68.jpg",
+              "link": ""
+            }
+          },
+          "1582308777426": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/download.png",
+              "link": ""
+            }
+          },
+          "1580330326986-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/download.jpeg",
+              "link": ""
+            }
+          },
+          "1582308887479": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pp.jpeg",
+              "link": ""
+            }
+          },
+          "1580330326986-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2348417.jpeg",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1583775546989",
+          "1582308777426",
+          "1580330326986-0",
+          "1582308887479",
+          "1580330326986-1"
+        ],
+        "settings": {
+          "title": "Coming Soon!",
+          "logo_opacity": 100,
+          "divider": false
+        }
+      },
+      "page-sections-about-mw": {
+        "type": "page-sections-about-mw",
+        "blocks": {
+          "1581706905722": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": false,
+              "image_1": "",
+              "image_width_1": 650,
+              "title_1": "",
+              "text_1": "",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/New_Morning_Willow_Logo_250x_2x_1a351dee-2e62-4724-840b-ebfc8c7307b7.jpeg",
+              "image_width_2": 370,
+              "title_2": "",
+              "text_2": "<p><a href=\"\/collections\/morning-willow-boutique\" title=\"Morning Willow Boutique | Mishawaka, IN\"><strong>Shop Now<\/strong><\/a><\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": false,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "",
+              "text_3": "",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          },
+          "1581705944260": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2020-02-14_at_1.47.13_PM.png",
+              "image_width": 500,
+              "subtitle": "Meet the Owner",
+              "title": "Andrea Weaver",
+              "text": "<p>Hey there! My name is Andrea Weaver and I am the owner of Morning Willow Boutique. I have a loving family and the cutest cockapoo. My favorite things include Gilmore Girls, avocados, coffee, Pinterest, and Audrey Hepburn. I recently graduated from Ball State University with a Bachelor of Science degree in fashion merchandising and a minor in marketing. My dream has always been to own and run a clothing boutique that makes women feel inspired when wearing my pieces. So one day, I decided to go for it! It&rsquo;s a scary thing to take a chance on something so big but&nbsp;when I was starting this whole process, I heard something very inspiring, &ldquo;feel the fear but do it anyway.&rdquo; I have kept that quote close to my heart as I have been working on building this business. Don&rsquo;t let fear stop you from living your dreams. As cheesy as that may sound, I truly mean that.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1581713830671": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "Morning Willow boutique",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/morning-willow-boutique",
+              "image": "shopify:\/\/shop_images\/MW.jpg",
+              "alignment": "top",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 550,
+              "parallax": true
+            }
+          },
+          "1581713843653": {
+            "type": "rich-text",
+            "settings": {
+              "title": "About the boutique",
+              "text": "<p>Hi darling! Welcome to our one-stop boutique for the hottest trends and fashion pieces. We have officially launched in October of 2019 and are so looking forward to the future. Our mission is to not only make women feel like they are always rockin&rsquo; the chicest outfit no matter their style but always feel beautiful inside and out. We carry a wide array of styles ranging from modern, contemporary, with a dash of country and boho chic. We strive to go beyond the point-of-purchase by providing exceptional services, experiences, and shipping! If this is your first time here or your hundredth time here, we love you and are so glad you&rsquo;re here!! We hope you feel inspired and iconic wearing our clothing.<\/p>",
+              "align_text": "center",
+              "narrow_column": true,
+              "enlarge_text": false
+            }
+          },
+          "1581706360883": {
+            "type": "map",
+            "settings": {
+              "map_title": "Morning Willow Boutique Hours",
+              "address": "<p><strong>University Park Mall<br><\/strong>6501 N Grape Rd, Mishawaka, IN 46545<\/p>\n<p><strong>Monday - Saturday<\/strong>&nbsp;10:00am - 9:00pm<br><strong>Sunday<\/strong>&nbsp;11:00am - 6:00pm<\/p>",
+              "map_address": "6501 N Grape Rd, Mishawaka, IN 46545",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1581706905722",
+          "1581705944260",
+          "1581713830671",
+          "1581713843653",
+          "1581706360883"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-about-satori": {
+        "type": "page-sections-about-satori",
+        "blocks": {
+          "1581793984004": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2020-02-18_at_1.13.53_PM.png",
+              "image_width": 500,
+              "subtitle": "Meet the Owner",
+              "title": "Nicole Towner",
+              "text": "<p>Nicole started out making custom lake apparel in the Lake Wawasee area. After her youngest daughter, Satori, was born she decided to open a store front named after her&ndash;&ndash; Satori Boutique! That first location in Syracuse, Indiana opened in 2010 and is still open as a seasonal location. After moving to the Granger area, Nicole opened a second Satori Boutique location in December of 2018. You can now shop the Granger location on Viewtique! Nicole really enjoys helping customers find a special gift or outfit for a special event. She loves getting to know&nbsp;her customers and find joy in help others <em>feel<\/em>&nbsp;just as beautiful as beautiful as they are!<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1581794354480": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "Satori Boutique",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/pages\/about-satori-boutique",
+              "image": "shopify:\/\/shop_images\/DSCN3528.jpg",
+              "alignment": "center",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 550,
+              "parallax": true
+            }
+          },
+          "1581794030664": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSCN3521.jpg",
+              "image_width": 500,
+              "subtitle": "About the Boutique",
+              "title": "Satori Boutique",
+              "text": "<p>Satori is defined as a state of sudden indescribable intuitive enlightenment or awakening. The Lotus flower symbolizes purity of heart and mind.&nbsp;Since 2010, the Satori Boutique has helped women rise up and take on the world with confidence.&nbsp;This small town&nbsp;family business has catered to a broad demographic of stylish, chic, fearless women searching&nbsp;for unique designer&nbsp;clothing, jewelry, and other accessories. Our new store in Granger, Indiana has&nbsp;an added dimension of home furnishings and other&nbsp;items that will make you feel even more beautiful. We have a growing list of exclusive products and can't wait to help you find that special timeless piece for your home or wardrobe.<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1581794595803": {
+            "type": "map",
+            "settings": {
+              "map_title": "Satori Boutique",
+              "address": "<p>918 E University Dr<br> Granger, IN 46530<\/p>\n<p><strong>Mon - Wed:<\/strong>&nbsp;11AM &ndash; 5PM<br><strong>Thurs - Fri:&nbsp;<\/strong>11AM &ndash; 6PM<br><strong>Saturday:<\/strong>&nbsp;10AM &ndash; 4PM<br><strong>Sunday:<\/strong> 11AM &ndash; 3PM<br><br><\/p>",
+              "map_address": "918 E University Dr, Granger, IN 46530",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1581793984004",
+          "1581794354480",
+          "1581794030664",
+          "1581794595803"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-about-sorella-template": {
+        "type": "page-sections-about-sorella-template",
+        "blocks": {
+          "1582007809867": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/86379093_3017621154916823_8379970910962057216_n.jpg",
+              "image_width": 500,
+              "subtitle": "Meet the Owner",
+              "title": "Jill Renea",
+              "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+              "button_label": "Optional button",
+              "button_link": "",
+              "layout": "left"
+            }
+          },
+          "1582008134889": {
+            "type": "background-image-text",
+            "settings": {
+              "subtitle": "",
+              "title": "Sorella Boutique",
+              "text": "<p>Try on items at home.<br>Only pay for what you love.<\/p>",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/pages\/about-sorella-boutique",
+              "image": "shopify:\/\/shop_images\/82174491_2456387364488906_2694200227065233408_o.jpg",
+              "alignment": "center",
+              "color_border": "#f4f4f4",
+              "layout": "left",
+              "height": 550,
+              "parallax": true
+            }
+          },
+          "1582008125184": {
+            "type": "text-and-image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/7bbe43b8377c8230f3f98a69d94b8780.jpg",
+              "image_width": 500,
+              "subtitle": "",
+              "title": "Sorella Boutique",
+              "text": "<p>Sorella boutique is a&nbsp;unique apparel and gift boutique! Trendy and affordable women's clothing lines, premium denim, purses,&nbsp; and beautiful gift items make this boutique a long-time local favorite!<\/p>",
+              "button_label": "",
+              "button_link": "",
+              "layout": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1582007809867",
+          "1582008134889",
+          "1582008125184"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "page-sections-why-local": {
+        "type": "page-sections-why-local",
+        "blocks": {
+          "1582057556774": {
+            "type": "image-row",
+            "settings": {
+              "image_1": "shopify:\/\/shop_images\/82048055_2633901413596898_1418779198545199104_n.jpg",
+              "image_1_link": "shopify:\/\/collections\/cambria-boutique",
+              "image_2": "shopify:\/\/shop_images\/DSCN3382.JPG",
+              "image_2_link": "shopify:\/\/collections\/ali-on-the-boulevard",
+              "image_3": "shopify:\/\/shop_images\/ts_front.jpg",
+              "image_3_link": "shopify:\/\/collections\/the-twisted-string-elkhart-in",
+              "image_4": "shopify:\/\/shop_images\/untitled--3.jpg",
+              "image_4_link": "shopify:\/\/collections\/inspire-me",
+              "enable_gutter": true,
+              "enable_zoom": true
+            }
+          },
+          "1582057832273": {
+            "type": "map",
+            "settings": {
+              "map_title": "Northern Indiana",
+              "address": "",
+              "map_address": "South Bend, Indiana",
+              "api_key": "AIzaSyBKeUsuxdeWzYo6B-zGyKp-kK8nxAWX0iI",
+              "show_button": true,
+              "background_image": "",
+              "background_image_position": "center center"
+            }
+          },
+          "1582058142791": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "left",
+              "enable_image_1": true,
+              "image_1": "shopify:\/\/shop_images\/MG_1571.jpg",
+              "image_width_1": 650,
+              "title_1": "",
+              "text_1": "<p><strong>ALI ON THE BOULEVARD<\/strong><br>South Bend, IN<\/p>\n<p>A women&rsquo;s jewelry, clothing and gift boutique located in the heart of South Bend&rsquo;s art district. Incredible pieces at reasonable prices for the gal on the go, day-to-night looks, or something sweet for cutie next door!<\/p>",
+              "button_label_1": "Shop",
+              "button_link_1": "shopify:\/\/collections\/ali-on-the-boulevard",
+              "enable_image_2": true,
+              "image_2": "shopify:\/\/shop_images\/MG_1575.jpg",
+              "image_width_2": 650,
+              "title_2": "",
+              "text_2": "<p><strong>CABRIA BOUTIQUE<\/strong><br>South Bend, IN<\/p>\n<p>A cozy, boho-chic boutique located in the South Bend East Bank Emporium building offering quality women&rsquo;s apparel and accessories that owner Angie Cave says anyone can wear!<\/p>",
+              "button_label_2": "Shop",
+              "button_link_2": "shopify:\/\/collections\/cambria-boutique",
+              "enable_image_3": true,
+              "image_3": "shopify:\/\/shop_images\/MG_1539.jpg",
+              "image_width_3": 650,
+              "title_3": "",
+              "text_3": "<p><strong>INSPIRE ME<\/strong><br>South Bend, IN<\/p>",
+              "button_label_3": "Shop",
+              "button_link_3": "shopify:\/\/collections\/inspire-me"
+            }
+          },
+          "1582058665954": {
+            "type": "text-columns",
+            "settings": {
+              "title": "",
+              "align_text": "center",
+              "enable_image_1": true,
+              "image_1": "",
+              "image_width_1": 650,
+              "title_1": "Example title",
+              "text_1": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_1": "",
+              "button_link_1": "",
+              "enable_image_2": true,
+              "image_2": "",
+              "image_width_2": 650,
+              "title_2": "Example title",
+              "text_2": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_2": "",
+              "button_link_2": "",
+              "enable_image_3": true,
+              "image_3": "",
+              "image_width_3": 650,
+              "title_3": "Example title",
+              "text_3": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.<\/p>",
+              "button_label_3": "",
+              "button_link_3": ""
+            }
+          }
+        },
+        "block_order": [
+          "1582057556774",
+          "1582057832273",
+          "1582058142791",
+          "1582058665954"
+        ],
+        "settings": {
+          "page_title_enable": true,
+          "page_content_enable": false
+        }
+      },
+      "1583775274499": {
+        "type": "hero-video",
+        "disabled": true,
+        "settings": {
+          "title": "Experience Local",
+          "title_size": 59,
+          "subheading": "Northern Indiana Fashion Boutiques",
+          "link_text": "Shop All",
+          "link": "",
+          "color_accent": "rgba(0,0,0,0)",
+          "text_align": "vertical-center horizontal-center",
+          "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+          "section_height": "550px",
+          "mobile_height": "auto"
+        }
+      },
+      "1583854422613": {
+        "type": "slideshow",
+        "blocks": {
+          "1583854422613-0": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "",
+              "title": "",
+              "title_size": 57,
+              "subheading": "South Bend, IN",
+              "link": "shopify:\/\/collections\/ali-on-the-boulevard",
+              "link_text": "Shop Ali On The Boulevard",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#ffffff",
+              "text_align": "vertical-bottom horizontal-center",
+              "image": "shopify:\/\/shop_images\/AOTB_March_store_photo.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1583855605078": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "",
+              "title": "",
+              "title_size": 80,
+              "subheading": "Granger, IN",
+              "link": "shopify:\/\/collections\/satori-boutique",
+              "link_text": "Shop Satori Boutique",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#ffffff",
+              "text_align": "vertical-bottom horizontal-center",
+              "image": "shopify:\/\/shop_images\/DSCN3528.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1583854422613-1": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "",
+              "title": "",
+              "title_size": 45,
+              "subheading": "Elkhart, IN",
+              "link": "shopify:\/\/collections\/the-twisted-string-elkhart-in",
+              "link_text": "Shop The Twisted String",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#ffffff",
+              "text_align": "vertical-bottom horizontal-center",
+              "image": "shopify:\/\/shop_images\/IMG_0011_Original.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1583855693234": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "",
+              "title": "",
+              "title_size": 80,
+              "subheading": "South Bend, IN",
+              "link": "shopify:\/\/collections\/inspire-me",
+              "link_text": "Shop Inspire Me",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#ffffff",
+              "text_align": "vertical-bottom horizontal-center",
+              "image": "shopify:\/\/shop_images\/IMG_0525.jpg",
+              "focal_point": "center center"
+            }
+          },
+          "1583855824798": {
+            "type": "image",
+            "settings": {
+              "top_subheading": "",
+              "title": "",
+              "title_size": 80,
+              "subheading": "South Bend, IN",
+              "link": "shopify:\/\/collections\/cambria-boutique",
+              "link_text": "Shop Cambria Boutique",
+              "link_2": "",
+              "link_text_2": "",
+              "color_accent": "#ffffff",
+              "text_align": "vertical-bottom horizontal-center",
+              "image": "shopify:\/\/shop_images\/IMG_0559_2.jpg",
+              "focal_point": "center center"
+            }
+          }
+        },
+        "block_order": [
+          "1583854422613-0",
+          "1583855824798",
+          "1583855693234",
+          "1583855605078",
+          "1583854422613-1"
+        ],
+        "settings": {
+          "section_height": "650px",
+          "mobile_height": "400px",
+          "parallax": false,
+          "style": "minimal",
+          "autoplay": true,
+          "autoplay_speed": 5
+        }
+      },
+      "1583854945048": {
+        "type": "featured-content",
+        "settings": {
+          "title": "Discover & Shop Local",
+          "text": "<p>Northern Indiana Fashion Boutiques<\/p>",
+          "align_text": "center",
+          "narrow_column": false,
+          "enlarge_text": true,
+          "divider": false
+        }
+      },
+      "1583855023728": {
+        "type": "featured-content",
+        "disabled": true,
+        "settings": {
+          "title": "",
+          "text": "",
+          "align_text": "center",
+          "narrow_column": false,
+          "enlarge_text": true,
+          "divider": false
+        }
+      },
+      "1583860448144": {
+        "type": "background-image-text",
+        "disabled": true,
+        "settings": {
+          "subtitle": "Collection",
+          "title": "March Madness",
+          "text": "<p>Looking for a last-minute St. Paddy's Day outfit from your local fashion boutiques?&nbsp;<\/p>",
+          "button_label": "Shop the Collection",
+          "button_link": "shopify:\/\/collections\/march-madness",
+          "image": "shopify:\/\/shop_images\/IMG_0454.jpg",
+          "focal_point": "20% 100%",
+          "color_border": "#f4f4f4",
+          "layout": "left",
+          "height": 550,
+          "framed": false,
+          "parallax": true
+        }
+      },
+      "1583864105374": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "March Verde Collection",
+          "home_featured_products": "march-madness",
+          "per_row": 5,
+          "rows": 1,
+          "mobile_scrollable": true,
+          "view_all": true,
+          "divider": false
+        }
+      },
+      "collection-template-bc-original": {
+        "type": "collection-template-bc-original",
+        "settings": {
+          "description_position": "top",
+          "subcollection_style": "above",
+          "subcollections_per_row": 5,
+          "enable_collection_count": true,
+          "per_row": 4,
+          "rows_per_page": 7,
+          "mobile_flush_grid": false
+        }
+      }
+    },
+    "content_for_index": [
+      "1583855023728",
+      "1583854422613",
+      "1583864105374",
+      "1576266201048",
+      "1576286920980",
+      "1583860448144",
+      "1576265733642",
+      "1576079956431",
+      "1583775274499",
+      "1579206367551",
+      "1575493714669",
+      "1575492564938",
+      "1580330326986",
+      "1526068199595",
+      "1583854945048",
+      "1576287169005",
+      "1576368698766",
+      "1576285368401",
+      "1524769873765",
+      "1576169934159",
+      "1575499177073",
+      "1575493843207",
+      "1575494200423"
+    ]
+  },
+  "presets": {
+    "Modern": {
+      "breadcrumb": true,
+      "button_style": "square",
+      "cart_notes_enable": false,
+      "cart_terms_conditions_enable": false,
+      "cart_type": "drawer",
+      "checkout_accent_color": "#111111",
+      "checkout_body_background_color": "#fff",
+      "checkout_button_color": "#111111",
+      "checkout_error_color": "#ff6d6d",
+      "checkout_input_background_color_mode": "white",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_sidebar_background_color": "#fafafa",
+      "collection_color_swatches": false,
+      "collection_grid_gutter": true,
+      "collection_grid_image": "product",
+      "collection_grid_opacity": 10,
+      "collection_grid_shape": "square",
+      "collection_grid_style": "overlaid-box",
+      "collection_grid_text_align": "center",
+      "collection_grid_tint": "#000000",
+      "color_announcement": "#0f0f0f",
+      "color_announcement_text": "#fff",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_borders": "#e8e8e1",
+      "color_button": "#111111",
+      "color_button_text": "#fff",
+      "color_cart_dot": "#ff4f33",
+      "color_drawer_background": "#ffffff",
+      "color_drawer_border": "#e8e8e1",
+      "color_drawer_button": "#111111",
+      "color_drawer_button_text": "#ffffff",
+      "color_drawer_text": "#000000",
+      "color_footer": "#ffffff",
+      "color_footer_text": "#000000",
+      "color_header": "#fff",
+      "color_header_text": "#000",
+      "color_image_overlay": "#000",
+      "color_image_overlay_text_shadow": 20,
+      "color_large_image_bg": "#0f0f0f",
+      "color_modal_overlays": "#e6e6e6",
+      "color_price": "#1c1d1d",
+      "color_savings_text": "#ff4e4e",
+      "color_small_image_bg": "#fff",
+      "currency_format": "money_format",
+      "icon_linecaps": "miter",
+      "icon_weight": "2px",
+      "inventory_enable": true,
+      "product_color_swatches": false,
+      "product_contact": false,
+      "product_grid_image_size": "natural",
+      "product_hover_image": false,
+      "product_video_height": "1280",
+      "product_video_style": "muted",
+      "product_video_width": "960",
+      "quantity_enable": false,
+      "quick_shop_text": "Quick view",
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "sku_enable": false,
+      "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+      "social_instagram_link": "https:\/\/instagram.com\/shopify",
+      "social_pinterest_link": "https:\/\/www.pinterest.com\/shopify",
+      "type_base_font_family": "futura_n4",
+      "type_base_line_height": 1.6,
+      "type_base_size": 16,
+      "type_base_spacing": "25",
+      "type_body_align_text": true,
+      "type_collection_font": "body",
+      "type_collection_size": 18,
+      "type_header_base_size": 38,
+      "type_header_capitalize": true,
+      "type_header_font_family": "tiemann_n4",
+      "type_header_line_height": 1,
+      "type_header_spacing": "0",
+      "type_headers_align_text": true,
+      "type_navigation_capitalize": true,
+      "type_navigation_size": 13,
+      "type_navigation_style": "body",
+      "type_product_style": "body",
+      "variant_type": "button",
+      "vendor_enable": false,
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {
+            "1524770014057": {
+              "type": "logo",
+              "settings": {
+                "desktop_logo_width": 140,
+                "mobile_logo_width": 110
+              }
+            },
+            "1524770292306": {
+              "type": "announcement",
+              "settings": {
+                "text": "Free shipping",
+                "link_text": "On all orders over $100"
+              }
+            },
+            "1524770296206": {
+              "type": "announcement",
+              "settings": {
+                "text": "Hassle-free returns",
+                "link_text": "30-day postage paid returns"
+              }
+            }
+          },
+          "block_order": [
+            "1524770014057",
+            "1524770292306",
+            "1524770296206"
+          ],
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "main_menu_alignment": "center-split",
+            "header_style": "sticky",
+            "sticky_index": false,
+            "sticky_collection": false,
+            "toolbar_menu": "top",
+            "toolbar_social": true,
+            "announcement_compact": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1494301487048": {
+              "type": "logo_social",
+              "settings": {
+                "container_width": 95
+              }
+            },
+            "1494301487049": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "container_width": 25
+              }
+            },
+            "1494292487693": {
+              "type": "newsletter",
+              "settings": {
+                "container_width": 33
+              }
+            }
+          },
+          "block_order": [
+            "1494301487049",
+            "1494292487693",
+            "1494301487048"
+          ],
+          "settings": {
+            "show_payment_icons": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "subcollection_style": "above",
+            "subcollections_per_row": 5,
+            "per_row": 4
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_position": "left",
+            "image_size": "large",
+            "social_enable": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "social_sharing_blog": true
+          }
+        },
+        "1498163293234": {
+          "type": "featured-content",
+          "settings": {
+            "align_text": "center",
+            "narrow_column": true,
+            "enlarge_text": true,
+            "divider": false
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "blog_image_size": "wide"
+          }
+        },
+        "1499789718857": {
+          "type": "featured-collections",
+          "blocks": {
+            "1499789718857-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1499789718857-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1499789718857-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1499789718857-3": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1499789718857-0",
+            "1499789718857-1",
+            "1499789718857-2",
+            "1499789718857-3"
+          ],
+          "settings": {
+            "title": "Shop by category",
+            "divider": false,
+            "per_row": 4,
+            "enable_gutter": true
+          }
+        },
+        "1499790633921": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "80% 0",
+            "color_border": "#cdb8ac",
+            "layout": "left",
+            "height": 750,
+            "framed": false,
+            "parallax": true
+          }
+        },
+        "product-sections-template": {
+          "type": "product-sections-template",
+          "blocks": {
+            "product-image-row": {
+              "type": "image-row",
+              "settings": {
+                "enable_gutter": false,
+                "enable_zoom": true
+              }
+            },
+            "product-text-and-image": {
+              "type": "text-and-image",
+              "settings": {
+                "layout": "left"
+              }
+            },
+            "product-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550,
+                "parallax": true
+              }
+            },
+            "product-text-columns": {
+              "type": "text-columns",
+              "settings": {}
+            },
+            "product-hero-video": {
+              "type": "hero-video",
+              "settings": {
+                "text_align": "vertical-bottom horizontal-left",
+                "section_height": "650px",
+                "mobile_height": "auto"
+              }
+            }
+          },
+          "block_order": [
+            "product-image-row",
+            "product-text-and-image",
+            "product-background-image-text",
+            "product-text-columns",
+            "product-hero-video"
+          ],
+          "settings": {
+            "image_size": "medium",
+            "social_enable": true,
+            "collection_links_enable": true
+          }
+        },
+        "page-sections-template": {
+          "type": "page-sections-template",
+          "blocks": {
+            "page-image-hero": {
+              "type": "image-hero",
+              "settings": {}
+            },
+            "page-rich-text": {
+              "type": "rich-text",
+              "settings": {
+                "align_text": "center",
+                "narrow_column": true,
+                "enlarge_text": true
+              }
+            },
+            "page-text-columns": {
+              "type": "text-columns",
+              "settings": {}
+            },
+            "page-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550
+              }
+            },
+            "page-featured-collection": {
+              "type": "featured-collection",
+              "settings": {
+                "title": "Featured collection",
+                "per_row": 4,
+                "rows": 1,
+                "view_all": true
+              }
+            }
+          },
+          "block_order": [
+            "page-image-hero",
+            "page-rich-text",
+            "page-text-columns",
+            "page-background-image-text",
+            "page-featured-collection"
+          ],
+          "settings": {
+            "page_title_enable": false,
+            "page_content_enable": false
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {}
+        },
+        "1524769873765": {
+          "type": "slideshow",
+          "blocks": {
+            "1524769873765-0": {
+              "type": "image",
+              "settings": {
+                "title_size": 80,
+                "link": "shopify:\/\/collections\/all",
+                "link_text": "Shop this",
+                "link_2": "shopify:\/\/collections\/all",
+                "link_text_2": "Shop all",
+                "color_accent": "#000000",
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "top center"
+              }
+            },
+            "1524769873765-1": {
+              "type": "image",
+              "settings": {
+                "title_size": 80,
+                "link": "shopify:\/\/collections\/all",
+                "link_text": "Shop all",
+                "link_2": "shopify:\/\/collections\/all",
+                "link_text_2": "Shop all",
+                "color_accent": "#000000",
+                "text_align": "vertical-bottom horizontal-left",
+                "focal_point": "top center"
+              }
+            }
+          },
+          "block_order": [
+            "1524769873765-0",
+            "1524769873765-1"
+          ],
+          "settings": {
+            "section_height": "750px",
+            "mobile_height": "auto",
+            "parallax": true,
+            "style": "bars",
+            "autoplay": true,
+            "autoplay_speed": 7
+          }
+        },
+        "collection-header": {
+          "type": "collection-header",
+          "settings": {
+            "enable": true,
+            "collection_image_enable": true,
+            "parallax": true
+          }
+        },
+        "collection-sidebar": {
+          "type": "collection-sidebar",
+          "blocks": {
+            "1524772785241": {
+              "type": "subcollections",
+              "settings": {}
+            },
+            "1524772580942": {
+              "type": "tags_all",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1524772785241",
+            "1524772580942"
+          ],
+          "settings": {
+            "enable_sidebar": true,
+            "filter_style": "sidebar",
+            "tags_combine": false,
+            "enable_sort": true
+          }
+        },
+        "1525115199973": {
+          "type": "blog-posts",
+          "settings": {
+            "title": "From the journal",
+            "blog": "news",
+            "post_limit": 3,
+            "blog_show_tags": false,
+            "blog_show_date": true,
+            "blog_show_comments": false,
+            "blog_show_author": false,
+            "view_all": true,
+            "blog_image_size": "wide",
+            "divider": false
+          }
+        },
+        "1525118065355": {
+          "type": "map",
+          "settings": {}
+        },
+        "1525295772132": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 4,
+            "rows": 1,
+            "view_all": true,
+            "divider": false
+          }
+        },
+        "1525886124958": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525886482727": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "100",
+                "height": 720,
+                "text_size": 120,
+                "focal_point": "80% 50%",
+                "boxed": false,
+                "framed": false
+              }
+            },
+            "1525886854810": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "50",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1525911710924": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "50",
+                "boxed": false,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525886482727",
+            "1525886854810",
+            "1525911710924"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525912530555": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525912530555-0": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "50",
+                "height": 800,
+                "text_size": 100,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1525912530555-1": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "50",
+                "height": 500,
+                "text_size": 100,
+                "text_align": "vertical-bottom horizontal-center",
+                "focal_point": "80% 50%",
+                "boxed": true,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1525912530555-0",
+            "1525912530555-1"
+          ],
+          "settings": {
+            "full_width": true,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1526068199595": {
+          "type": "instagram",
+          "settings": {}
+        },
+        "collection-promotions": {
+          "type": "collection-promotions",
+          "blocks": {
+            "1526403837307": {
+              "type": "banner",
+              "settings": {
+                "link": "shopify:\/\/collections\/all",
+                "label": "Shop now",
+                "color_tint": "#e95454",
+                "color_tint_opacity": 10,
+                "framed": false
+              }
+            },
+            "1526496043079": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "100",
+                "height": 500,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1526403837307",
+            "1526496043079"
+          ],
+          "settings": {
+            "gutter_size": 20
+          }
+        }
+      },
+      "content_for_index": [
+        "1524769873765",
+        "1498163293234",
+        "1525912530555",
+        "1499789718857",
+        "1525886124958",
+        "1525295772132",
+        "1499790633921",
+        "1525115199973",
+        "1525118065355",
+        "1526068199595"
+      ]
+    },
+    "Vintage": {
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#000000",
+      "color_price": "#1c1d1d",
+      "color_savings_text": "#72acc7",
+      "color_borders": "#f2f2f2",
+      "color_button": "#682d2d",
+      "color_button_text": "#fff",
+      "color_cart_dot": "#682d2d",
+      "color_small_image_bg": "#f7f7f9",
+      "color_large_image_bg": "#682d2d",
+      "color_header": "#ffffff",
+      "color_header_text": "#000000",
+      "color_announcement": "#6a2727",
+      "color_announcement_text": "#ffffff",
+      "color_footer": "#f7f7f9",
+      "color_footer_text": "#593b32",
+      "color_drawer_background": "#ffffff",
+      "color_drawer_text": "#000000",
+      "color_drawer_border": "#e8e8e1",
+      "color_drawer_button": "#682d2d",
+      "color_drawer_button_text": "#ffffff",
+      "color_modal_overlays": "#cdc9c2",
+      "color_image_overlay": "#000",
+      "color_image_overlay_text_shadow": 30,
+      "type_header_font_family": "americana_n8",
+      "type_header_spacing": "0",
+      "type_header_base_size": 36,
+      "type_header_line_height": 1.2,
+      "type_header_capitalize": true,
+      "type_headers_align_text": true,
+      "type_base_font_family": "avenir_next_n4",
+      "type_base_spacing": "0",
+      "type_base_size": 18,
+      "type_base_line_height": 1.5,
+      "type_body_align_text": true,
+      "type_navigation_style": "heading",
+      "type_navigation_size": 17,
+      "type_product_style": "body",
+      "type_collection_font": "heading",
+      "type_collection_size": 20,
+      "button_style": "square",
+      "icon_weight": "3px",
+      "icon_linecaps": "miter",
+      "vendor_enable": false,
+      "sku_enable": false,
+      "quantity_enable": false,
+      "variant_type": "button",
+      "inventory_enable": false,
+      "quick_shop_text": "Quick view",
+      "product_grid_image_size": "square",
+      "product_hover_image": true,
+      "product_color_swatches": false,
+      "collection_color_swatches": false,
+      "product_video_width": "1280",
+      "product_video_height": "720",
+      "product_video_style": "muted",
+      "product_contact": true,
+      "collection_grid_style": "below",
+      "collection_grid_shape": "landscape",
+      "collection_grid_image": "product",
+      "collection_grid_text_align": "top-center",
+      "collection_grid_tint": "#000000",
+      "collection_grid_opacity": 0,
+      "collection_grid_gutter": true,
+      "cart_type": "drawer",
+      "cart_notes_enable": false,
+      "cart_terms_conditions_enable": false,
+      "currency_format": "money_format",
+      "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+      "social_twitter_link": "https:\/\/twitter.com\/shopify",
+      "social_instagram_link": "https:\/\/instagram.com\/shopify",
+      "social_youtube_link": "https:\/\/www.youtube.com\/user\/shopify",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_color": "#f5f5f5",
+      "checkout_accent_color": "#682d2d",
+      "checkout_button_color": "#682d2d",
+      "checkout_error_color": "#ff6d6d",
+      "product_fixed_image_height": false,
+      "breadcrumb": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {
+            "1520882467782": {
+              "type": "logo",
+              "settings": {}
+            },
+            "1521051841065": {
+              "type": "announcement",
+              "settings": {
+                "text": "Free shipping",
+                "link_text": "On all orders over $100",
+                "link": "shopify:\/\/collections\/all"
+              }
+            },
+            "1520888647304": {
+              "type": "announcement",
+              "settings": {
+                "text": "Hassle-free returns",
+                "link_text": "30-day postage paid returns",
+                "link": "shopify:\/\/collections\/all"
+              }
+            }
+          },
+          "block_order": [
+            "1520882467782",
+            "1521051841065",
+            "1520888647304"
+          ],
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "main_menu_alignment": "center-split",
+            "header_style": "normal",
+            "sticky_index": true,
+            "sticky_collection": true,
+            "toolbar_menu": "toolbar",
+            "toolbar_social": true,
+            "announcement_compact": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1494301487048": {
+              "type": "logo_social",
+              "settings": {
+                "container_width": 95
+              }
+            },
+            "1494301487049": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "container_width": 25
+              }
+            },
+            "1494292487693": {
+              "type": "newsletter",
+              "settings": {
+                "container_width": 30
+              }
+            }
+          },
+          "block_order": [
+            "1494301487049",
+            "1494292487693",
+            "1494301487048"
+          ],
+          "settings": {
+            "show_payment_icons": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "subcollection_style": "above",
+            "subcollections_per_row": 3,
+            "per_row": 2
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "large",
+            "thumbnail_position": "below",
+            "social_enable": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "social_sharing_blog": true
+          }
+        },
+        "1498163293234": {
+          "type": "featured-content",
+          "settings": {
+            "align_text": "center",
+            "narrow_column": true,
+            "enlarge_text": true,
+            "divider": false
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "blog_image_size": "wide"
+          }
+        },
+        "1499790633921": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#6a635b",
+            "layout": "right",
+            "height": 750,
+            "framed": true,
+            "parallax": true
+          }
+        },
+        "product-sections-template": {
+          "type": "product-sections-template",
+          "blocks": {
+            "product-image-row": {
+              "type": "image-row",
+              "settings": {
+                "enable_gutter": false,
+                "enable_zoom": true
+              }
+            },
+            "product-text-and-image": {
+              "type": "text-and-image",
+              "settings": {
+                "layout": "left"
+              }
+            },
+            "product-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550,
+                "parallax": true
+              }
+            },
+            "product-text-columns": {
+              "type": "text-columns",
+              "settings": {}
+            },
+            "product-hero-video": {
+              "type": "hero-video",
+              "settings": {
+                "text_align": "vertical-bottom horizontal-left",
+                "section_height": "650px",
+                "mobile_height": "auto"
+              }
+            }
+          },
+          "block_order": [
+            "product-image-row",
+            "product-text-and-image",
+            "product-background-image-text",
+            "product-text-columns",
+            "product-hero-video"
+          ],
+          "settings": {
+            "image_size": "medium",
+            "social_enable": true,
+            "collection_links_enable": true
+          }
+        },
+        "page-sections-template": {
+          "type": "page-sections-template",
+          "blocks": {
+            "page-rich-text": {
+              "type": "rich-text",
+              "settings": {
+                "align_text": "center",
+                "narrow_column": true,
+                "enlarge_text": true
+              }
+            },
+            "page-text-columns": {
+              "type": "text-columns",
+              "settings": {}
+            },
+            "page-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550
+              }
+            },
+            "page-featured-collection": {
+              "type": "featured-collection",
+              "settings": {
+                "per_row": 4,
+                "rows": 1,
+                "view_all": true
+              }
+            }
+          },
+          "block_order": [
+            "page-rich-text",
+            "page-text-columns",
+            "page-background-image-text",
+            "page-featured-collection"
+          ],
+          "settings": {
+            "page_title_enable": false,
+            "page_content_enable": false
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {}
+        },
+        "collection-header": {
+          "type": "collection-header",
+          "settings": {
+            "enable": true,
+            "collection_image_enable": true,
+            "parallax": true
+          }
+        },
+        "collection-sidebar": {
+          "type": "collection-sidebar",
+          "blocks": {
+            "1524772785241": {
+              "type": "subcollections",
+              "settings": {}
+            },
+            "1524772580942": {
+              "type": "tags_all",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1524772785241",
+            "1524772580942"
+          ],
+          "settings": {
+            "enable_sidebar": true,
+            "filter_style": "sidebar",
+            "tags_combine": false,
+            "enable_sort": true
+          }
+        },
+        "1523298253705": {
+          "type": "slideshow",
+          "blocks": {
+            "1523298253705-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "1523298253705-1": {
+              "type": "image",
+              "settings": {
+                "title_size": 80,
+                "text_align": "vertical-bottom horizontal-right",
+                "focal_point": "center center"
+              }
+            }
+          },
+          "block_order": [
+            "1523298253705-0",
+            "1523298253705-1"
+          ],
+          "settings": {
+            "section_height": "100vh",
+            "mobile_height": "500px",
+            "parallax": true,
+            "style": "minimal",
+            "autoplay": true,
+            "autoplay_speed": 7
+          }
+        },
+        "list-collections-template": {
+          "type": "list-collections-template",
+          "settings": {
+            "title_enable": true,
+            "display_type": "all",
+            "sort": "alphabetical",
+            "grid": "3"
+          }
+        },
+        "1523380258742": {
+          "type": "featured-collections",
+          "disabled": true,
+          "blocks": {
+            "1523380258742-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1523380258742-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1523380258742-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1524685811204": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1524685816171": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1524685829380": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1523380258742-0",
+            "1523380258742-1",
+            "1523380258742-2",
+            "1524685811204",
+            "1524685816171",
+            "1524685829380"
+          ],
+          "settings": {
+            "divider": false,
+            "per_row": 3,
+            "enable_gutter": true
+          }
+        },
+        "1524685456938": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#655147",
+            "layout": "right",
+            "height": 650,
+            "framed": true,
+            "parallax": true
+          }
+        },
+        "1524685919990": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 4,
+            "rows": 1,
+            "view_all": true,
+            "divider": false
+          }
+        },
+        "1524685997883": {
+          "type": "newsletter",
+          "settings": {
+            "color_background": "#f7f7f9",
+            "color_text": "#3f2e2e"
+          }
+        },
+        "1524686167862": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 3,
+            "rows": 1,
+            "view_all": true,
+            "divider": false
+          }
+        },
+        "1524686876171": {
+          "type": "featured-collections",
+          "blocks": {
+            "1524686876171-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1524686876171-1": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1524686876171-0",
+            "1524686876171-1"
+          ],
+          "settings": {
+            "divider": false,
+            "per_row": 2,
+            "enable_gutter": true
+          }
+        },
+        "1525878145666": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525879359021": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "100",
+                "height": 500,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "80% 50%",
+                "boxed": false,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525879359021"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525881294487": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525881312850": {
+              "type": "banner",
+              "settings": {
+                "link": "shopify:\/\/collections\/all",
+                "label": "Learn more",
+                "color_tint": "#d69344",
+                "color_tint_opacity": 14,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525881312850"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 0,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525968536765": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525968571112": {
+              "type": "product",
+              "settings": {
+                "label": "New",
+                "enable_price": true,
+                "width": "100",
+                "text_size": 100,
+                "color_tint": "#000",
+                "color_tint_opacity": 0,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1525968571112"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1525969002555": {
+          "type": "blog-posts",
+          "settings": {
+            "blog": "news",
+            "post_limit": 3,
+            "blog_show_tags": false,
+            "blog_show_date": true,
+            "blog_show_comments": false,
+            "blog_show_author": false,
+            "view_all": true,
+            "blog_image_size": "wide",
+            "divider": false
+          }
+        },
+        "1526333080570": {
+          "type": "instagram",
+          "settings": {}
+        },
+        "1526493275292": {
+          "type": "promo-grid",
+          "blocks": {
+            "1526493290477": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "100",
+                "boxed": true,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1526493290477"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 20,
+            "space_above": false,
+            "space_below": true
+          }
+        },
+        "collection-promotions": {
+          "type": "collection-promotions",
+          "blocks": {
+            "1526501666154": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "100",
+                "boxed": true,
+                "framed": true
+              }
+            },
+            "1526501699095": {
+              "type": "banner",
+              "settings": {
+                "heading": "Free shipping",
+                "link": "shopify:\/\/collections\/all",
+                "label": "Learn more",
+                "color_tint": "#d69344",
+                "color_tint_opacity": 14,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1526501666154",
+            "1526501699095"
+          ],
+          "settings": {
+            "gutter_size": 20
+          }
+        }
+      },
+      "content_for_index": [
+        "1523298253705",
+        "1498163293234",
+        "1525878145666",
+        "1523380258742",
+        "1524686876171",
+        "1526493275292",
+        "1524685456938",
+        "1524685919990",
+        "1525881294487",
+        "1524686167862",
+        "1524685997883",
+        "1499790633921",
+        "1525968536765",
+        "1525969002555",
+        "1526333080570"
+      ]
+    },
+    "Bold": {
+      "color_body_bg": "#000000",
+      "color_body_text": "#ffffff",
+      "color_price": "#d1ba98",
+      "color_savings_text": "#ff6565",
+      "color_borders": "#2b2a27",
+      "color_button": "#9f8561",
+      "color_button_text": "#ffffff",
+      "color_cart_dot": "#9f8561",
+      "color_small_image_bg": "#000000",
+      "color_large_image_bg": "#111111",
+      "color_header": "#000000",
+      "color_header_text": "#ffffff",
+      "color_announcement": "#cf2424",
+      "color_announcement_text": "#fff",
+      "color_footer": "#000000",
+      "color_footer_text": "#ffffff",
+      "color_drawer_background": "#000000",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_border": "#2b2a27",
+      "color_drawer_button": "#9f8561",
+      "color_drawer_button_text": "#ffffff",
+      "color_modal_overlays": "#67635d",
+      "color_image_overlay": "#000",
+      "color_image_overlay_opacity": 15,
+      "color_image_overlay_text_shadow": 30,
+      "type_header_font_family": "fjalla_one_n4",
+      "type_header_spacing": "150",
+      "type_header_base_size": 45,
+      "type_header_line_height": 1.2,
+      "type_header_capitalize": true,
+      "type_headers_align_text": true,
+      "type_base_font_family": "itc_conduit_n4",
+      "type_base_spacing": "50",
+      "type_base_size": 18,
+      "type_base_line_height": 1.4,
+      "type_body_align_text": true,
+      "type_navigation_style": "heading",
+      "type_navigation_size": 18,
+      "type_product_style": "heading",
+      "type_collection_font": "heading",
+      "type_collection_size": 23,
+      "button_style": "angled",
+      "icon_weight": "5px",
+      "icon_linecaps": "miter",
+      "vendor_enable": false,
+      "search_enable": false,
+      "sku_enable": false,
+      "quantity_enable": false,
+      "variant_type": "button",
+      "inventory_enable": false,
+      "product_save_amount": true,
+      "product_zoom_enable": false,
+      "quick_shop_enable": true,
+      "quick_shop_text": "Quick view",
+      "product_grid_image_size": "square",
+      "product_hover_image": false,
+      "product_color_swatches": false,
+      "collection_color_swatches": false,
+      "product_video_width": "1280",
+      "product_video_height": "720",
+      "product_video_style": "muted",
+      "product_content_collapse_1": false,
+      "product_content_collapse_2": true,
+      "product_content_collapse_3": true,
+      "product_contact": false,
+      "enable_product_reviews": true,
+      "reviews_layout": "expandable",
+      "collection_grid_style": "overlaid-box",
+      "collection_grid_shape": "landscape",
+      "collection_grid_image": "collection",
+      "collection_grid_text_align": "bottom-center",
+      "collection_grid_tint": "#000000",
+      "collection_grid_opacity": 10,
+      "collection_grid_gutter": true,
+      "cart_type": "drawer",
+      "currency_format": "money_format",
+      "social_facebook_link": "https:\/\/www.facebook.com\/shopify",
+      "social_twitter_link": "https:\/\/twitter.com\/shopify",
+      "social_youtube_link": "https:\/\/www.youtube.com\/user\/shopify",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_color": "#000000",
+      "checkout_input_background_color_mode": "transparent",
+      "checkout_sidebar_background_color": "#000000",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#ae9878",
+      "checkout_button_color": "#ae9878",
+      "checkout_error_color": "#ff6d6d",
+      "color_image_2": "#cf2424",
+      "color_image_2_opacity": 0,
+      "color_image_1": "#6d1414",
+      "color_image_1_opacity": 0,
+      "type_accent_style": "body",
+      "type_accent_bold": true,
+      "type_accent_capitalize": true,
+      "type_button_font": "heading",
+      "type_button_capitalize": false,
+      "type_header_accent_transform": true,
+      "type_base_accent_transform": true,
+      "collection_grid_font": "heading",
+      "color_image_bg": "#000000",
+      "breadcrumb": true,
+      "color_sale_tag": "#990000",
+      "color_input": "#ffffff",
+      "checkout_banner_background_color": "#fff",
+      "checkout_call_to_action_color": "#a26b25",
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {
+            "1524768779513": {
+              "type": "logo",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1524768779513"
+          ],
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "main_menu_alignment": "left-center",
+            "header_style": "normal",
+            "sticky_index": true,
+            "sticky_collection": false,
+            "toolbar_social": false,
+            "announcement_compact": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "1494292487693": {
+              "type": "newsletter",
+              "settings": {}
+            },
+            "1526406521795": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "container_width": 25
+              }
+            },
+            "1525444454442": {
+              "type": "logo_social",
+              "settings": {
+                "container_width": 95
+              }
+            }
+          },
+          "block_order": [
+            "1494292487693",
+            "1526406521795",
+            "1525444454442"
+          ],
+          "settings": {
+            "show_payment_icons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "subcollection_style": "above",
+            "subcollections_per_row": 3,
+            "per_row": 5
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "large",
+            "social_enable": true
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "social_sharing_blog": true
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_comments": true,
+            "blog_show_author": false,
+            "blog_image_size": "wide"
+          }
+        },
+        "1499790633921": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#090909",
+            "layout": "right",
+            "height": 750,
+            "framed": false,
+            "parallax": true
+          }
+        },
+        "product-sections-template": {
+          "type": "product-sections-template",
+          "blocks": {
+            "product-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "button_link": "shopify:\/\/collections\/all",
+                "alignment": "top left",
+                "color_border": "#3a6815",
+                "layout": "right",
+                "height": 550,
+                "parallax": false
+              }
+            },
+            "product-text-columns": {
+              "type": "text-columns",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "product-background-image-text",
+            "product-text-columns"
+          ],
+          "settings": {
+            "image_size": "large",
+            "thumbnail_position": "below",
+            "social_enable": true,
+            "collection_links_enable": true
+          }
+        },
+        "page-sections-template": {
+          "type": "page-sections-template",
+          "blocks": {
+            "page-rich-text": {
+              "type": "rich-text",
+              "settings": {
+                "align_text": "center",
+                "narrow_column": true,
+                "enlarge_text": true
+              }
+            },
+            "page-text-columns": {
+              "type": "text-columns",
+              "settings": {}
+            },
+            "page-background-image-text": {
+              "type": "background-image-text",
+              "settings": {
+                "alignment": "center",
+                "color_border": "#f4f4f4",
+                "layout": "right",
+                "height": 550
+              }
+            },
+            "page-featured-collection": {
+              "type": "featured-collection",
+              "settings": {
+                "per_row": 4,
+                "rows": 1,
+                "view_all": true
+              }
+            }
+          },
+          "block_order": [
+            "page-rich-text",
+            "page-text-columns",
+            "page-background-image-text",
+            "page-featured-collection"
+          ],
+          "settings": {
+            "page_title_enable": false,
+            "page_content_enable": false
+          }
+        },
+        "newsletter-popup": {
+          "type": "newsletter-popup",
+          "settings": {}
+        },
+        "1524768368258": {
+          "type": "slideshow",
+          "blocks": {
+            "1524768368258-0": {
+              "type": "image",
+              "settings": {
+                "link": "shopify:\/\/collections\/all",
+                "link_text": "Shop all",
+                "text_align": "vertical-center horizontal-left",
+                "focal_point": "top center"
+              }
+            }
+          },
+          "block_order": [
+            "1524768368258-0"
+          ],
+          "settings": {
+            "section_height": "750px",
+            "mobile_height": "auto",
+            "parallax": true,
+            "style": "minimal",
+            "autoplay": true,
+            "autoplay_speed": 5
+          }
+        },
+        "collection-header": {
+          "type": "collection-header",
+          "settings": {
+            "enable": true,
+            "collection_image_enable": false,
+            "parallax": false
+          }
+        },
+        "collection-sidebar": {
+          "type": "collection-sidebar",
+          "blocks": {
+            "1524772785241": {
+              "type": "subcollections",
+              "settings": {}
+            },
+            "1524772580942": {
+              "type": "tags_all",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1524772785241",
+            "1524772580942"
+          ],
+          "settings": {
+            "enable_sidebar": true,
+            "filter_style": "sidebar",
+            "tags_combine": false,
+            "enable_sort": true
+          }
+        },
+        "1525290496166": {
+          "type": "featured-collections",
+          "blocks": {
+            "1525290496166-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1525290496166-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "1525290496166-1": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1525290496166-0",
+            "1525290496166-2",
+            "1525290496166-1"
+          ],
+          "settings": {
+            "divider": false,
+            "per_row": 3,
+            "enable_gutter": true
+          }
+        },
+        "1525899982112": {
+          "type": "instagram",
+          "settings": {}
+        },
+        "1525969132569": {
+          "type": "promo-grid",
+          "blocks": {
+            "1525969870126": {
+              "type": "product",
+              "settings": {
+                "link_label": "Shop now",
+                "label": "New",
+                "enable_price": true,
+                "width": "50",
+                "text_size": 100,
+                "color_tint": "#f8ebd4",
+                "color_tint_opacity": 0,
+                "framed": true
+              }
+            },
+            "1525969996422": {
+              "type": "product",
+              "settings": {
+                "link_label": "Shop now",
+                "label": "New",
+                "enable_price": true,
+                "width": "50",
+                "text_size": 100,
+                "color_tint": "#ff0000",
+                "color_tint_opacity": 0,
+                "framed": true
+              }
+            }
+          },
+          "block_order": [
+            "1525969870126",
+            "1525969996422"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 5,
+            "space_above": false,
+            "space_below": false
+          }
+        },
+        "1526048428302": {
+          "type": "featured-collection",
+          "settings": {
+            "per_row": 4,
+            "rows": 1,
+            "view_all": false,
+            "divider": false
+          }
+        },
+        "1526048519234": {
+          "type": "newsletter",
+          "settings": {
+            "color_background": "#171615",
+            "color_text": "#ffffff"
+          }
+        },
+        "1526048620689": {
+          "type": "blog-posts",
+          "settings": {
+            "title": "Our blog",
+            "blog": "news",
+            "post_limit": 3,
+            "blog_show_tags": false,
+            "blog_show_date": true,
+            "blog_show_comments": false,
+            "blog_show_author": false,
+            "view_all": true,
+            "blog_image_size": "wide",
+            "divider": false
+          }
+        },
+        "collection-promotions": {
+          "type": "collection-promotions",
+          "blocks": {
+            "1526501090474": {
+              "type": "advanced",
+              "settings": {
+                "cta_link1": "shopify:\/\/collections\/all",
+                "width": "50",
+                "height": 400,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1526501130849": {
+              "type": "sale_collection",
+              "settings": {
+                "width": "50",
+                "boxed": false,
+                "framed": true
+              }
+            },
+            "1526501360047": {
+              "type": "banner",
+              "settings": {
+                "label": "Shop 2017",
+                "color_tint": "#514f4b",
+                "color_tint_opacity": 20,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1526501090474",
+            "1526501130849",
+            "1526501360047"
+          ],
+          "settings": {
+            "gutter_size": 20
+          }
+        },
+        "1526480838446": {
+          "type": "background-image-text",
+          "settings": {
+            "button_link": "shopify:\/\/collections\/all",
+            "focal_point": "center",
+            "color_border": "#f4f4f4",
+            "layout": "left",
+            "height": 750,
+            "framed": false,
+            "parallax": true
+          }
+        },
+        "1526481284428": {
+          "type": "featured-content",
+          "settings": {
+            "align_text": "center",
+            "narrow_column": true,
+            "enlarge_text": true,
+            "divider": false
+          }
+        },
+        "1526481405629": {
+          "type": "promo-grid",
+          "blocks": {
+            "1526481405629-1": {
+              "type": "advanced",
+              "settings": {
+                "width": "100",
+                "height": 660,
+                "text_size": 120,
+                "text_align": "vertical-center horizontal-center",
+                "focal_point": "center",
+                "boxed": false,
+                "framed": false
+              }
+            }
+          },
+          "block_order": [
+            "1526481405629-1"
+          ],
+          "settings": {
+            "full_width": false,
+            "gutter_size": 34,
+            "space_above": false,
+            "space_below": true
+          }
+        }
+      },
+      "content_for_index": [
+        "1524768368258",
+        "1526481284428",
+        "1525969132569",
+        "1525290496166",
+        "1526048428302",
+        "1526480838446",
+        "1499790633921",
+        "1526048519234",
+        "1526048620689",
+        "1526481405629",
+        "1525899982112"
+      ]
+    }
+  }
+}

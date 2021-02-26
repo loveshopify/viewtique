@@ -1,0 +1,105 @@
+<script id="PredictiveTemplate" type="text/template">
+  <div class="predictive-result__layout">
+    {% raw %}
+      {{#if products}}
+        <div data-type-products>
+          <div class="grid grid--uniform">
+            {{#products}}
+              <div class="grid__item grid-product small--one-half medium-up--one-quarter" data-aos="row-of-4">
+                <div class="grid-product__content">
+                  {{#if custom_label }}
+                    <div class="grid-product__tag grid-product__tag--custom">
+                      {{custom_label}}
+                    </div>
+                  {{/if}}
+                  {{#if on_sale }}
+                    <div class="grid-product__tag grid-product__tag--sale">
+                      {% endraw %}{{ 'products.general.sale' | t }}{% raw %}
+                    </div>
+                  {{/if}}
+
+                  <a href="{{url}}" class="grid-product__link">
+                    <div class="grid-product__image-mask">
+                      <div
+                        class="grid__image-ratio grid__image-ratio--object grid__image-ratio--{% endraw %}{{ settings.predictive_image_size }}{% raw %}">
+                        <div class="predictive__image-wrap">
+                          {{#if image }}
+                            <img class="image-fit lazyload"
+                                data-src="{{image}}"
+                                data-widths="[180, 360, 540, 720]"
+                                data-sizes="auto">
+                          {{/if}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-product__meta">
+                      <div class="grid-product__title grid-product__title--{% endraw %}{{ settings.type_product_style }}{% raw %}">
+                        {{title}}
+                      </div>
+                      {% endraw %}{%- if settings.predictive_search_show_vendor -%}{% raw %}
+                        <div class="grid-product__vendor">{{vendor}}</div>
+                      {% endraw %}{%- endif -%}{% raw %}
+                      {% endraw %}{%- if settings.predictive_search_show_price -%}{% raw %}
+                        <div class="grid-product__price">
+                          {{#if on_sale }}
+                            <span class="grid-product__price--original">{{{compare_price_max}}}</span>
+                          {{/if}}
+                          {{{price}}}
+                        </div>
+                      {% endraw %}{%- endif -%}{% raw %}
+                    </div>
+                  </a>
+                </div>
+              </div>
+            {{/products}}
+          </div>
+        </div>
+      {{/if}}
+
+      {{#if pages}}
+        <div data-type-pages>
+          <p class="h6 predictive__label">{% endraw %}{{ 'general.search.pages' | t }}{% raw %}</p>
+          {{#pages}}
+            <div>
+              <a href="{{url}}">
+                {{title}}
+              </a>
+            </div>
+          {{/pages}}
+        </div>
+      {{/if}}
+
+      {{#if articles}}
+        <div data-type-articles>
+          <p class="h6 predictive__label">{% endraw %}{{ 'general.search.articles' | t }}{% raw %}</p>
+          <div class="grid grid--uniform">
+            {{#articles}}
+              <div class="grid__item grid-product small--one-half medium-up--one-quarter" data-aos="row-of-4">
+                <a href="{{url}}" class="grid-product__link grid-product__link--inline">
+
+                  <div class="grid-product__image-mask">
+                    <div
+                      class="grid__image-ratio grid__image-ratio--object grid__image-ratio--{% endraw %}{{ settings.predictive_image_size }}{% raw %}">
+                      <div class="predictive__image-wrap">
+                        {{#if image }}
+                          <img class="image-fit lazyload"
+                              data-src="{{image}}"
+                              data-widths="[180, 360, 540, 720]"
+                              data-sizes="auto">
+                        {{/if}}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-product__meta">
+                    {{title}}
+                  </div>
+                </a>
+              </div>
+            {{/articles}}
+          </div>
+        </div>
+      {{/if}}
+    {% endraw %}
+  </div>
+</script>

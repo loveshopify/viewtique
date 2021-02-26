@@ -1,0 +1,229 @@
+{%- if section.settings.enable_sidebar -%}
+  <div
+    id="CollectionSidebar"
+    data-section-id="{{ section.id }}"
+    data-section-type="collection-sidebar"
+    data-combine-tags="{{ section.settings.tags_combine }}"
+    data-style="{{ section.settings.filter_style }}">
+
+    {% include 'sidebar-drawer' %}
+
+    {%- if section.settings.filter_style == 'sidebar' -%}
+      <div class="collection-sidebar small--hide">
+        {% include 'collection-sidebar-filters', location: 'CollectionSidebar' %}
+      </div>
+    {%- endif -%}
+  </div>
+
+{%- endif -%}
+
+{%- if section.settings.enable_sidebar == false or section.settings.filter_style == 'drawer' -%}
+  {% comment %}
+    Override grid styles if sidebar is disabled
+  {% endcomment %}
+  {% style %}
+    .collection-content .grid__item--sidebar { width: 0; }
+    .collection-content .grid__item--content { width: 100%; }
+    .grid__item--sidebar { position: static; overflow: hidden; }
+  {% endstyle %}
+{%- endif -%}
+
+{%- if section.settings.enable_sidebar and section.settings.filter_style != 'drawer' -%}
+  {% comment %}
+    Sidebar enabled but not in drawer mode, only show filter button on mobile
+  {% endcomment %}
+  {% style %}
+    @media screen and (min-width: 769px) {
+      .collection-filter__item--drawer {
+        display: none;
+      }
+      .collection-filter__item--count {
+        text-align: left;
+      }
+    }
+  {% endstyle %}
+{%- endif -%}
+
+{%- unless section.settings.enable_sidebar -%}
+  {% comment %}
+    Disable sidebar & filter features
+  {% endcomment %}
+  {% style %}
+    .collection-filter__item--drawer {
+      display: none;
+    }
+    .collection-filter__item--count {
+      text-align: left;
+    }
+  {% endstyle %}
+{%- endunless -%}
+
+{%- unless section.settings.enable_sort -%}
+  {% style %}
+    .collection-filter__sort-container {
+      display: none;
+    }
+  {% endstyle %}
+{%- endunless -%}
+
+{% schema %}
+  {
+    "name": "Collection filter",
+    "max_blocks": 15,
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_sidebar",
+        "label": "Enable filter",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "filter_style",
+        "label": "Filter style",
+        "default": "drawer",
+        "options": [
+          {
+            "value": "sidebar",
+            "label": "Sidebar"
+          },
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "tags_combine",
+        "label": "Enable tag combinations"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sort",
+        "label": "Show sort options",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "tags_group",
+        "name": "Tag group",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Tag Group"
+          },
+          {
+            "type": "textarea",
+            "id": "tag_list",
+            "label": "Tag list (one per line)",
+            "default": "First tag \nSecond tag \nThird tag",
+            "info": "Tags are case sensitive and must match your product tag exactly"
+          },
+          {
+            "type": "checkbox",
+            "id": "collapsed",
+            "label": "Collapsed",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "color_group",
+        "name": "Color swatches",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Color"
+          },
+          {
+            "type": "textarea",
+            "id": "tag_list",
+            "label": "Swatch list (one per line)",
+            "default": "Burgundy \nHeather grey \nGreen",
+            "info": "Products must be tagged with their color in order to appear here. Tags are case sensitive and must match your product tag exactly. Ex: 'Heather grey'. [Learn how to set up swatches](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)."
+          },
+          {
+            "type": "checkbox",
+            "id": "collapsed",
+            "label": "Collapsed",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "tags_all",
+        "name": "All tags",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Tags"
+          },
+          {
+            "type": "checkbox",
+            "id": "collapsed",
+            "label": "Collapsed",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "menu",
+        "name": "Menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Choose a menu",
+            "default": "main-menu"
+          },
+          {
+            "type": "checkbox",
+            "id": "collapsed",
+            "label": "Collapsed",
+            "default": false
+          }
+        ]
+      },
+      {
+        "type": "subcollections",
+        "name": "Subcollections",
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Links to collections from your menu will appear here. [Learn more](https://archetypethemes.co/blogs/impulse/how-do-i-create-subcollections)"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_subsubcollections",
+            "label": "Show third-level items",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_count",
+            "label": "Enable count"
+          },
+          {
+            "type": "checkbox",
+            "id": "collapsed",
+            "label": "Collapsed",
+            "default": false
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

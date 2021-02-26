@@ -1,0 +1,17 @@
+{%- assign old_collection = collection -%}
+<div class="grid grid--uniform grid--collection{% unless settings.collection_grid_gutter %} grid--no-gutters{% endunless %}">
+  {% for sub_collection_link in sub_collection_links %}
+    {% if sub_collection_link.url contains '/collections/' %}
+      {%- assign sub_collection_handle = sub_collection_link.url | remove: '/collections/' -%}
+      {%- assign collection = collections[sub_collection_handle] -%}
+      {% if collection != blank %}
+        {% unless parent_url == collection.url %}
+          {% include 'collection-grid-item', collection_title: sub_collection_link.title %}
+        {% endunless %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+{%- assign collection = old_collection -%}
+

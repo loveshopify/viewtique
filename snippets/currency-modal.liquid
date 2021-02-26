@@ -1,0 +1,65 @@
+{% comment %}
+  Codes available in Shopify's conversion file
+{% endcomment %}
+{%- assign codes = 'USD,EUR,GBP,CAD,ARS,AUD,BBD,BDT,BSD,BHD,BRL,BOB,BND,BGN,ILS,MMK,KYD,CLP,CNY,COP,CRC,HRK,CZK,DKK,DOP,XCD,EGP,XPF,FJD,GHS,GTQ,GYD,GEL,HKD,HUF,ISK,INR,IDR,NIS,JMD,JPY,JOD,KZT,KES,KWD,LVL,LTL,MXN,MYR,MUR,MDL,MAD,MNT,MZN,ANG,NZD,NGN,NOK,OMR,PKR,PYG,PEN,PHP,PLN,QAR,RON,RUB,SAR,RSD,SCR,SGD,SYP,ZAR,KRW,LKR,SEK,CHF,TWD,THB,TZS,TTD,TRY,UAH,AED,UYU,VEB,VND,ZMK' | split: ',' -%}
+
+<div id="CurrencyModal" class="modal modal--square">
+  <div class="modal__inner">
+    <div class="modal__centered page-width text-center">
+      <div class="modal__centered-content">
+        <div class="currency-options">
+
+          {% comment %}
+            Shopify's native multi-currency implementation
+          {% endcomment %}
+          {%- if shop.enabled_currencies.size > 1 -%}
+            {%- assign supported_codes = '' -%}
+            {%- for currency in shop.enabled_currencies  -%}
+              {%- assign supported_codes = supported_codes | append: currency.iso_code | append: ' ' -%}
+            {%- endfor -%}
+            {% assign supported_codes = supported_codes | split: ' ' %}
+          {%- else -%}
+            {% comment %}
+              Theme-only currency switcher. Always checkout in shop currency.
+            {% endcomment %}
+            {% assign supported_codes = settings.supported_currencies | split: ' ' %}
+          {%- endif -%}
+
+          {% for code in supported_codes %}
+            {% if codes contains code %}
+              <button type="button"
+                class="currency-options__btn{% if cart.currency.iso_code == code %} is-active{% endif %}"
+                data-value="{{ code }}">
+                <span class="currency-flag" data-flag="{{ code }}" aria-hidden="true"></span>
+                <span class="currency-options__label">
+                  <span>{{ code }}</span>
+                </span>
+              </button>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {%- unless shop.enabled_currencies.size > 1 -%}
+          <div class="modal__footer-text">
+            {{ 'cart.general.orders_processed_in_currency_html' | t: currency: cart.currency.iso_code }}
+          </div>
+        {%- endunless -%}
+      </div>
+
+      <button type="button" class="modal__close js-modal-close text-link">
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+        <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t | json }}</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<span
+  id="CurrencyData"
+  class="hide"
+  data-shop-currency="{{ cart.currency.iso_code }}"
+  data-current-currency="{{ cart.currency.iso_code }}"
+  data-format="{{ settings.currency_format | default: 'money_with_currency_format' }}"
+  data-money-format="{{ shop.money_format | strip_html }}"
+  data-money-currency-format="{{ shop.money_with_currency_format | strip_html }}">
+</span>

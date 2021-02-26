@@ -1,0 +1,82 @@
+{% comment %}
+  Output should match product-grid-item
+{% endcomment %}
+ 
+<script id="RecentlyViewedProduct" type="text/template">
+{% raw %}
+  <hr class="hr--large">
+  <div class="index-section index-section--small">
+    <div class="page-width">
+      <header class="section-header">
+        <h3 class="section-header__title">{% endraw %}{{ 'products.general.recent_products' | t }}{% raw %}</h3>
+      </header>
+    </div>
+    <div class="page-width page-width--flush-small">
+      <div class="grid-overflow-wrapper">
+        <div class="grid grid--uniform" data-aos="overflow__animation">
+          {{#items}}
+            <div class="grid__item grid-product {{ ../grid_item_width }} aos-animate" data-aos="row-of-5">
+              <div class="grid-product__content">
+                {{#if sold_out}}
+                  <div class="grid-product__tag">
+                    {% endraw %}{{ 'products.product.sold_out' | t }}{% raw %}
+                  </div>
+                {{/if}}
+                {{#if on_sale}}
+                  {{#unless sold_out}}
+                    <div class="grid-product__tag grid-product__tag--sale">
+                      {% endraw %}{% capture saved_amount %}{% raw %}
+                        {{{ money_saved }}}
+                      {% endraw %}{% endcapture %}{% raw %}
+                      {% endraw %}{{ 'products.general.save_html' | t: saved_amount: saved_amount }}{% raw %}
+                    </div>
+                  {{/unless}}
+                {{/if}}
+               
+                <a href="{{ url_formatted }}" class="grid-product__link{{#if sold_out}} grid-product__link--disabled{{/if}}">
+                 
+                  <div class="grid-product__image-mask mbnmbvbnm {{ product.id }}">
+                  
+                    <div class="image-wrap recent-p-images" style="height: 0; padding-bottom: {{ image_aspect_ratio }}%;">
+                      <img class="grid-product__image lazyload"
+                          data-src="{{ image_responsive_url }}"
+                          data-widths="[180, 360, 540, 720, 900]"
+                          data-aspectratio="{{ image_aspect_ratio }}"
+                          data-sizes="auto"
+                          data-parent-fit="cover"
+                          alt="{{ title }}">
+                    </div>
+                    </div>
+                
+
+                  <div class="grid-product__meta">
+                    <div class="grid-product__title grid-product__title--{% endraw %}{{ settings.type_product_style }}{% raw %}">{{ title }}</div>
+                    {% endraw %}{% if settings.vendor_enable %}{% raw %}
+                      <div class="grid-product__vendor">{{ vendor }}</div>
+                    {% endraw %}{% endif %}{% raw %}
+                    <div class="grid-product__price">
+                      {{#if on_sale}}
+                        <span class="visually-hidden">{% endraw %}{{ 'products.general.regular_price' | t }}{% raw %}</span>
+                        <span class="grid-product__price--original">{{{ compare_at_price_formatted }}}</span>
+                        <span class="visually-hidden">{% endraw %}{{ 'products.general.sale_price' | t }}{% raw %}</span>
+                      {{/if}}
+                      {{#if price_varies}}
+                        {% endraw %}{% capture price_min %}{% raw %}
+                          {{{ price_min_formatted }}}
+                        {% endraw %}{% endcapture %}{% raw %}
+                        {% endraw %}{{ 'products.general.from_text_html' | t: price: price_min }}{% raw %}
+                      {{ else }}
+                        {{{ price_formatted }}}
+                      {{/if}}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          {{/items}}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endraw %}
+</script>

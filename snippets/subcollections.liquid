@@ -1,0 +1,39 @@
+{% comment %}
+  Generate a list of collection tiles if the main menu item is
+  active and its children are also collection links
+{% endcomment %}
+
+{% case per_row %}
+{% when 2 %}
+  {%- assign grid_item_width = 'medium-up--one-half' -%}
+{% when 3 %}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
+{% when 4 %}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+{% when 5 %}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
+{% endcase %}
+
+{% unless current_tags %}
+  {% for link in linklists.main-menu.links %}
+    {% if link.active and link.levels > 0 and link.child_active == false %}
+      {%- assign sub_collection_links = link.links -%}
+      {% include 'sub-collections' %}
+    {% endif %}
+    {% for sub_link in link.links %}
+      {% if sub_link.active and sub_link.levels > 0 and sub_link.child_active == false %}
+        {%- assign sub_collection_links = sub_link.links -%}
+        {% include 'sub-collections' %}
+      {% endif %}
+      {% for sub_sub_link in sub_link.links %}
+        {% if sub_sub_link.active and sub_sub_link.url == sub_link.url %}
+          {%- assign sub_collection_links = sub_link.links -%}
+          {% include 'sub-collections', parent_url: sub_link.url %}
+        {% elsif sub_sub_link.active and sub_sub_link.levels > 0 %}
+          {%- assign sub_collection_links = sub_sub_link.links -%}
+          {% include 'sub-collections' %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endunless %}

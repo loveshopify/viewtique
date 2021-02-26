@@ -1,0 +1,497 @@
+{% style %}
+  .flex-grid--{{ section.id }} {
+    margin-top: -{{ section.settings.gutter_size }}px;
+    margin-left: -{{ section.settings.gutter_size }}px;
+    {% if section.settings.full_width %}
+      padding-left: {{ section.settings.gutter_size }}px;
+      padding-right: {{ section.settings.gutter_size }}px;
+    {% endif %}
+  }
+
+  .flex-grid--{{ section.id }} .flex-grid--gutters {
+    margin-top: -{{ section.settings.gutter_size }}px;
+    margin-left: -{{ section.settings.gutter_size }}px;
+  }
+
+  .flex-grid--{{ section.id }} .flex-grid__item {
+    padding-top: {{ section.settings.gutter_size }}px;
+    padding-left: {{ section.settings.gutter_size }}px;
+  }
+
+  @media only screen and (max-width: 589px) {
+    .flex-grid--{{ section.id }} {
+      margin-top: -{{ section.settings.gutter_size | divided_by: 2 }}px;
+      margin-left: -{{ section.settings.gutter_size | divided_by: 2 }}px;
+      {% if section.settings.full_width %}
+        padding-left: {{ section.settings.gutter_size | divided_by: 2 }}px;
+        padding-right: {{ section.settings.gutter_size | divided_by: 2 }}px;
+      {% endif %}
+    }
+
+    .flex-grid--{{ section.id }} .flex-grid--gutters {
+      margin-top: -{{ section.settings.gutter_size | divided_by: 2 }}px;
+      margin-left: -{{ section.settings.gutter_size | divided_by: 2 }}px;
+    }
+
+    .flex-grid--{{ section.id }} .flex-grid__item {
+      padding-top: {{ section.settings.gutter_size | divided_by: 2 }}px;
+      padding-left: {{ section.settings.gutter_size | divided_by: 2 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="promo-grid{% if section.settings.space_above %} promo-grid--space-top{% endif %}{% if section.settings.space_below %} promo-grid--space-bottom{% endif %}">
+  <div class="flex-grid flex-grid--gutters flex-grid--{{ section.id }}">
+    {% for block in section.blocks limit: collection_limit %}
+
+      {% if collection_page %}
+        {% if block.settings.promo_collection != blank %}
+          {% if block.settings.promo_collection != collection.handle %}
+            {% continue %}
+          {% endif %}
+        {% endif %}
+
+      {% endif %}
+
+      {% style %}
+        {% if block.settings.height %}
+          {% unless block.settings.boxed %}
+            .flex-grid__item--{{ block.id }} {
+              min-height: {{ block.settings.height | times: 0.6 }}px;
+            }
+          {% endunless %}
+
+          @media only screen and (min-width: 769px) {
+            .flex-grid__item--{{ block.id }} {
+              min-height: {{ block.settings.height | times: 0.8 }}px;
+            }
+          }
+
+          @media only screen and (min-width: 1140px) {
+            .flex-grid__item--{{ block.id }} {
+              min-height: {{ block.settings.height }}px;
+            }
+          }
+        {% endif %}
+
+        {%- assign accent_exists = false -%}
+        {% unless block.settings.color_accent contains 'rgba(0,0,0,0)' %}
+          {%- assign accent_exists = true -%}
+          .flex-grid__item--{{ block.id }} .btn {
+            background: {{ block.settings.color_accent }} !important;
+            border: none !important;
+
+            {%- assign accent_brightness = block.settings.color_accent | color_extract: 'lightness' -%}
+
+            {% if accent_brightness > 60 %}
+              color: #000 !important;
+            {% endif %}
+          }
+
+          {% if settings.button_style == 'angled' %}
+            .flex-grid__item--{{ block.id }} .btn:before,
+            .flex-grid__item--{{ block.id }} .btn:after {
+              background: {{ block.settings.color_accent }} !important;
+              border: none !important;
+            }
+          {% endif %}
+        {% endunless %}
+
+        {%- assign tint_exists = false -%}
+        {% if block.settings.color_tint and block.settings.color_tint != 'rgba(0,0,0,0)' %}
+          {%- assign tint_exists = true -%}
+
+          .flex-grid__item--{{ block.id }} .btn--tint-border {
+            border: 1px solid {{ block.settings.color_tint | color_modify: 'alpha', 0.2 }} !important;
+          }
+
+          {% if settings.button_style == 'angled' %}
+            .flex-grid__item--{{ block.id }} .btn--tint-border:before,
+            .flex-grid__item--{{ block.id }} .btn--tint-border:after {
+              border-color: {{ block.settings.color_tint | color_modify: 'alpha', 0.2 }};
+            }
+          {% endif %}
+        {% endif %}
+
+        {% if block.settings.color_tint != 'rgba(0,0,0,0)' and block.settings.color_tint_opacity > 0 %}
+          .flex-grid__item--{{ block.id }} .promo-grid__container--tint:before {
+            {%- assign color_tint_opacity = block.settings.color_tint_opacity | divided_by: 100.00 -%}
+            background: {{ block.settings.color_tint | color_modify: 'alpha', color_tint_opacity }};
+          }
+        {% endif %}
+
+        {% if block.settings.text_size %}
+          .flex-grid__item--{{ block.id }} .promo-grid__text {
+            font-size: {{ block.settings.text_size | default: 100.0 | divided_by: 100.0 | times: 0.85 }}em;
+          }
+          .flex-grid__item--{{ block.id }}.flex-grid__item--50 .promo-grid__text {
+            font-size: {{ block.settings.text_size | default: 100.0 | divided_by: 100.0 }}em;
+          }
+
+          @media only screen and (min-width: 769px) {
+            .flex-grid__item--{{ block.id }} .promo-grid__text {
+              font-size: {{ block.settings.text_size | default: 100.0 | divided_by: 100.0 }}em;
+            }
+          }
+        {% endif %}
+      {% endstyle %}
+
+      <div class="flex-grid__item flex-grid__item--{{ block.settings.width }} flex-grid__item--{{ block.id }} type-{{ block.type }}" {{ block.shopify_attributes }}>
+        {% case block.type %}
+
+          {% when 'advanced' %}
+            <div
+              class="promo-grid__container{% if block.settings.boxed %} promo-grid__container--boxed{% endif %}{% if block.settings.framed %} promo-grid__container--framed{% endif %} {{ block.settings.text_align }}">
+
+              {% if block.settings.cta_link1 != blank and block.settings.cta_link2 == blank %}
+                <a href="{{ block.settings.cta_link1 }}" class="promo-grid__slide-link"></a>
+              {% endif %}
+
+              <div class="promo-grid__bg">
+                {% if block.settings.video_url != '' %}
+                  {% include 'promo-video', id: block.id, url: block.settings.video_url %}
+                {% else %}
+                  {% if block.settings.image != blank %}
+                    {% style %}
+                      .promo-grid__bg-image--{{ block.id }} {
+                        object-position: {{ block.settings.focal_point }};
+                        font-family: "object-fit: cover; object-position: {{ block.settings.focal_point }};";
+                      }
+                    {% endstyle %}
+
+                    {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    <img
+                      class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyload"
+                      src="{{ block.settings.image | img_url: '300x' }}"
+                      data-src="{{ img_url }}"
+                      data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                      data-sizes="auto"
+                      data-parent-fit="cover"
+                      alt="{{ block.settings.image.alt | escape }}">
+                    <noscript>
+                      <img
+                        class="image-fit promo-grid__bg-image promo-grid__bg-image--{{ block.id }} lazyloaded"
+                        src="{{ block.settings.image | img_url: '1800x' }}"
+                        alt="{{ block.settings.image.alt }}">
+                    </noscript>
+                  {% else %}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+                {% endif %}
+              </div>
+
+              {% if block.settings.subheading != blank or block.settings.heading != blank or block.settings.textarea != blank or block.settings.cta_text1 != blank or block.settings.cta_text2 != blank %}
+                <div class="promo-grid__content{% if block.settings.boxed %} promo-grid__content--boxed{% endif %}{% if block.settings.framed %} promo-grid__content--framed{% endif %}">
+                  <div class="promo-grid__text">
+                    {% if block.settings.subheading != blank %}
+                      <div class="rte--block rte--em">
+                        {{ block.settings.subheading }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.heading != blank %}
+                      <div class="rte--block rte--strong">
+                        {{ block.settings.heading }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.textarea != blank %}
+                      <div class="rte--block">
+                        {{ block.settings.textarea | newline_to_br }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.cta_text1 != blank %}
+                      <a href="{{ block.settings.cta_link1 }}" class="btn{% unless accent_exists %}{% unless block.settings.boxed %} btn--inverse{% endunless %}{% endunless %}">
+                        {{ block.settings.cta_text1 }}
+                      </a>
+                    {% endif %}
+                    {% if block.settings.cta_text2 != blank %}
+                      <a href="{{ block.settings.cta_link2 }}" class="btn{% unless accent_exists %}{% unless block.settings.boxed %} btn--inverse{% endunless %}{% endunless %}">
+                        {{ block.settings.cta_text2 }}
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+
+          {% when 'sale_collection' %}
+            <a
+              href="{{ collections[block.settings.sale_collection].url }}"
+              class="promo-grid__container{% if block.settings.framed and block.settings.boxed == false %} promo-grid__container--framed{% endif %}{% if block.settings.color_tint_opacity > 0 %} promo-grid__container--tint{% endif %} vertical-center horizontal-left">
+              {% if block.settings.top_text != blank or block.settings.middle_text != blank or block.settings.bottom_text != blank %}
+                <div class="promo-grid__content{% if block.settings.boxed %} promo-grid__content--boxed{% if block.settings.framed %} promo-grid__content--framed{% endif %}{% endif %}{% if block.settings.width == '50' %} promo-grid__content--small-text{% endif %}">
+                  <div class="promo-grid__text text-center">
+                    {% if block.settings.top_text != blank %}
+                      <div class="rte--block rte--em">
+                        {{ block.settings.top_text }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.middle_text != blank %}
+                      <div class="rte--block rte--strong">
+                        {%- assign middle_text = block.settings.middle_text | replace: '% off', '% <small>off</small>' | replace: '%', '<sup>%</sup>' | replace: '$', '<sup>$</sup>' -%}
+                        {{ middle_text }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.bottom_text != blank %}
+                      <div class="rte--block rte--em">
+                        {{ block.settings.bottom_text }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+
+              <div class="type-sale-images">
+                <div class="type-sale-images__crop" data-aos="row-of-2">
+                  {% if block.settings.sale_collection != blank %}
+                    {%- assign collection_image_1 = collections[block.settings.sale_collection].products[0].featured_image -%}
+                    {%- assign collection_image_2 = collections[block.settings.sale_collection].products[1].featured_image -%}
+
+                    <div class="type-sale-images__image">
+                      {% if collection_image_1 != blank %}
+                        <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: collection_image_1.aspect_ratio }}%;">
+                          {%- assign img_url = collection_image_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                          <img class="lazyload"
+                              data-src="{{ img_url }}"
+                              data-widths="[360, 540, 720, 900, 1080, 1600]"
+                              data-aspectratio="{{ collection_image_1.aspect_ratio }}"
+                              data-sizes="auto"
+                              alt="{{ collection_image_1.alt }}">
+                          <noscript>
+                            <img class="lazyloaded" src="{{ collection_image_1 | img_url: '800x' }}" alt="{{ image.alt }}">
+                          </noscript>
+                        </div>
+                      {% endif %}
+                    </div>
+
+                    <div class="type-sale-images__image">
+                      {% if collection_image_2 != blank %}
+                        <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: collection_image_2.aspect_ratio }}%;">
+                          {%- assign img_url = collection_image_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                          <img class="lazyload"
+                              data-src="{{ img_url }}"
+                              data-widths="[360, 540, 720, 900, 1080, 1600]"
+                              data-aspectratio="{{ collection_image_2.aspect_ratio }}"
+                              data-sizes="auto"
+                              alt="{{ collection_image_2.alt }}">
+                          <noscript>
+                            <img class="lazyloaded" src="{{ collection_image_2 | img_url: '800x' }}" alt="{{ image.alt }}">
+                          </noscript>
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% else %}
+                    {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+                </div>
+              </div>
+            </a>
+
+          {% when 'simple' %}
+            {%- assign block_img = '' -%}
+            {%- assign block_text = '' -%}
+            {% if block.settings.link contains '/products/' %}
+              {%- assign product_handle = block.settings.link | remove: '/products/' -%}
+              {%- assign block_img = all_products[product_handle].featured_image -%}
+              {%- assign block_text = all_products[product_handle].title -%}
+            {% elsif block.settings.link contains '/collections/' %}
+              {%- assign collection_handle = block.settings.link | remove: '/collections/' -%}
+              {%- assign block_text = collections[collection_handle].title -%}
+              {% if collections[collection_handle].image %}
+                {%- assign block_img = collections[collection_handle].image -%}
+              {% else %}
+                {%- assign block_img = collections[collection_handle].products[0].featured_image -%}
+              {% endif %}
+            {% endif %}
+            {% if block.settings.text != '' %}
+              {%- assign block_text = block.settings.text -%}
+            {% endif %}
+            {% if block.settings.image %}
+              {%- assign block_img = block.settings.image -%}
+            {% endif %}
+
+            <a href="{{ block.settings.link }}"
+              class="promo-grid__container{% if block.settings.framed %} promo-grid__container--framed{% endif %}{% if block.settings.color_tint_opacity > 0 %} promo-grid__container--tint{% endif %} vertical-center horizontal-center">
+              <div
+                class="promo-grid__bg{% if block_img != blank %} lazyload{% endif %}"
+                {% if block_img != blank %}
+                  data-bgset="{% include 'bgset', image: block_img %}"
+                  data-sizes="auto"
+                {% endif %}>
+                {% if block_img == blank %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              <noscript>
+                <div
+                  class="promo-grid__bg"
+                  style="background-image: url({{ block_img | img_url: '1400x' }});">
+                </div>
+              </noscript>
+
+              <div class="promo-grid__content">
+                <div class="promo-grid__text text-center">
+                  <p class="promo-grid__title h2">
+                    {% if block_text != blank %}
+                      {{ block_text | newline_to_br }}
+                    {% else %}
+                      Simple promotion
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+            </a>
+
+          {% when 'image' %}
+            <div class="promo-grid__container">
+              {% if block.settings.link %}
+                <a href="{{ block.settings.link }}">
+              {% endif %}
+                {% if block.settings.image != blank %}
+                  <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
+                    {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img class="lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[360, 540, 720, 900, 1080, 1600]"
+                        data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                        data-sizes="auto"
+                        role="presentation"
+                        alt="{{ block.settings.image.alt }}">
+                    <noscript>
+                      <img class="lazyloaded" src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt }}">
+                    </noscript>
+                  </div>
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              {% if block.settings.link %}
+                </a>
+              {% endif %}
+            </div>
+
+          {% when 'banner' %}
+            {% if block.settings.link %}
+              <a href="{{ block.settings.link }}" class="type-banner__link">
+            {% endif %}
+              <div class="promo-grid__container{% if block.settings.framed %} promo-grid__container--framed{% endif %}{% if block.settings.color_tint_opacity > 0 %} promo-grid__container--tint{% endif %}">
+                <div class="type-banner__content text-center">
+                  {% if block.settings.image != blank %}
+                    <div class="type-banner__image">
+                      <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
+                        {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                        <img class="lazyload"
+                            data-src="{{ img_url }}"
+                            data-widths="[180, 360, 460]"
+                            data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                            data-sizes="auto"
+                            role="presentation"
+                            alt="{{ block.settings.image.alt }}">
+                        <noscript>
+                          <img class="lazyloaded" src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.image.alt }}">
+                        </noscript>
+                      </div>
+                    </div>
+                  {% endif %}
+                  <div class="type-banner__text">
+                    {% if block.settings.heading != blank %}
+                      <p class="h3">{{ block.settings.heading }}</p>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                      <p>{{ block.settings.text }}</p>
+                    {% endif %}
+                    {% if block.settings.label != blank %}
+                      <p class="btn btn--secondary btn--small{% if tint_exists %} btn--tint-border{% endif %}">{{ block.settings.label }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% if block.settings.link %}
+              </a>
+            {% endif %}
+
+          {% when 'product' %}
+            {%- assign product = all_products[block.settings.product] -%}
+            <div
+              class="promo-grid__container{% if block.settings.framed %} promo-grid__container--framed{% endif %}">
+              <div class="type-product__wrapper{% if block.settings.color_tint_opacity > 0 %} promo-grid__container--tint{% endif %}">
+                <div class="flex-grid flex-grid--center flex-grid--gutters">
+                  <div class="flex-grid__item flex-grid__item--stretch flex-grid__item--50 flex-grid__item--mobile-second">
+                    {% if block.settings.subheading != blank or block.settings.heading != blank or block.settings.textarea != blank or block.settings.link_label != blank %}
+                      <div class="promo-grid__text type-product__content">
+                        {% if block.settings.subheading != blank %}
+                          <div class="rte--block rte--em">
+                            {{ block.settings.subheading }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.heading != blank %}
+                          <div class="rte--block rte--strong">
+                            {{ block.settings.heading }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.textarea != blank %}
+                          <div class="rte--block">
+                            {{ block.settings.textarea | newline_to_br }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.link_label != blank %}
+                          <a href="{{ product.url }}" class="btn">
+                            {{ block.settings.link_label }}
+                          </a>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                  <div class="flex-grid__item flex-grid__item--stretch flex-grid__item--50 flex-grid__item--second">
+                    <div class="type-product__images" data-aos="row-of-2">
+                      {% unless product.empty? %}
+                        {% for image in product.images limit: 2 %}
+                          <div class="type-product__image">
+                            {% if forloop.index == 1 %}
+                              <div class="type-product__labels">
+                                {% if block.settings.label != blank %}
+                                  <div class="type-product__label">
+                                    {{ block.settings.label }}
+                                  </div>
+                                {% endif %}
+                                {% if block.settings.enable_price %}
+                                  <div class="type-product__label type-product__label--secondary">
+                                    {{ product.price | money }}
+                                  </div>
+                                {% endif %}
+                              </div>
+                            {% endif %}
+                            <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: image.aspect_ratio }}%;">
+                              {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                              <a href="{{ product.url }}">
+                                <img class="lazyload"
+                                    data-src="{{ img_url }}"
+                                    data-widths="[360, 540, 720, 900, 1080, 1600]"
+                                    data-aspectratio="{{ image.aspect_ratio }}"
+                                    data-sizes="auto"
+                                    alt="{{ image.alt }}">
+                                <noscript>
+                                  <img class="lazyloaded" src="{{ image | img_url: '600x' }}" alt="{{ image.alt }}">
+                                </noscript>
+                              </a>
+                            </div>
+                          </div>
+                        {% endfor %}
+                      {% else %}
+                        <div class="type-product__image">
+                          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                        <div class="type-product__image">
+                          {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                      {% endunless %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        {% endcase %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

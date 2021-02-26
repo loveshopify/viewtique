@@ -1,0 +1,4 @@
+<button type="button" class="collapsible-trigger collapsible-trigger-btn collapsible--auto-height{% unless collapsed_state %} is-open{% endunless %} tag-list__header" aria-controls="{{ location }}-{{ index }}{% if id %}-{{ id }}{% endif %}">
+  {{ title }}
+  {% include 'collapsible-icons' %}
+</button>

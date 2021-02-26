@@ -1,0 +1,21 @@
+{%- assign animation_row = 1 -%}
+
+<div id="FilterDrawer" class="drawer drawer--left">
+  <div class="drawer__fixed-header">
+    <div class="drawer__header appear-animation appear-delay-{{ animation_row }}">
+      <div class="h2 drawer__title">
+        {{ 'collections.filters.title_tags' | t }}
+      </div>
+      <div class="drawer__close">
+        <button type="button" class="drawer__close-button js-drawer-close">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+          <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  {%- assign animation_row = animation_row | plus: 1 -%}
+  <div class="drawer__inner appear-animation appear-delay-{{ animation_row }}">
+    {% include 'collection-sidebar-filters', location: 'SidebarDrawer' %}
+  </div>
+</div>

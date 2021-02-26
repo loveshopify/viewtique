@@ -1,0 +1,53 @@
+{%- if section.settings.show_section -%}
+  {%- assign grid_item_width = 'small--one-half medium-up--one-fifth dfsgdfgh' -%}
+
+  {% case section.settings.recent_count %}
+  {% when 2 %}
+    {%- assign grid_item_width = 'medium-up--one-half' -%}
+  {% when 3 %}
+    {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
+  {% when 4 %}
+    {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+  {% when 6 %}
+    {%- assign grid_item_width = 'small--one-half medium-up--one-sixth' -%}
+  {% when 8 %}
+    {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+  {% endcase %}
+
+  <div
+    data-subsection
+    data-section-id="{{ section.id }}"
+    data-section-type="recently-viewed"
+    data-product-handle="{{ product.handle }}"
+    data-recent-count="{{ section.settings.recent_count }}"
+    data-grid-item-class="{{ grid_item_width }}">
+    <div id="RecentlyViewed-{{ section.id }}"></div>
+  </div>
+{%- endif -%}
+
+<script>
+  theme.settings.recentlyViewedEnabled = {{ section.settings.show_section | default: 'false' }};
+</script>
+
+{% schema %}
+  {
+    "name": "Recently viewed products",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_section",
+        "label": "Show recently viewed products",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "recent_count",
+        "label": "Number of recent products",
+        "default": 5,
+        "min": 2,
+        "max": 10,
+        "step": 1
+      }
+    ]
+  }
+{% endschema %}

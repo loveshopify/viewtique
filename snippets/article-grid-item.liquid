@@ -1,0 +1,88 @@
+{%- assign fixed_aspect_ratio = false -%}
+{% unless image_size == 'natural' %}
+  {%- assign fixed_aspect_ratio = true -%}
+{% endunless %}
+
+<div class="grid__item {{ grid_item_width }}" data-aos="row-of-{{ per_row }}">
+  <div class="grid">
+    <div class="grid__item small--one-third">
+      {% if article.image %}
+        <a href="{{ article.url }}" class="article__grid-image">
+          {% if fixed_aspect_ratio %}
+            <div class="image-wrap">
+              <div
+                class="grid__image-ratio grid__image-ratio--cover grid__image-ratio--{{ image_size }} lazyload"
+                data-bgset="{% include 'bgset', image: article.image %}"
+                data-sizes="auto">
+              </div>
+              <noscript>
+                <img class="lazyloaded" src="{{ article.image | img_url: '400x' }}" alt="{{ article.title | escape }}">
+              </noscript>
+            </div>
+          {% else %}
+            <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: article.image.aspect_ratio }}%;">
+              {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="lazyload"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080]"
+                  data-aspectratio="{{ article.image.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ article.image.alt | escape }}">
+              <noscript>
+                <img class="lazyloaded" src="{{ article.image | img_url: '400x' }}" alt="{{ article.title | escape }}">
+              </noscript>
+            </div>
+          {% endif %}
+        </a>
+      {% else %}
+        <div class="article__grid-image">
+          {% if fixed_aspect_ratio %}
+            <div class="image-wrap">
+              <div
+                class="grid__image-ratio grid__image-ratio--cover grid__image-ratio--{{ image_size }} lazyload">
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="grid__item small--two-thirds">
+      <div class="article__grid-meta">
+        {% if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 %}
+          <div class="article__date">
+            {% if section.settings.blog_show_tags and article.tags.size > 0 %}
+              {% for tag in article.tags %}
+                {%- include 'filter-out-custom-tags' -%}
+                <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+              {% endfor %}
+            {% endif %}
+            {% if section.settings.blog_show_comments and article.comments_count > 0 %}
+              <a href="{{ article.url }}#comments">
+                {{ 'blogs.comments.with_count' | t: count: article.comments_count }}
+              </a> &middot;
+            {% endif %}
+            {% if section.settings.blog_show_date %}
+              {{ article.published_at | time_tag: format: 'month_day_year' }}
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <a href="{{ article.url }}" class="article__title">{{ article.title }}</a>
+
+        {% if section.settings.blog_show_author %}
+          <div class="article__author">by {{ article.author }}</div>
+        {% endif %}
+
+        {% if section.settings.blog_show_excerpt %}
+          <div class="rte article__excerpt">
+            {% if article.excerpt.size > 0 %}
+              {{ article.excerpt }}
+            {% else %}
+              {{ article.content | strip_html | truncatewords: 40 }}
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

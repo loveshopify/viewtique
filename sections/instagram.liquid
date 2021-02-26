@@ -1,0 +1,107 @@
+{%- assign count = section.settings.count | times: 6 -%}
+{%- assign grid_item_width = 'small--one-half medium-up--one-sixth' -%}
+
+{% if section.settings.divider %}<div class="section--divider">{% endif %}
+
+<div data-section-id="{{ section.id }}" data-section-type="instagram" class="instagram-section">
+  {% unless section.settings.full_width %}
+    <div class="page-width">
+  {% endunless %}
+
+    {% if section.settings.title != blank %}
+      <header class="section-header">
+        <h3 class="section-header__title">{{ section.settings.title }}</h3>
+      </header>
+    {% endif %}
+
+    <div class="instagram-feed-wrap instagram-feed-wrap--{{ section.settings.count }}" data-aos>
+      <div class="instagram-feed-wrap__reflow-fix"></div>
+      {% if section.settings.username != blank %}
+        {%- assign instagram_username = section.settings.username | remove: '@' -%}
+        <a href="https://www.instagram.com/{{ instagram_username }}" class="instagram-feed__link" target="_blank">@{{ instagram_username }}</a>
+      {% endif %}
+      {% if section.settings.client_id != blank %}
+        <div
+          id="Instafeed-{{section.id}}"
+          class="grid grid--uniform grid--no-gutters"
+          data-user-id="{{ section.settings.client_id | split: '.' | first }}"
+          data-client-id="{{ section.settings.client_id | strip }}"
+          data-count="{{ count }}"
+          data-grid-item-width="{{ grid_item_width }}"></div>
+      {% else %}
+        <div class="grid grid--uniform grid--no-gutters">
+          {% for i in (1..count) %}
+            <div class="grid__item {{ grid_item_width }}">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+  {% unless section.settings.full_width %}
+    </div>
+  {% endunless %}
+</div>
+
+{% if section.settings.divider %}</div>{% endif %}
+
+{% schema %}
+  {
+    "name": "Instagram feed",
+    "class": "index-section--flush",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "username",
+        "label": "Username",
+        "default": "@username"
+      },
+      {
+        "type": "text",
+        "id": "client_id",
+        "label": "Instagram Access Token",
+        "info": "No token? [Create one here](https://archetypethemes.co/instagram). If no images show up after inserting your access token, it's likely invalid. No error will display on the page."
+      },
+      {
+        "type": "select",
+        "id": "count",
+        "label": "Number of rows",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full page width",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instagram feed",
+        "category": "Social media"
+      }
+    ]
+  }
+{% endschema %}

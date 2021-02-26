@@ -1,0 +1,238 @@
+{%- assign product = all_products[section.settings.featured_product] -%}
+
+{% if section.settings.divider %}<div class="section--divider">{% endif %}
+
+<div id="ProductSection-{{ section.id }}"
+  itemscope itemtype="http://schema.org/Product"
+  data-section-id="{{ section.id }}"
+  data-section-type="product"
+  {% if settings.product_zoom_enable %}
+    data-image-zoom="true"
+  {% endif %}
+  {% if settings.inventory_enable %}
+    data-inventory="true"
+  {% endif %}
+  {% if settings.inventory_transfers_enable %}
+    data-incoming-inventory="true"
+  {% endif %}>
+
+  {% include 'product-template-variables' %}
+
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-half">
+        {% include 'product-images', section_id: section.id, thumbnail_position: section.settings.thumbnail_position, thumbnail_arrows: section.settings.thumbnail_arrows %}
+      </div>
+
+      <div class="grid__item medium-up--one-half">
+        <div class="product-single__meta">
+          {% unless product.empty? %}
+            {%- assign compare_at_price = current_variant.compare_at_price -%}
+            {%- assign price = current_variant.price -%}
+            {%- assign product_available = current_variant.available -%}
+          {% else %}
+            {%- assign compare_at_price = 1999 -%}
+            {%- assign price = 1999 -%}
+            {%- assign product_available = true -%}
+          {% endunless %}
+
+          {% if settings.vendor_enable %}
+            <div class="product-single__vendor">
+              {{ product.vendor }}
+            </div>
+          {% endif %}
+
+          <div class="h1 product-single__title">
+            {% unless product.empty? %}
+              {{ product.title }}
+            {% else %}
+              {{ 'home_page.onboarding.product_title' | t }}
+            {% endunless %}
+          </div>
+
+          {%- if settings.enable_product_reviews -%}
+            {%- assign review_link = product.url | within: collection | append: '#Reviews-' | append: product.id -%}
+            <a href="{{ review_link }}" class="product-single__review-link">
+              <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+            </a>
+          {%- endif -%}
+
+          {%- if settings.sku_enable -%}
+            <p id="Sku-{{ section.id }}" class="product-single__sku">
+              {%- if current_variant.sku -%}
+                {{ current_variant.sku }}
+              {%- endif -%}
+            </p>
+          {%- endif -%}
+
+          {%- assign hide_sale_price = true -%}
+          {%- if product.compare_at_price_max > product.price -%}
+            {%- if current_variant.compare_at_price > current_variant.price -%}
+              {%- assign hide_sale_price = false -%}
+            {%- endif -%}
+            <span
+              id="PriceA11y-{{ section.id }}"
+              class="visually-hidden"
+              aria-hidden="{{ hide_sale_price }}">
+                {{ 'products.general.regular_price' | t }}
+            </span>
+            <span class="product__price-wrap-{{ section.id }}{% if hide_sale_price %} hide{% endif %}">
+              <span id="ComparePrice-{{ section.id }}" class="product__price product__price--compare">
+                {%- if current_variant.compare_at_price > current_variant.price -%}
+                  {{ current_variant.compare_at_price | money }}
+                {%- endif -%}
+              </span>
+            </span>
+            <span id="ComparePriceA11y-{{ section.id }}" class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+          {% else %}
+            <span id="PriceA11y-{{ section.id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+          {%- endif -%}
+
+          <span id="ProductPrice-{{ section.id }}"
+            class="product__price{% if current_variant.compare_at_price > current_variant.price %} on-sale{% endif %}">
+            {{ current_variant.price | money }}
+          </span>
+
+          {%- if settings.product_save_amount -%}
+            {%- if settings.product_save_type == 'dollar' -%}
+              {% capture saved_amount %}{{ current_variant.compare_at_price | minus: current_variant.price | money }}{% endcapture %}
+            {%- else -%}
+              {% capture saved_amount %}{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round }}%{% endcapture %}
+            {%- endif -%}
+            <span id="SavePrice-{{ section.id }}" class="product__price-savings{% if hide_sale_price %} hide{% endif %}">
+              {{ 'products.general.save_html' | t: saved_amount: saved_amount }}
+            </span>
+          {%- endif -%}
+
+          <div class="product__unit-price product__unit-price--spacing product__unit-price-wrapper--{{ section.id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
+            {%- capture unit_price_base_unit -%}
+              <span class="product__unit-base--{{ section.id }}">
+                {%- if current_variant.unit_price_measurement -%}
+                  {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                    {{ current_variant.unit_price_measurement.reference_value }}
+                  {%- endif -%}
+                  {{ current_variant.unit_price_measurement.reference_unit }}
+                {%- endif -%}
+              </span>
+            {%- endcapture -%}
+
+            <span class="product__unit-price--{{ section.id }}">{{ current_variant.unit_price | money }}</span>/{{ unit_price_base_unit }}
+          </div>
+
+          {%- if settings.inventory_enable or settings.inventory_transfers_enable -%}
+            {%- assign variants_with_inventory_tracking = product.variants | where: 'inventory_management', 'shopify' -%}
+
+            <script>
+              // Store inventory quantities in JS because they're no longer
+              // available directly in JS when a variant changes.
+              // Have an object that holds all potential products so it works
+              // with quick view or with multiple featured products.
+              window.inventories = window.inventories || {};
+              window.inventories['{{section.id}}'] = {};
+               {% for variant in variants_with_inventory_tracking %}
+                window.inventories['{{section.id}}'][{{variant.id}}] = {
+                  'quantity': {{ variant.inventory_quantity | default: 0 }},
+                  'incoming': {{ variant.incoming | default: false | json }},
+                  'next_incoming_date': {{ variant.next_incoming_date | date: format: 'date' | json }}
+                };
+               {% endfor %}
+            </script>
+          {%- endif -%}
+
+          <hr class="hr--medium">
+
+          {% unless product.empty? %}
+            {% include 'product-form', section_id: section.id %}
+          {% endunless %}
+
+          {%- if settings.trust_image != blank -%}
+            <div class="aos-animate trust-image" style="max-width: {{ settings.trust_image.width }}px;">
+              <div class="image-wrap " style="height: 0; padding-bottom: {{ 100 | divided_by: settings.trust_image.aspect_ratio }}%;">
+                {%- assign img_url = settings.trust_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540]"
+                    data-aspectratio="{{ settings.trust_image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ settings.trust_image.alt }}">
+                <noscript>
+                  <img class="lazyloaded" src="{{ settings.trust_image | img_url: '540x' }}" alt="{{ settings.trust_image.alt }}">
+                </noscript>
+              </div>
+            </div>
+          {%- endif -%}
+
+          <div class="product-single__description rte">
+            {% if section.settings.show_description %}
+              {% unless product.empty? %}
+                {{ product.description }}
+              {% else %}
+                {{ 'home_page.onboarding.product_description' | t }}
+              {% endunless %}
+            {% else %}
+              <p><a href="{{ product.url }}">{{ 'general.accessibility.learn_more' | t }}</a></p>
+            {% endif %}
+          </div>
+
+          {% include 'product-additional-content', section_id: section.id %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% if section.settings.divider %}</div>{% endif %}
+
+{% schema %}
+  {
+    "name": "Featured product",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "product",
+        "id": "featured_product",
+        "label": "Product"
+      },
+      {
+        "type": "select",
+        "id": "thumbnail_position",
+        "label": "Thumbnail position",
+        "default": "beside",
+        "options": [
+          {
+            "value": "beside",
+            "label": "Next to image"
+          },
+          {
+            "value": "below",
+            "label": "Below image"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "thumbnail_arrows",
+        "label": "Show thumbnail arrows"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_description",
+        "label": "Show description",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured product",
+        "category": "Product"
+      }
+    ]
+  }
+{% endschema %}

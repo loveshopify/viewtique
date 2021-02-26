@@ -1,0 +1,230 @@
+{%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+
+{%- unless product.empty? -%}
+  <div
+    data-product-images
+    data-zoom="{{ settings.product_zoom_enable }}"
+    data-has-slideshow="true">
+    <div class="product__photos product__photos-{{ section_id }} product__photos--{{ thumbnail_position }}">
+
+      <div class="product__main-photos" data-aos>
+        <div id="ProductPhotos-{{ section_id }}">
+          {%- for image in product.images -%}
+            {%- assign is_featured = false -%}
+            {%- if featured_image == image -%}
+              {%- assign is_featured = true -%}
+            {%- endif -%}
+            {%- assign image_alt = image.alt -%}
+            {%- assign has_product_video = false -%}
+            {%- assign video_type = '' -%}
+            {%- if image.alt contains 'youtube.com/watch' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'youtube' -%}
+              {%- assign video_id = image.alt | split: 'v=' -%}
+              {%- assign video_id = video_id[1] | split: '&' | first -%}
+            {%- endif -%}
+            {%- if image.alt contains 'youtu.be/' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'youtube' -%}
+              {%- assign video_id = image.alt | split: '.be/' -%}
+              {%- assign video_id = video_id[1] | split: '&' | first -%}
+            {%- endif -%}
+            {%- if image.alt contains 'vimeo.com' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'vimeo' -%}
+              {%- assign video_id = image.alt | split: '.com/' -%}
+              {%- assign video_id = video_id[1] | split: '/' | first -%}
+            {%- endif -%}
+            {%- if image.alt contains '.mp4' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'mp4' -%}
+            {%- endif -%}
+            {%- if has_product_video -%}
+              {%- assign image_alt = product.title -%}
+            {%- endif -%}
+            <div class="{% if is_featured %}starting-slide{% else %}secondary-slide{% endif %}" data-index="{{ forloop.index0 }}">
+              <div class="product-image-main product-image-main--{{ section_id }}">
+                <div class="image-wrap
+                  {% if has_product_video and video_type == 'youtube' %} hide{% endif %}
+                  {% if has_product_video and video_type == 'vimeo' %} hide{% endif %}
+                  {% if has_product_video and video_type == 'mp4' %} hide{% endif %}" style="height: 0; padding-bottom: {{ 100 | divided_by: image.aspect_ratio }}%;">
+                  {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  {%- assign zoom_img_url = image | img_url: product_zoom_size -%}
+
+                  {%- if is_featured -%}
+                    <img class="{% if settings.product_zoom_enable %}photoswipe__image{% endif %} lazyload"
+                      data-photoswipe-src="{{ zoom_img_url }}"
+                      data-photoswipe-width="{{ image.width }}"
+                      data-photoswipe-height="{{ image.height }}"
+                      data-index="{{ forloop.index }}"
+                      data-src="{{ img_url }}"
+                      data-widths="[360, 540, 720, 900, 1080]"
+                      data-aspectratio="{{ image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="{{ image_alt | escape }}">
+                    <noscript>
+                      <img class="lazyloaded" src="{{ image | img_url: product_image_size }}" alt="{{ image_alt | escape }}">
+                    </noscript>
+                  {%- else -%}
+                    <img class="{% if settings.product_zoom_enable %}photoswipe__image{% endif %} lazyload"
+                      data-photoswipe-src="{{ zoom_img_url }}"
+                      data-photoswipe-width="{{ image.width }}"
+                      data-photoswipe-height="{{ image.height }}"
+                      data-index="{{ forloop.index }}"
+                      data-src="{{ img_url }}"
+                      data-widths="[360, 540, 720, 900, 1080]"
+                      data-aspectratio="{{ image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="{{ image_alt | escape }}">
+                    <noscript>
+                      <img class="lazyloaded" src="{{ image | img_url: product_image_size }}" alt="{{ image_alt | escape }}">
+                    </noscript>
+                  {%- endif -%}
+
+                  {%- if settings.product_zoom_enable -%}
+                    <button type="button" class="btn btn--body btn--circle js-photoswipe__zoom product__photo-zoom">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
+                      <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t }}</span>
+                    </button>
+                  {%- endif -%}
+                </div>
+                {%- if has_product_video -%}
+                  {%- assign aspect_width = settings.product_video_width | divided_by: 100.00 -%}
+                  {%- assign aspect_ratio = settings.product_video_height | divided_by: aspect_width -%}
+                  <div
+                    data-video-type="{{ video_type }}"
+                    class="product__video-wrapper
+                      {% if has_product_video %}
+                        {% if video_type == 'youtube' or video_type == 'vimeo' %}
+                          loading
+                        {% endif %}
+                      {% endif %}"
+                    data-video-style="{{ settings.product_video_style }}"
+                    style="padding-bottom: {{ aspect_ratio }}%;">
+                    {%- if video_type == 'youtube' -%}
+                      <div
+                        id="ProductVideo-{{ section_id }}-{{ forloop.index }}"
+                        class="product__video"
+                        data-image-count="{{product.images | size }}"
+                        data-video-type="{{ video_type }}"
+                        data-video-style="{{ settings.product_video_style }}"
+                        data-youtube-id="{{ video_id }}"
+                        data-video-width="{{ settings.product_video_width }}"
+                        data-video-height="{{ settings.product_video_height }}">
+                      </div>
+                    {%- endif -%}
+                    {%- if video_type == 'vimeo' -%}
+                      <div
+                        id="ProductVideo-{{ section_id }}-{{ forloop.index }}"
+                        class="product__video"
+                        data-image-count="{{product.images | size }}"
+                        data-video-type="{{ video_type }}"
+                        data-video-style="{{ settings.product_video_style }}"
+                        data-video-id="{{ video_id }}"
+                        data-video-width="{{ settings.product_video_width }}"
+                        data-video-height="{{ settings.product_video_height }}">
+                      </div>
+                    {%- endif -%}
+                    {%- if video_type == 'mp4' -%}
+                      <video
+                        loop playsinline
+                        {% if settings.product_video_style == 'muted' %}muted{% endif %}
+                        {% if settings.product_video_style == 'unmuted' %}controls{% endif %}
+                        controlsList="nodownload"
+                        data-image-count="{{product.images | size }}"
+                        data-video-type="{{ video_type }}"
+                        data-video-style="{{ settings.product_video_style }}"
+                        {% if isModal %}
+                          data-video-src="{{ image.alt }}"
+                        {% endif %}
+                        id="ProductVideo-{{ section_id }}-{{ forloop.index }}"
+                        class="product__video">
+                        {%- unless isModal -%}
+                          <source src="{{ image.alt }}" type="video/mp4">
+                        {%- endunless -%}
+                        Your browser does not support the video tag.
+                      </video>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <div
+        id="ProductThumbs-{{ section_id }}"
+        class="product__thumbs product__thumbs--{{ thumbnail_position }} product__thumbs-placement--{{ image_position }} {% if product.images.size == 1 %} medium-up--hide{% endif %} small--hide"
+        data-position="{{ thumbnail_position }}"
+        data-arrows="{{ thumbnail_arrows }}"
+        data-aos>
+
+        {%- if product.images.size > 1 -%}
+          {%- for image in product.images -%}
+            {%- assign image_alt = image.alt -%}
+            {%- assign has_product_video = false -%}
+            {%- assign video_type = '' -%}
+            {%- if image.alt contains 'youtube.com/watch' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'youtube' -%}
+            {%- endif -%}
+            {%- if image.alt contains 'youtu.be/' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'youtube' -%}
+            {%- endif -%}
+            {%- if image.alt contains 'vimeo.com' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'vimeo' -%}
+            {%- endif -%}
+            {%- if image.alt contains '.mp4' -%}
+              {%- assign has_product_video = true -%}
+              {%- assign video_type = 'mp4' -%}
+            {%- endif -%}
+            {%- if has_product_video -%}
+              {%- assign image_alt = product.title -%}
+            {%- endif -%}
+
+            <div class="product__thumb-item"
+              data-index="{{ forloop.index0 }}">
+              <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: image.aspect_ratio }}%;">
+                <div
+                  class="product__thumb product__thumb-{{ section_id }} js-no-transition"
+                  data-id="{{ image.id }}">
+                  {%- if has_product_video -%}
+                    <span class="product__thumb-play">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="0 0 32 32"><path class="st0" d="M9.3 6.2l17.1 9.7-17.1 9.7"/></svg>
+                    </span>
+                  {%- endif -%}
+
+                  {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="animation-delay-{{ forloop.index | times: 3 }} lazyload"
+                      data-src="{{ img_url }}"
+                      data-widths="[360, 540, 720, 900, 1080]"
+                      data-aspectratio="{{ image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="{{ image_alt | escape }}">
+                  <noscript>
+                    <img class="lazyloaded" src="{{ image | img_url: product_thumb_size }}" alt="{{ image_alt | escape }}">
+                  </noscript>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- else -%}
+  <div class="product__photos product__photos-{{ section_id }}">
+    <div class="product__main-photos" style="width: 100%">
+      <div id="ProductPhotos-{{ section_id }}">
+        <div data-index="{{ forloop.index0 }}">
+          <a href="#">
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endunless -%}

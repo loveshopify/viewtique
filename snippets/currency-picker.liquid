@@ -1,0 +1,8 @@
+{% if settings.enable_currencies %}
+  <div id="CurrencyPicker-{{ picker_id }}" class="currency-picker {{ currency_class }}">
+    <button type="button" class="currency-picker__btn js-modal-open-currency-modal">
+      <span class="currency-flag currency-flag--small" data-flag="{{ cart.currency.iso_code }}" aria-hidden="true"></span>
+      <span class="currency-picker__label">{{ cart.currency.iso_code }}</span>
+    </button>
+  </div>
+{% endif %}

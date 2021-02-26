@@ -1,0 +1,72 @@
+{% if settings.show_breadcrumbs %}
+
+{% unless template.name == 'index' or template.name == 'cart' %}
+  <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+    <a href="{{ routes.root_url }}" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+
+    {% if template.name == 'product' %}
+
+      {% if collection %}
+        <span class="divider" aria-hidden="true">/</span>
+        {% if collection.handle %}
+          {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+          {{ collection.title | link_to: url }}
+        {% endif %}
+      {% endif %}
+      <span class="divider" aria-hidden="true">/</span>
+
+    {% elsif template.name == 'collection' and collection.handle %}
+
+      <span class="divider" aria-hidden="true">/</span>
+
+      {% if current_tags %}
+
+        {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+        {{ collection.title | link_to: url }}
+
+        <span class="divider" aria-hidden="true">/</span>
+
+        {% for tag in current_tags %}
+          {%- include 'filter-out-custom-tags' -%}
+
+          {%- assign tag_name = tag | strip -%}
+          {%- assign tag_text = tag_name | capitalize -%}
+          <span>{{ tag_text }}</span>
+
+          {% unless forloop.last %}
+            <span>+</span>
+          {% endunless %}
+
+        {% endfor %}
+      {% endif %}
+
+    {% elsif template.name == 'blog' %}
+
+      <span class="divider" aria-hidden="true">/</span>
+      {% if current_tags %}
+        {{ blog.title | link_to: blog.url }}
+        <span class="divider" aria-hidden="true">/</span>
+        <span>{{ current_tags | join: " + " }}</span>
+      {% endif %}
+
+    {% elsif template.name == 'article' %}
+
+      <span class="divider" aria-hidden="true">/</span>
+      {{ blog.title | link_to: blog.url }}
+      <span class="divider" aria-hidden="true">/</span>
+
+    {% elsif template.name == 'page' %}
+
+      <span class="divider" aria-hidden="true">/</span>
+      <span>{{ page_title }}</span>
+
+    {% else %}
+
+      <span class="divider" aria-hidden="true">/</span>
+      <span>{{ page_title }}</span>
+
+    {% endif %}
+  </nav>
+{% endunless %}
+
+{% endif %}
